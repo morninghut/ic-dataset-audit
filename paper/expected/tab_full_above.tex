@@ -1,0 +1,58 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+Metric & Polaris test & Spica test & Nebula test & Flickr8k-Expert & Composite & Flickr8k-CF \\
+\midrule
+Judge InternVL-8B +\,ref & 33.43\enspace1\,[1,\,2] & 33.75\enspace1\,[1,\,2] & 33.02\enspace1\,[1,\,2] & 52.71\enspace4\,[1,\,6] & 52.26\enspace3\,[3,\,4] & 48.63\enspace2\,[2,\,3] \\
+Judge Qwen-8B +\,ref & 32.82\enspace2\,[2,\,3] & 33.03\enspace2\,[2,\,3] & 32.40\enspace2\,[1,\,3] & 52.26\enspace5\,[3,\,9] & 52.85\enspace2\,[1,\,2] & 47.66\enspace4\,[3,\,5] \\
+Judge Qwen-4B +\,ref & 32.78\enspace3\,[2,\,3] & 32.86\enspace3\,[2,\,3] & 31.25\enspace3\,[3,\,7] & 51.67\enspace7\,[6,\,13] & 51.81\enspace4\,[3,\,5] & 45.18\enspace7\,[6,\,9] \\
+Ridge SigLIP (Polaris) & 31.42\enspace4\,[4,\,5] & 31.05\enspace5\,[4,\,7] & 30.86\enspace4\,[2,\,7] & 51.52\enspace10\,[5,\,13] & 49.17\enspace12\,[10,\,12] & 45.05\enspace8\,[6,\,10] \\
+Judge Qwen-4B & 30.64\enspace5\,[4,\,9] & 31.32\enspace4\,[4,\,7] & 29.51\enspace8\,[5,\,11] & 51.36\enspace11\,[7,\,14] & 49.26\enspace11\,[9,\,12] & 43.69\enspace10\,[9,\,14] \\
+Polos & 30.47\enspace6\,[4,\,9] & 28.97\enspace10\,[8,\,11] & 27.51\enspace12\,[9,\,13] & 48.02\enspace21\,[21,\,24] & 47.39\enspace19\,[13,\,20] & 38.01\enspace25\,[22,\,25] \\
+Judge Qwen-8B & 30.13\enspace7\,[5,\,10] & 30.60\enspace6\,[4,\,8] & 30.60\enspace5\,[3,\,8] & 52.21\enspace6\,[3,\,10] & 51.63\enspace5\,[3,\,6] & 45.72\enspace6\,[6,\,8] \\
+Judge InternVL-8B & 29.98\enspace8\,[5,\,11] & 29.86\enspace8\,[6,\,10] & 28.72\enspace10\,[7,\,12] & 51.63\enspace8\,[6,\,13] & 49.65\enspace10\,[7,\,11] & 44.92\enspace9\,[6,\,10] \\
+DENEB & 29.75\enspace9\,[6,\,11] & 30.47\enspace7\,[4,\,8] & 29.73\enspace7\,[4,\,10] & 49.89\enspace17\,[14,\,20] & 47.85\enspace13\,[13,\,18] & 42.86\enspace12\,[10,\,15] \\
+Ridge CLIP (Polaris) & 29.64\enspace10\,[6,\,10] & 28.28\enspace11\,[9,\,12] & 27.69\enspace11\,[9,\,12] & 49.62\enspace18\,[14,\,20] & 46.71\enspace21\,[19,\,21] & 41.01\enspace19\,[16,\,20] \\
+Polos (official) & 28.93\enspace11\,[9,\,11] & -- & -- & 49.44\enspace19\,[15,\,20] & 46.10\enspace22\,[22,\,22] & 41.43\enspace18\,[15,\,19] \\
+Pearl & 27.78\enspace12\,[12,\,13] & 29.05\enspace9\,[7,\,11] & 30.17\enspace6\,[3,\,10] & 51.35\enspace12\,[6,\,13] & 50.18\enspace7\,[6,\,10] & 42.06\enspace16\,[12,\,18] \\
+Ridge SigLIP (Spica) & 26.92\enspace13\,[12,\,13] & 27.66\enspace12\,[10,\,12] & 29.32\enspace9\,[5,\,11] & 52.89\enspace3\,[1,\,6] & 50.00\enspace8\,[6,\,11] & 47.21\enspace5\,[3,\,5] \\
+Ridge CLIP (Spica) & 25.59\enspace14\,[14,\,17] & 24.83\enspace13\,[13,\,15] & 26.21\enspace13\,[12,\,13] & 51.05\enspace13\,[7,\,14] & 46.92\enspace20\,[17,\,21] & 42.37\enspace14\,[11,\,17] \\
+RefPAC-S++ (L/14) & 24.84\enspace15\,[14,\,19] & 23.55\enspace15\,[13,\,19] & 23.57\enspace15\,[14,\,19] & 51.54\enspace9\,[5,\,13] & 49.97\enspace9\,[7,\,11] & 43.56\enspace11\,[9,\,12] \\
+RefPAC-S (L/14) & 24.82\enspace16\,[14,\,19] & 23.62\enspace14\,[13,\,18] & 23.11\enspace16\,[14,\,21] & 49.94\enspace16\,[14,\,19] & 47.83\enspace14\,[13,\,18] & 42.42\enspace13\,[12,\,17] \\
+BLEU-1 & 24.80\enspace17\,[14,\,20] & 22.81\enspace17\,[13,\,21] & 20.74\enspace23\,[17,\,26] & 27.87\enspace31\,[30,\,32] & 28.96\enspace32\,[32,\,32] & 23.06\enspace31\,[31,\,31] \\
+RefPAC-S & 24.48\enspace18\,[15,\,20] & 23.34\enspace16\,[14,\,19] & 23.58\enspace14\,[14,\,19] & 49.16\enspace20\,[17,\,20] & 45.25\enspace23\,[23,\,24] & 40.77\enspace20\,[17,\,21] \\
+METEOR & 23.89\enspace19\,[16,\,22] & 22.40\enspace19\,[14,\,21] & 21.86\enspace20\,[15,\,23] & 29.47\enspace30\,[29,\,31] & 34.78\enspace28\,[28,\,28] & 25.10\enspace29\,[29,\,30] \\
+RefPAC-S++ & 23.82\enspace20\,[18,\,22] & 21.55\enspace21\,[18,\,24] & 21.95\enspace19\,[16,\,24] & 50.03\enspace15\,[14,\,19] & 47.49\enspace18\,[14,\,20] & 42.08\enspace15\,[12,\,18] \\
+RefCLIP-S & 23.73\enspace21\,[17,\,22] & 22.45\enspace18\,[15,\,21] & 22.41\enspace17\,[15,\,24] & 47.09\enspace24\,[22,\,24] & 43.60\enspace25\,[25,\,26] & 39.37\enspace21\,[21,\,23] \\
+Text-only SimCSE & 23.24\enspace22\,[19,\,23] & 20.54\enspace22\,[20,\,27] & 21.61\enspace22\,[16,\,25] & 45.62\enspace25\,[24,\,26] & 41.73\enspace27\,[27,\,27] & 39.30\enspace22\,[20,\,24] \\
+CIDEr & 22.34\enspace23\,[21,\,26] & 20.35\enspace23\,[21,\,27] & 22.06\enspace18\,[14,\,23] & 34.17\enspace28\,[28,\,28] & 30.81\enspace30\,[30,\,31] & 28.05\enspace28\,[28,\,28] \\
+PAC-S++ (L/14) & 21.78\enspace24\,[22,\,27] & 20.26\enspace24\,[20,\,27] & 20.00\enspace25\,[19,\,27] & 50.40\enspace14\,[11,\,18] & 50.73\enspace6\,[5,\,8] & 41.44\enspace17\,[14,\,20] \\
+SPICE & 21.59\enspace25\,[23,\,28] & 21.80\enspace20\,[15,\,23] & 21.71\enspace21\,[14,\,25] & 30.22\enspace29\,[29,\,31] & 32.22\enspace29\,[29,\,29] & 19.87\enspace33\,[32,\,33] \\
+ROUGE-L & 21.48\enspace26\,[23,\,29] & 19.93\enspace25\,[21,\,28] & 20.50\enspace24\,[20,\,27] & 26.70\enspace32\,[31,\,32] & 30.36\enspace31\,[30,\,31] & 25.07\enspace30\,[29,\,30] \\
+PAC-S (L/14) & 21.03\enspace27\,[24,\,29] & 19.44\enspace26\,[22,\,28] & 18.61\enspace27\,[24,\,29] & 47.56\enspace22\,[21,\,24] & 47.53\enspace16\,[13,\,21] & 38.63\enspace23\,[21,\,25] \\
+BLEU-4 & 19.94\enspace28\,[26,\,31] & 19.19\enspace27\,[23,\,30] & 19.53\enspace26\,[23,\,29] & 24.42\enspace33\,[33,\,33] & 28.05\enspace33\,[33,\,33] & 20.94\enspace32\,[32,\,33] \\
+CLIP-S & 19.82\enspace29\,[27,\,31] & 17.98\enspace28\,[25,\,30] & 17.51\enspace28\,[26,\,30] & 42.44\enspace27\,[27,\,27] & 43.35\enspace26\,[25,\,26] & 33.10\enspace27\,[27,\,27] \\
+PAC-S & 19.69\enspace30\,[27,\,31] & 17.95\enspace29\,[26,\,30] & 17.40\enspace29\,[26,\,30] & 45.49\enspace26\,[25,\,26] & 45.01\enspace24\,[23,\,24] & 35.05\enspace26\,[26,\,26] \\
+PAC-S++ & 19.62\enspace31\,[27,\,31] & 16.86\enspace30\,[28,\,30] & 16.66\enspace30\,[28,\,30] & 47.47\enspace23\,[21,\,24] & 47.52\enspace17\,[13,\,21] & 38.18\enspace24\,[22,\,25] \\
+Rigel & -- & -- & -- & 53.32\enspace1\,[1,\,3] & 47.60\enspace15\,[13,\,21] & 48.05\enspace3\,[2,\,5] \\
+Rigel +\,ref & -- & -- & -- & 53.01\enspace2\,[1,\,5] & 53.39\enspace1\,[1,\,2] & 49.92\enspace1\,[1,\,1] \\
+\addlinespace
+Rigel$^{\dagger}$ & 27.71 & 29.16 & 31.47 & -- & -- & -- \\
+Rigel +\,ref$^{\dagger}$ & 35.19 & 35.55 & 35.73 & -- & -- & -- \\
+DENEB$^{\dagger}$ & 30.54 & -- & -- & -- & -- & -- \\
+Pearl$^{\dagger}$ & 34.12 & 31.10 & 31.18 & -- & -- & -- \\
+Ridge SigLIP (Spica)$^{\dagger}$ & 29.97 & 29.35 & 30.45 & -- & -- & -- \\
+Ridge CLIP (Spica)$^{\dagger}$ & 28.64 & 26.35 & 27.38 & -- & -- & -- \\
+Polos (official)$^{\dagger}$ & -- & 28.85 & 29.29 & -- & -- & -- \\
+Polos$^{\dagger}$ & -- & 33.28 & 30.54 & -- & -- & -- \\
+Ridge SigLIP (Polaris)$^{\dagger}$ & -- & 33.17 & 32.45 & -- & -- & -- \\
+Ridge CLIP (Polaris)$^{\dagger}$ & -- & 30.51 & 29.15 & -- & -- & -- \\
+\addlinespace
+Polos$^{\ddagger}$ & 30.22 & -- & -- & 48.18 & 46.74 & 38.81 \\
+Ridge SigLIP (Polaris)$^{\ddagger}$ & 31.20 & -- & -- & 51.71 & 48.89 & 45.14 \\
+Ridge CLIP (Polaris)$^{\ddagger}$ & 29.49 & -- & -- & 49.70 & 46.21 & 41.02 \\
+DENEB$^{\ddagger}$ & -- & 29.96 & 28.70 & 49.09 & 47.82 & 41.77 \\
+Pearl$^{\ddagger}$ & -- & -- & -- & 51.45 & 48.40 & 42.18 \\
+Ridge SigLIP (Spica)$^{\ddagger}$ & -- & -- & -- & 53.17 & 49.63 & 46.87 \\
+Ridge CLIP (Spica)$^{\ddagger}$ & -- & -- & -- & 51.32 & 46.45 & 42.06 \\
+\bottomrule
+\end{tabular}

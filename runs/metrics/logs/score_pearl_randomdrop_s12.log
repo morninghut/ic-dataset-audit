@@ -1,0 +1,38 @@
+===== 2026-11-12 22:13:59 attempt 1: score_pearl randomdrop 12
+external/envs/pearl/lib/python3.10/site-packages/pytorch_lightning/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound
+epoch=0-step=16680.ckpt: monitored 0.5527, best so far 0.5527
+epoch=1-step=33361.ckpt: monitored 0.5533, best so far 0.5533
+epoch=2-step=50042.ckpt: monitored 0.5551, best so far 0.5551
+epoch=3-step=66723.ckpt: monitored 0.5531, best so far 0.5551
+checkpoint runs/metrics/pearl/randomdrop_s12/experiments/lightning/version_12-11-2026--15-13-28/epoch=2-step=50042.ckpt
+external/envs/pearl/lib/python3.10/site-packages/pytorch_lightning/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound
+features loaded
+spica_test 15238 86s
+polaris_test 26122 149s
+nebula_test 3298 19s
+flickr8k_expert 16992 95s
+composite 11982 65s
+flickr8k_cf 47830 261s
+pascal50s 40000 224s
+polaris_val 26268 149s
+nebula_valid 3298 19s
+spica_val 8773 50s
+foil_1ref 198960 971s
+foil_4ref 198960 1078s
+external/envs/pearl/lib/python3.10/site-packages/pytorch_lightning/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound
+features loaded
+spica_test 15238 87s
+polaris_test 26122 149s
+nebula_test 3298 19s
+flickr8k_expert 16992 95s
+composite 11982 65s
+flickr8k_cf 47830 261s
+pascal50s 40000 224s
+polaris_val 26268 149s
+nebula_valid 3298 19s
+spica_val 8773 50s
+foil_1ref 198960 966s
+foil_4ref 198960 1079s

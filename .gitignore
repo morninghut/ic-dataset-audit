@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+
+# archives of per-sample scores, unpacked in place (see README.md, section 2)
+/per_sample_scores.tar
+/further_scores.tar
+/runs/probe/models/
+/runs/metrics/pearl/
+/runs/metrics/deneb/
+/runs/metrics/vlm/
+
+# written on your machine
+/feature_cache_v2/
+/expected_results/
+/logs/
+/cleaned/
+/paper/generated/
+/paper/figures/*.pdf
+/paper/figures/*.png

@@ -1,0 +1,29 @@
+\begin{tabular}{lrr}
+\toprule
+Metric & $\tau$ & Metric $-$ human [95\% CI] \\
+\midrule
+\multicolumn{3}{l}{\emph{Polaris test} (19,909 samples; human 31.06)} \\
+\quad Judge InternVL-8B +\,ref & 33.47 & $+$2.40 [$+$1.27, $+$3.54] \\
+\quad Judge Qwen-8B +\,ref & 32.86 & $+$1.80 [$+$0.67, $+$2.96] \\
+\quad Judge Qwen-4B +\,ref & 32.81 & $+$1.75 [$+$0.60, $+$2.92] \\
+\quad Ridge SigLIP (Polaris) & 31.43 & $+$0.37 [$-$0.88, $+$1.64] \\
+\quad Judge Qwen-4B & 30.66 & $-$0.40 [$-$1.72, $+$0.98] \\
+\quad Polos & 30.49 & $-$0.58 [$-$1.88, $+$0.78] \\
+\addlinespace
+\multicolumn{3}{l}{\emph{Spica test} (10,063 samples; human 30.17)} \\
+\quad Judge InternVL-8B +\,ref & 33.90 & $+$3.73 [$+$2.21, $+$5.32] \\
+\quad Judge Qwen-8B +\,ref & 33.21 & $+$3.04 [$+$1.49, $+$4.67] \\
+\quad Judge Qwen-4B +\,ref & 33.14 & $+$2.97 [$+$1.40, $+$4.62] \\
+\quad Judge Qwen-4B & 31.73 & $+$1.56 [$-$0.18, $+$3.38] \\
+\quad Ridge SigLIP (Polaris) & 31.02 & $+$0.85 [$-$1.02, $+$2.71] \\
+\quad DENEB & 30.80 & $+$0.63 [$-$1.18, $+$2.51] \\
+\addlinespace
+\multicolumn{3}{l}{\emph{Flickr8k-Expert} (7,196 samples; human 52.52)} \\
+\quad Rigel & 53.32 & $+$0.79 [$-$0.33, $+$1.98] \\
+\quad Rigel +\,ref & 53.01 & $+$0.49 [$-$0.63, $+$1.67] \\
+\quad Ridge SigLIP (Spica) & 52.89 & $+$0.37 [$-$0.77, $+$1.53] \\
+\quad Judge InternVL-8B +\,ref & 52.71 & $+$0.19 [$-$0.98, $+$1.38] \\
+\quad Judge Qwen-8B +\,ref & 52.26 & $-$0.26 [$-$1.49, $+$0.98] \\
+\quad Judge Qwen-8B & 52.21 & $-$0.31 [$-$1.51, $+$0.90] \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,124 @@
+{
+ "sets": {
+  "composite": {
+   "rows": 11982,
+   "source": [
+    "composite",
+    "test"
+   ],
+   "sha256": "64ec771fc097595e3359fe2742f78ed167a55b277b9a8295ec9e0cc30231cb16"
+  },
+  "flickr8k_cf": {
+   "rows": 47830,
+   "source": [
+    "flickr8k",
+    "cf"
+   ],
+   "sha256": "e5f3a57a137970a4a5781956798184248f5603ebdd8a9cad5857d5c81313e842"
+  },
+  "flickr8k_expert": {
+   "rows": 16992,
+   "source": [
+    "flickr8k",
+    "expert"
+   ],
+   "sha256": "ef9618579248642e1e3f67d3c4084af4ba45c38bf3643d2d2e76692eba7b5e27"
+  },
+  "foil_1ref": {
+   "rows": 198960,
+   "source": null,
+   "sha256": "71017338a4b524fe8bc070729e49088d77755fdb720ccce50b868528ae6a2271"
+  },
+  "foil_4ref": {
+   "rows": 198960,
+   "source": null,
+   "sha256": "71017338a4b524fe8bc070729e49088d77755fdb720ccce50b868528ae6a2271"
+  },
+  "nebula_test": {
+   "rows": 3298,
+   "source": [
+    "nebula",
+    "test"
+   ],
+   "sha256": "40bc744c91a195caeef8fa920c7716ea165343a4a75393ecf56a01bc6eb5ecbc"
+  },
+  "nebula_train": {
+   "rows": 26382,
+   "source": [
+    "nebula",
+    "train"
+   ],
+   "sha256": "20fed1a4dd2941382d3d45c94ec25d8c64f181a5563fddc345e439e878ee6768"
+  },
+  "nebula_valid": {
+   "rows": 3298,
+   "source": [
+    "nebula",
+    "valid"
+   ],
+   "sha256": "8fb6f95fb57bfc9d95d156c6f5245eb6ed2f19f46b7f330a81e6ad9d98d0ccaa"
+  },
+  "pascal50s": {
+   "rows": 40000,
+   "source": null,
+   "sha256": "ea9a2fa4c3760423f3269f4e60e1277085f249de53f04c55316c470b37eac6e9"
+  },
+  "polaris_test": {
+   "rows": 26122,
+   "source": [
+    "polaris",
+    "test"
+   ],
+   "sha256": "4391ec3baa7f36342795377768d7e043ecf1b2edce0b2218ff6d199be317a377"
+  },
+  "polaris_train": {
+   "rows": 78630,
+   "source": [
+    "polaris",
+    "train"
+   ],
+   "sha256": "45a25848223a43978a2d3c5c0f1c3a60bb63b11c02a8a381ecf4d611c01776ab"
+  },
+  "polaris_val": {
+   "rows": 26268,
+   "source": [
+    "polaris",
+    "val"
+   ],
+   "sha256": "3e570abc8d43b2772c4ed715c9705a39e8e4f0db99cf2ce78d79ee189240b2d2"
+  },
+  "spica_test": {
+   "rows": 15238,
+   "source": [
+    "spica",
+    "test"
+   ],
+   "sha256": "d97f6121ab8fe2093a0587af6ff17bd2e1ca0787717487b69b8469d795165a5a"
+  },
+  "spica_train": {
+   "rows": 160576,
+   "source": [
+    "spica",
+    "train"
+   ],
+   "sha256": "3570d6edaade85905838ee86aa01987d8e510241ff70dd66ff557d95fb6ea7d9"
+  },
+  "spica_train_noref": {
+   "rows": 148810,
+   "source": [
+    "spica",
+    "train"
+   ],
+   "sha256": "b2ceca35d1c48706e0a31e6f6ebe319ea31c0ad380027b481ab6ec466661b3c1"
+  },
+  "spica_val": {
+   "rows": 8773,
+   "source": [
+    "spica",
+    "val"
+   ],
+   "sha256": "62d42f95362685bf46270c6f6e4486ae200255bfda5620d04678cf44efc7122e"
+  }
+ },
+ "note": "sha256 of the float32 human scores in row order; ids give the position of each row in the released file"
+}

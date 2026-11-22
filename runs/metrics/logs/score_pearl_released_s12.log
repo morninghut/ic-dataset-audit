@@ -1,0 +1,37 @@
+===== 2026-11-12 06:28:55 attempt 1: score_pearl released 12
+external/envs/pearl/lib/python3.10/site-packages/pytorch_lightning/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound
+epoch=0-step=19336.ckpt: monitored 0.5586, best so far 0.5586
+epoch=1-step=38673.ckpt: monitored 0.5604, best so far 0.5604
+epoch=2-step=58010.ckpt: monitored 0.5593, best so far 0.5604
+checkpoint runs/metrics/pearl/released_s12/experiments/lightning/version_12-11-2026--00-22-07/epoch=1-step=38673.ckpt
+external/envs/pearl/lib/python3.10/site-packages/pytorch_lightning/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound
+features loaded
+spica_test 15238 86s
+polaris_test 26122 148s
+nebula_test 3298 19s
+flickr8k_expert 16992 95s
+composite 11982 65s
+flickr8k_cf 47830 260s
+pascal50s 40000 224s
+polaris_val 26268 148s
+nebula_valid 3298 19s
+spica_val 8773 50s
+foil_1ref 198960 969s
+foil_4ref 198960 1080s
+external/envs/pearl/lib/python3.10/site-packages/pytorch_lightning/utilities/imports.py:22: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import DistributionNotFound
+features loaded
+spica_test 15238 87s
+polaris_test 26122 149s
+nebula_test 3298 19s
+flickr8k_expert 16992 95s
+composite 11982 65s
+flickr8k_cf 47830 261s
+pascal50s 40000 224s
+polaris_val 26268 149s
+nebula_valid 3298 19s
+spica_val 8773 50s
+foil_1ref 198960 966s
+foil_4ref 198960 1080s

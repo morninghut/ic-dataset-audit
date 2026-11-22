@@ -1,0 +1,2246 @@
+{
+ "polaris_test": {
+  "samples": 26122,
+  "lowest": 6197,
+  "above": 19925,
+  "lowest_share": 0.2372329836919072,
+  "lowest_with_single_rating": 0.8880103275778602,
+  "variant": "c",
+  "cross_pairs": 123475225,
+  "within_pairs": 198492850,
+  "weight_detection": 0.4523837378513562,
+  "weight_ranking": 0.5454501760945785,
+  "metrics": [
+   {
+    "metric": "BLEU-1",
+    "ranked": true,
+    "auc": 0.8506958096249673,
+    "auc_low": 0.8408072548102615,
+    "auc_high": 0.8597766629850087,
+    "cross_share": 0.7010664919174945,
+    "tau_all": 45.25935358086434,
+    "tau_above": 24.804350484118874
+   },
+   {
+    "metric": "BLEU-4",
+    "ranked": true,
+    "auc": 0.8907522055537862,
+    "auc_low": 0.8828873457495401,
+    "auc_high": 0.8977888681640148,
+    "cross_share": 0.7647596580629213,
+    "tau_all": 46.228888111025164,
+    "tau_above": 19.93747536112786
+   },
+   {
+    "metric": "ROUGE-L",
+    "ranked": true,
+    "auc": 0.8815274400188378,
+    "auc_low": 0.8733715471057982,
+    "auc_high": 0.8889676109501433,
+    "cross_share": 0.7465564153947756,
+    "tau_all": 46.23811565996992,
+    "tau_above": 21.484554028674026
+   },
+   {
+    "metric": "METEOR",
+    "ranked": true,
+    "auc": 0.9221150153806158,
+    "auc_low": 0.915803708367282,
+    "auc_high": 0.928153052346155,
+    "cross_share": 0.7456319266320137,
+    "tau_all": 51.22043776307014,
+    "tau_above": 23.88640547179485
+   },
+   {
+    "metric": "CIDEr",
+    "ranked": true,
+    "auc": 0.940655289350556,
+    "auc_low": 0.9346338236962399,
+    "auc_high": 0.9464501148482312,
+    "cross_share": 0.7659012526149869,
+    "tau_all": 52.05508836021837,
+    "tau_above": 22.341235761248136
+   },
+   {
+    "metric": "SPICE",
+    "ranked": true,
+    "auc": 0.932839652650967,
+    "auc_low": 0.9273792789789218,
+    "auc_high": 0.9379637676963064,
+    "cross_share": 0.7687954303104936,
+    "tau_all": 50.9393298233954,
+    "tau_above": 21.592083655405805
+   },
+   {
+    "metric": "CLIP-S",
+    "ranked": true,
+    "auc": 0.9584898387510531,
+    "auc_low": 0.9542614736129834,
+    "auc_high": 0.9625232499066225,
+    "cross_share": 0.7932317813577556,
+    "tau_all": 52.295773289880685,
+    "tau_above": 19.824182591871338
+   },
+   {
+    "metric": "RefCLIP-S",
+    "ranked": true,
+    "auc": 0.9621214498698019,
+    "auc_low": 0.958124007703888,
+    "auc_high": 0.966147465906025,
+    "cross_share": 0.7635770206266582,
+    "tau_all": 54.75707706913947,
+    "tau_above": 23.734214177276037
+   },
+   {
+    "metric": "text only (SimCSE)",
+    "ranked": true,
+    "auc": 0.9543865864589435,
+    "auc_low": 0.9496627843820346,
+    "auc_high": 0.9588119345255008,
+    "cross_share": 0.7643279460384377,
+    "tau_all": 53.7876715033727,
+    "tau_above": 23.239979702218744
+   },
+   {
+    "metric": "PAC-S",
+    "ranked": true,
+    "auc": 0.959601065719864,
+    "auc_low": 0.9552906767418246,
+    "auc_high": 0.9638862388931447,
+    "cross_share": 0.7947500154645434,
+    "tau_all": 52.32237659266703,
+    "tau_above": 19.688630524231655
+   },
+   {
+    "metric": "RefPAC-S",
+    "ranked": true,
+    "auc": 0.9625612223018828,
+    "auc_low": 0.9583755163757315,
+    "auc_high": 0.9667038390358299,
+    "cross_share": 0.7581443972236218,
+    "tau_all": 55.20193131976574,
+    "tau_above": 24.47683942345485
+   },
+   {
+    "metric": "PAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9603028016349029,
+    "auc_low": 0.9563619696308003,
+    "auc_high": 0.9643509092580839,
+    "cross_share": 0.7840675076204348,
+    "tau_all": 53.1162176529968,
+    "tau_above": 21.027616758158864
+   },
+   {
+    "metric": "RefPAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9618298529117886,
+    "auc_low": 0.9576784772186342,
+    "auc_high": 0.9655528463715628,
+    "cross_share": 0.7552608459998199,
+    "tau_all": 55.32507509640631,
+    "tau_above": 24.82392098768542
+   },
+   {
+    "metric": "PAC-S++",
+    "ranked": true,
+    "auc": 0.9603953384170792,
+    "auc_low": 0.9560311996020816,
+    "auc_high": 0.9648038350090283,
+    "cross_share": 0.7956230877018076,
+    "tau_all": 52.35528412934094,
+    "tau_above": 19.617211217095477
+   },
+   {
+    "metric": "RefPAC-S++",
+    "ranked": true,
+    "auc": 0.9624203843321606,
+    "auc_low": 0.9581433987506394,
+    "auc_high": 0.9666827020370367,
+    "cross_share": 0.7630475558195946,
+    "tau_all": 54.83051752866164,
+    "tau_above": 23.819270234941044
+   },
+   {
+    "metric": "PAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9607209907898527,
+    "auc_low": 0.956600523967845,
+    "auc_high": 0.9650307005894496,
+    "cross_share": 0.7782009346748449,
+    "tau_all": 53.56526178092523,
+    "tau_above": 21.781503641583583
+   },
+   {
+    "metric": "RefPAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9620924359522325,
+    "auc_low": 0.9580120554570506,
+    "auc_high": 0.9661837482794153,
+    "cross_share": 0.7552437496750397,
+    "tau_all": 55.35778442359959,
+    "tau_above": 24.84033250998228
+   },
+   {
+    "metric": "VLM judge",
+    "ranked": true,
+    "auc": 0.9670700782282438,
+    "auc_low": 0.9635426247711786,
+    "auc_high": 0.9702226306418251,
+    "cross_share": 0.7166287859160402,
+    "tau_all": 58.969137712582345,
+    "tau_above": 30.635531675401324
+   },
+   {
+    "metric": "VLM judge + refs",
+    "ranked": true,
+    "auc": 0.9663729424263046,
+    "auc_low": 0.9629025520750969,
+    "auc_high": 0.9695523665002316,
+    "cross_share": 0.7023829295644648,
+    "tau_all": 60.07535947901573,
+    "tau_above": 32.77925881612719
+   },
+   {
+    "metric": "VLM judge (Qwen 8B)",
+    "ranked": true,
+    "auc": 0.9694164315149051,
+    "auc_low": 0.9659277138152736,
+    "auc_high": 0.9725848566623942,
+    "cross_share": 0.7210044115126251,
+    "tau_all": 58.90570335125878,
+    "tau_above": 30.130032204623465
+   },
+   {
+    "metric": "VLM judge (Qwen 8B) + refs",
+    "ranked": true,
+    "auc": 0.9683560285069333,
+    "auc_low": 0.9650212087810238,
+    "auc_high": 0.971589805289018,
+    "cross_share": 0.703006849945742,
+    "tau_all": 60.277264961937526,
+    "tau_above": 32.82047670399296
+   },
+   {
+    "metric": "VLM judge (InternVL 8B)",
+    "ranked": true,
+    "auc": 0.966679943284169,
+    "auc_low": 0.9630781421911877,
+    "auc_high": 0.9700218190907525,
+    "cross_share": 0.7208506795482554,
+    "tau_all": 58.574798668555175,
+    "tau_above": 29.977284746700168
+   },
+   {
+    "metric": "VLM judge (InternVL 8B) + refs",
+    "ranked": true,
+    "auc": 0.9670251947303599,
+    "auc_low": 0.963473776208736,
+    "auc_high": 0.970396596340838,
+    "cross_share": 0.6985209780299404,
+    "tau_all": 60.49198518238974,
+    "tau_above": 33.434886134589824
+   },
+   {
+    "metric": "Polos (official ckpt)",
+    "ranked": true,
+    "auc": 0.965219549103879,
+    "auc_low": 0.9615655181333038,
+    "auc_high": 0.9690355029724057,
+    "cross_share": 0.7273003581128618,
+    "tau_all": 57.87368483942827,
+    "tau_above": 28.934142515822874
+   },
+   {
+    "metric": "Polos (retrained)",
+    "ranked": true,
+    "auc": 0.967142594799888,
+    "auc_low": 0.9634885412256292,
+    "auc_high": 0.970532108309414,
+    "cross_share": 0.7177382759390287,
+    "tau_all": 58.88712368548864,
+    "tau_above": 30.473142708410407
+   },
+   {
+    "metric": "Polos (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.9660874924504086,
+    "auc_low": 0.9624012382555458,
+    "auc_high": 0.9695177491536037,
+    "cross_share": 0.7189469017931055,
+    "tau_all": 58.655347557547145,
+    "tau_above": 30.223231891655605
+   },
+   {
+    "metric": "Rigel (official ckpt) +dup",
+    "ranked": false,
+    "auc": 0.9722966813787948,
+    "auc_low": 0.9690249774946486,
+    "auc_high": 0.9753116209953124,
+    "cross_share": 0.7386926137875129,
+    "tau_all": 57.847969265979394,
+    "tau_above": 27.713075014155446
+   },
+   {
+    "metric": "Rigel (official ckpt) + refs +dup",
+    "ranked": false,
+    "auc": 0.9732413081247675,
+    "auc_low": 0.9698596491663877,
+    "auc_high": 0.9760788705491751,
+    "cross_share": 0.6904952348641997,
+    "tau_all": 62.00960153396346,
+    "tau_above": 35.18610498276945
+   },
+   {
+    "metric": "DENEB (retrained)",
+    "ranked": true,
+    "auc": 0.9645842165233282,
+    "auc_low": 0.9609390097046148,
+    "auc_high": 0.968165432568784,
+    "cross_share": 0.7214452650242899,
+    "tau_all": 58.26385403471448,
+    "tau_above": 29.754844461516686
+   },
+   {
+    "metric": "DENEB (retrained) +dup",
+    "ranked": false,
+    "auc": 0.9658968388192855,
+    "auc_low": 0.9622992801706317,
+    "auc_high": 0.9694296831829066,
+    "cross_share": 0.7167541419203286,
+    "tau_all": 58.81080729555407,
+    "tau_above": 30.53986843525342
+   },
+   {
+    "metric": "Pearl (retrained)",
+    "ranked": true,
+    "auc": 0.969225629405953,
+    "auc_low": 0.9659779318273294,
+    "auc_high": 0.9723846083606312,
+    "cross_share": 0.7370074133438497,
+    "tau_all": 57.60625237691392,
+    "tau_above": 27.779335704206545
+   },
+   {
+    "metric": "Pearl (retrained) +dup",
+    "ranked": false,
+    "auc": 0.9720602965763644,
+    "auc_low": 0.9688145940751961,
+    "auc_high": 0.9750504720576636,
+    "cross_share": 0.6965058486957932,
+    "tau_all": 61.32189010966258,
+    "tau_above": 34.12119132792864
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours)",
+    "ranked": true,
+    "auc": 0.9676573377371858,
+    "auc_low": 0.9640203622502357,
+    "auc_high": 0.9711048529948227,
+    "cross_share": 0.7117460880576397,
+    "tau_all": 59.44832800037231,
+    "tau_above": 31.416642354458663
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.9675519481742187,
+    "auc_low": 0.9638937009132492,
+    "auc_high": 0.971048760809093,
+    "cross_share": 0.7131412508818982,
+    "tau_all": 59.3186546685307,
+    "tau_above": 31.196387540688708
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours)",
+    "ranked": true,
+    "auc": 0.9689093257372076,
+    "auc_low": 0.9655091109167658,
+    "auc_high": 0.9722424317314791,
+    "cross_share": 0.7429102473908198,
+    "tau_all": 57.10702046051179,
+    "tau_above": 26.916536845878024
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours) +dup",
+    "ranked": false,
+    "auc": 0.9703275576132783,
+    "auc_low": 0.9669939027284549,
+    "auc_high": 0.9735621949882007,
+    "cross_share": 0.7224318886762903,
+    "tau_all": 58.9034182634017,
+    "tau_above": 29.97470946832722
+   }
+  ]
+ },
+ "spica_test": {
+  "samples": 15238,
+  "lowest": 4008,
+  "above": 11230,
+  "lowest_share": 0.26302664391652447,
+  "lowest_with_single_rating": 0.907185628742515,
+  "variant": "c",
+  "cross_pairs": 45009840,
+  "within_pairs": 63050835,
+  "weight_detection": 0.4846090712663358,
+  "weight_ranking": 0.5091841196033823,
+  "metrics": [
+   {
+    "metric": "BLEU-1",
+    "ranked": true,
+    "auc": 0.8553243912886604,
+    "auc_low": 0.8433886670410229,
+    "auc_high": 0.8673367618101021,
+    "cross_share": 0.7478439059321422,
+    "tau_all": 46.05063219604501,
+    "tau_above": 22.80500725936839
+   },
+   {
+    "metric": "BLEU-4",
+    "ranked": true,
+    "auc": 0.8949275091846582,
+    "auc_low": 0.885326387116898,
+    "auc_high": 0.9042640684598053,
+    "cross_share": 0.7966151207927507,
+    "tau_all": 48.0496662561583,
+    "tau_above": 19.192616562883998
+   },
+   {
+    "metric": "ROUGE-L",
+    "ranked": true,
+    "auc": 0.8831132370166168,
+    "auc_low": 0.8722647805575483,
+    "auc_high": 0.8928949139654396,
+    "cross_share": 0.7853213844899547,
+    "tau_all": 47.282591216090104,
+    "tau_above": 19.934952464550943
+   },
+   {
+    "metric": "METEOR",
+    "ranked": true,
+    "auc": 0.9275951769657479,
+    "auc_low": 0.9196899099384889,
+    "auc_high": 0.9345866642605937,
+    "cross_share": 0.7842185813769792,
+    "tau_all": 52.846618661723646,
+    "tau_above": 22.39527492165089
+   },
+   {
+    "metric": "CIDEr",
+    "ranked": true,
+    "auc": 0.9461364781567764,
+    "auc_low": 0.9388441645997055,
+    "auc_high": 0.9527262526077069,
+    "cross_share": 0.8067015803600842,
+    "tau_all": 53.60142823597399,
+    "tau_above": 20.34837884678464
+   },
+   {
+    "metric": "SPICE",
+    "ranked": true,
+    "auc": 0.9367174044608912,
+    "auc_low": 0.9297580643872049,
+    "auc_high": 0.9436648833601988,
+    "cross_share": 0.7922086348956829,
+    "tau_all": 53.429666494232364,
+    "tau_above": 21.803946569568485
+   },
+   {
+    "metric": "CLIP-S",
+    "ranked": true,
+    "auc": 0.9642675246123958,
+    "auc_low": 0.9586013885332665,
+    "auc_high": 0.9693321634861886,
+    "cross_share": 0.8309398975042188,
+    "tau_all": 54.15271419685118,
+    "tau_above": 17.979868303189708
+   },
+   {
+    "metric": "RefCLIP-S",
+    "ranked": true,
+    "auc": 0.967743164605784,
+    "auc_low": 0.9624664592170766,
+    "auc_high": 0.9725640562470536,
+    "cross_share": 0.7986405045600614,
+    "tau_all": 56.764609181862255,
+    "tau_above": 22.44785849293239
+   },
+   {
+    "metric": "text only (SimCSE)",
+    "ranked": true,
+    "auc": 0.9618079291106123,
+    "auc_low": 0.9563560973210085,
+    "auc_high": 0.9672267575068189,
+    "cross_share": 0.8105584218828888,
+    "tau_all": 55.22027915269956,
+    "tau_above": 20.544664344408858
+   },
+   {
+    "metric": "PAC-S",
+    "ranked": true,
+    "auc": 0.9670588920111691,
+    "auc_low": 0.9620469240462238,
+    "auc_high": 0.9719369913704186,
+    "cross_share": 0.8319782876075154,
+    "tau_all": 54.41030835915096,
+    "tau_above": 17.954435007573903
+   },
+   {
+    "metric": "RefPAC-S",
+    "ranked": true,
+    "auc": 0.970528155621082,
+    "auc_low": 0.96582718709269,
+    "auc_high": 0.9748759237382597,
+    "cross_share": 0.7932586712301095,
+    "tau_all": 57.49000187961373,
+    "tau_above": 23.3423606942668
+   },
+   {
+    "metric": "PAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9695137552144153,
+    "auc_low": 0.964789968124529,
+    "auc_high": 0.9739167227157002,
+    "cross_share": 0.8213634638653913,
+    "tau_all": 55.403152166144146,
+    "tau_above": 19.437030364591305
+   },
+   {
+    "metric": "RefPAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9713215821251531,
+    "auc_low": 0.9667470537414202,
+    "auc_high": 0.9755915995345575,
+    "cross_share": 0.7916136771960497,
+    "tau_all": 57.706611384099084,
+    "tau_above": 23.616739181056552
+   },
+   {
+    "metric": "PAC-S++",
+    "ranked": true,
+    "auc": 0.9658005449475048,
+    "auc_low": 0.9605861388770641,
+    "auc_high": 0.9709856033411187,
+    "cross_share": 0.8401922531751853,
+    "tau_all": 53.733218469772545,
+    "tau_above": 16.864203424074777
+   },
+   {
+    "metric": "RefPAC-S++",
+    "ranked": true,
+    "auc": 0.968423215901234,
+    "auc_low": 0.9632867914153217,
+    "auc_high": 0.9734480079115864,
+    "cross_share": 0.8053453593694918,
+    "tau_all": 56.3738617169678,
+    "tau_above": 21.551013417342716
+   },
+   {
+    "metric": "PAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.96938258389721,
+    "auc_low": 0.9646237871892341,
+    "auc_high": 0.9738620399217884,
+    "cross_share": 0.8151738345637561,
+    "tau_all": 55.80823338687014,
+    "tau_above": 20.257548064736703
+   },
+   {
+    "metric": "RefPAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9706193134656778,
+    "auc_low": 0.9659298066545725,
+    "auc_high": 0.9749441577460182,
+    "cross_share": 0.7918085226258468,
+    "tau_all": 57.606449514403835,
+    "tau_above": 23.55370359944674
+   },
+   {
+    "metric": "VLM judge",
+    "ranked": true,
+    "auc": 0.9714982101691542,
+    "auc_low": 0.9672723973811993,
+    "auc_high": 0.9756022308610657,
+    "cross_share": 0.7413313431344688,
+    "tau_all": 61.64377423129337,
+    "tau_above": 31.31541552582382
+   },
+   {
+    "metric": "VLM judge + refs",
+    "ranked": true,
+    "auc": 0.9718572427718027,
+    "auc_low": 0.9677928494960489,
+    "auc_high": 0.9758965374512275,
+    "cross_share": 0.7321699175174518,
+    "tau_all": 62.4626318888571,
+    "tau_above": 32.855250599528944
+   },
+   {
+    "metric": "VLM judge (Qwen 8B)",
+    "ranked": true,
+    "auc": 0.9753481238769123,
+    "auc_low": 0.9716541425383044,
+    "auc_high": 0.9788042797666663,
+    "cross_share": 0.7472930881387416,
+    "tau_all": 61.65131632996385,
+    "tau_above": 30.59740703237602
+   },
+   {
+    "metric": "VLM judge (Qwen 8B) + refs",
+    "ranked": true,
+    "auc": 0.9742481644013842,
+    "auc_low": 0.9703585897814635,
+    "auc_high": 0.9780988539251066,
+    "cross_share": 0.7320950840664057,
+    "tau_all": 62.78554999270361,
+    "tau_above": 33.03433246453508
+   },
+   {
+    "metric": "VLM judge (InternVL 8B)",
+    "ranked": true,
+    "auc": 0.9736097040113895,
+    "auc_low": 0.9695430715213958,
+    "auc_high": 0.9773209038586058,
+    "cross_share": 0.7511586579265745,
+    "tau_all": 61.10974196509059,
+    "tau_above": 29.864698483131647
+   },
+   {
+    "metric": "VLM judge (InternVL 8B) + refs",
+    "ranked": true,
+    "auc": 0.9738699359962177,
+    "auc_low": 0.9700202711036456,
+    "auc_high": 0.9779297704207071,
+    "cross_share": 0.7277257892243523,
+    "tau_all": 63.11214278359682,
+    "tau_above": 33.74773133174058
+   },
+   {
+    "metric": "Polos (official ckpt) +dup",
+    "ranked": false,
+    "auc": 0.9725561899353563,
+    "auc_low": 0.968141503292482,
+    "auc_high": 0.9767828010759806,
+    "cross_share": 0.7571437252091306,
+    "tau_all": 60.49182175087768,
+    "tau_above": 28.851682368206056
+   },
+   {
+    "metric": "Polos (retrained)",
+    "ranked": true,
+    "auc": 0.9727982703337759,
+    "auc_low": 0.9686794998025796,
+    "auc_high": 0.9766487372608901,
+    "cross_share": 0.7564956130393357,
+    "tau_all": 60.57466209546079,
+    "tau_above": 28.96829533959915
+   },
+   {
+    "metric": "Polos (retrained) +dup",
+    "ranked": false,
+    "auc": 0.9757888386183999,
+    "auc_low": 0.9723128363377413,
+    "auc_high": 0.9791463549077772,
+    "cross_share": 0.7312993819299983,
+    "tau_all": 63.05805608456598,
+    "tau_above": 33.27625114745069
+   },
+   {
+    "metric": "Rigel (official ckpt) +dup",
+    "ranked": false,
+    "auc": 0.9776359902634624,
+    "auc_low": 0.9741323329295358,
+    "auc_high": 0.9807429279626226,
+    "cross_share": 0.7571534138436987,
+    "tau_all": 61.14130357542981,
+    "tau_above": 29.160290501606102
+   },
+   {
+    "metric": "Rigel (official ckpt) + refs +dup",
+    "ranked": false,
+    "auc": 0.9789699763429508,
+    "auc_low": 0.9754901241506306,
+    "auc_high": 0.982031896546492,
+    "cross_share": 0.7194889558230585,
+    "tau_all": 64.52168404294423,
+    "tau_above": 35.54518742068945
+   },
+   {
+    "metric": "DENEB (retrained)",
+    "ranked": true,
+    "auc": 0.9745837021415761,
+    "auc_low": 0.9705585393566165,
+    "auc_high": 0.9782122212318429,
+    "cross_share": 0.7477497365208432,
+    "tau_all": 61.51478191332803,
+    "tau_above": 30.474769124420348
+   },
+   {
+    "metric": "DENEB (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.9736249673404749,
+    "auc_low": 0.9694384573990749,
+    "auc_high": 0.9772990324571481,
+    "cross_share": 0.7505632849294818,
+    "tau_all": 61.16055378187695,
+    "tau_above": 29.96158380484647
+   },
+   {
+    "metric": "Pearl (retrained)",
+    "ranked": true,
+    "auc": 0.9769161291545729,
+    "auc_low": 0.9733288220776596,
+    "auc_high": 0.9802335644549459,
+    "cross_share": 0.7575731840345395,
+    "tau_all": 61.01787478892245,
+    "tau_above": 29.054909088954776
+   },
+   {
+    "metric": "Pearl (retrained) +dup",
+    "ranked": false,
+    "auc": 0.9772823305600138,
+    "auc_low": 0.9737888436743485,
+    "auc_high": 0.9805523759363243,
+    "cross_share": 0.745002296176013,
+    "tau_all": 62.09400217113676,
+    "tau_above": 31.098638336495842
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours)",
+    "ranked": true,
+    "auc": 0.9747043979716435,
+    "auc_low": 0.9708955270522608,
+    "auc_high": 0.9782488427822813,
+    "cross_share": 0.7442714970257869,
+    "tau_all": 61.81777976084788,
+    "tau_above": 31.04686039255302
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours) +dup",
+    "ranked": false,
+    "auc": 0.9759416829742119,
+    "auc_low": 0.9722974012691249,
+    "auc_high": 0.9793352791380248,
+    "cross_share": 0.7319660824074956,
+    "tau_all": 63.020859164527806,
+    "tau_above": 33.17410563603459
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours)",
+    "ranked": true,
+    "auc": 0.975913733530268,
+    "auc_low": 0.972167493287965,
+    "auc_high": 0.9793145184118567,
+    "cross_share": 0.7661016693346299,
+    "tau_all": 60.20927029419082,
+    "tau_above": 27.657672873538974
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours) +dup",
+    "ranked": false,
+    "auc": 0.9761355072579685,
+    "auc_low": 0.9724436543585749,
+    "auc_high": 0.979557911195635,
+    "cross_share": 0.7553820147681481,
+    "tau_all": 61.092157731616496,
+    "tau_above": 29.349384559390835
+   }
+  ]
+ },
+ "nebula_test": {
+  "samples": 3298,
+  "lowest": 865,
+  "above": 2433,
+  "lowest_share": 0.2622801697998787,
+  "lowest_with_single_rating": 1.0,
+  "variant": "c",
+  "cross_pairs": 2104545,
+  "within_pairs": 2958528,
+  "weight_detection": 0.39175607780319244,
+  "weight_ranking": 0.5441475985414498,
+  "metrics": [
+   {
+    "metric": "BLEU-1",
+    "ranked": true,
+    "auc": 0.8690146801327603,
+    "auc_low": 0.8574308664096933,
+    "auc_high": 0.8804966747741241,
+    "cross_share": 0.7192539692389194,
+    "tau_all": 40.198247051338576,
+    "tau_above": 20.739774159560056
+   },
+   {
+    "metric": "BLEU-4",
+    "ranked": true,
+    "auc": 0.9189665699711814,
+    "auc_low": 0.9096949483936922,
+    "auc_high": 0.9287757982532443,
+    "cross_share": 0.7554137180651462,
+    "tau_all": 43.455048871223205,
+    "tau_above": 19.53240051632835
+   },
+   {
+    "metric": "ROUGE-L",
+    "ranked": true,
+    "auc": 0.9011097410604192,
+    "auc_low": 0.8908883455595882,
+    "auc_high": 0.911219043852457,
+    "cross_share": 0.7380306034663643,
+    "tau_all": 42.58283550531531,
+    "tau_above": 20.50068722148145
+   },
+   {
+    "metric": "METEOR",
+    "ranked": true,
+    "auc": 0.9453753661717853,
+    "auc_low": 0.9373265421254988,
+    "auc_high": 0.9537860132804946,
+    "cross_share": 0.7458124696144948,
+    "tau_all": 46.78884135359279,
+    "tau_above": 21.856459653865393
+   },
+   {
+    "metric": "CIDEr",
+    "ranked": true,
+    "auc": 0.9603797970582715,
+    "auc_low": 0.9534155616426296,
+    "auc_high": 0.9677231402735935,
+    "cross_share": 0.7503158615343571,
+    "tau_all": 48.07484230083001,
+    "tau_above": 22.059319225020943
+   },
+   {
+    "metric": "SPICE",
+    "ranked": true,
+    "auc": 0.9481814358923187,
+    "auc_low": 0.9401861527110761,
+    "auc_high": 0.9562434725618788,
+    "cross_share": 0.7483059903797864,
+    "tau_all": 46.926739522763135,
+    "tau_above": 21.705837277508245
+   },
+   {
+    "metric": "CLIP-S",
+    "ranked": true,
+    "auc": 0.9766823707737302,
+    "auc_low": 0.9697922889538435,
+    "auc_high": 0.9829704684833022,
+    "cross_share": 0.7967547634950802,
+    "tau_all": 46.8759584475071,
+    "tau_above": 17.508696696623645
+   },
+   {
+    "metric": "RefCLIP-S",
+    "ranked": true,
+    "auc": 0.9796535593204232,
+    "auc_low": 0.9730054841186526,
+    "auc_high": 0.9857151053377186,
+    "cross_share": 0.7549986892546178,
+    "tau_all": 49.77682737150806,
+    "tau_above": 22.41191173765168
+   },
+   {
+    "metric": "text only (SimCSE)",
+    "ranked": true,
+    "auc": 0.9766700165593988,
+    "auc_low": 0.9703054915761399,
+    "auc_high": 0.9822507393507401,
+    "cross_share": 0.7605699421369305,
+    "tau_all": 49.10485301825748,
+    "tau_above": 21.606596870101455
+   },
+   {
+    "metric": "PAC-S",
+    "ranked": true,
+    "auc": 0.981333257307399,
+    "auc_low": 0.9746945468976389,
+    "auc_high": 0.9871269298388438,
+    "cross_share": 0.7993389787509719,
+    "tau_all": 47.180291218533824,
+    "tau_above": 17.398304144158388
+   },
+   {
+    "metric": "RefPAC-S",
+    "ranked": true,
+    "auc": 0.9825962381417361,
+    "auc_low": 0.9763258207966055,
+    "auc_high": 0.9883411396645624,
+    "cross_share": 0.7466049228434994,
+    "tau_all": 50.64526194039362,
+    "tau_above": 23.58415270304582
+   },
+   {
+    "metric": "PAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9823705361491438,
+    "auc_low": 0.9758577747146983,
+    "auc_high": 0.9882167914572157,
+    "cross_share": 0.7887138082923795,
+    "tau_all": 47.91892504043978,
+    "tau_above": 18.606361968068526
+   },
+   {
+    "metric": "RefPAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9831269941958951,
+    "auc_low": 0.977098062840907,
+    "auc_high": 0.9886484785351684,
+    "cross_share": 0.7506136611114188,
+    "tau_all": 50.43018696110174,
+    "tau_above": 23.112478543333722
+   },
+   {
+    "metric": "PAC-S++",
+    "ranked": true,
+    "auc": 0.9830352879125892,
+    "auc_low": 0.9759692858637831,
+    "auc_high": 0.988747775373582,
+    "cross_share": 0.8067454866211619,
+    "tau_all": 46.91244338427463,
+    "tau_above": 16.66099683604446
+   },
+   {
+    "metric": "RefPAC-S++",
+    "ranked": true,
+    "auc": 0.9837247481046972,
+    "auc_low": 0.9770179010977954,
+    "auc_high": 0.9892705551381711,
+    "cross_share": 0.7603670751254431,
+    "tau_all": 49.84490156220136,
+    "tau_above": 21.95080816942138
+   },
+   {
+    "metric": "PAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9847558498392764,
+    "auc_low": 0.9785051874300037,
+    "auc_high": 0.9898801420542015,
+    "cross_share": 0.7772865194542486,
+    "tau_all": 48.86384767319154,
+    "tau_above": 19.999422247427102
+   },
+   {
+    "metric": "RefPAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9848637116336311,
+    "auc_low": 0.9788202455720066,
+    "auc_high": 0.9898255258602905,
+    "cross_share": 0.7476393969311703,
+    "tau_all": 50.812813428069404,
+    "tau_above": 23.56557719762635
+   },
+   {
+    "metric": "VLM judge",
+    "ranked": true,
+    "auc": 0.9814354171566776,
+    "auc_low": 0.9747930678189874,
+    "auc_high": 0.9873410280964844,
+    "cross_share": 0.7014328038101026,
+    "tau_all": 53.77714008137675,
+    "tau_above": 29.506865373007702
+   },
+   {
+    "metric": "VLM judge + refs",
+    "ranked": true,
+    "auc": 0.9830281604812442,
+    "auc_low": 0.9768501929393374,
+    "auc_high": 0.9884398967860457,
+    "cross_share": 0.6900095503333793,
+    "tau_all": 54.848289426485984,
+    "tau_above": 31.246018448551894
+   },
+   {
+    "metric": "VLM judge (Qwen 8B)",
+    "ranked": true,
+    "auc": 0.9829606874645114,
+    "auc_low": 0.9764293620724793,
+    "auc_high": 0.9887427638671844,
+    "cross_share": 0.6944124194721397,
+    "tau_all": 54.49291497351203,
+    "tau_above": 30.602649147586895
+   },
+   {
+    "metric": "VLM judge (Qwen 8B) + refs",
+    "ranked": true,
+    "auc": 0.9828561518047844,
+    "auc_low": 0.9765072656269894,
+    "auc_high": 0.9881776714791661,
+    "cross_share": 0.6821285629179636,
+    "tau_all": 55.462222946654336,
+    "tau_above": 32.39903393688205
+   },
+   {
+    "metric": "VLM judge (InternVL 8B)",
+    "ranked": true,
+    "auc": 0.9820293697687623,
+    "auc_low": 0.9751910696397761,
+    "auc_high": 0.987887032432387,
+    "cross_share": 0.7073301169049354,
+    "tau_all": 53.39456945870006,
+    "tau_above": 28.71827872304518
+   },
+   {
+    "metric": "VLM judge (InternVL 8B) + refs",
+    "ranked": true,
+    "auc": 0.9837033658106622,
+    "auc_low": 0.9776261050847103,
+    "auc_high": 0.9888403745237195,
+    "cross_share": 0.6783787557047996,
+    "tau_all": 55.866647301864234,
+    "tau_above": 33.02026999289973
+   },
+   {
+    "metric": "Polos (official ckpt) +dup",
+    "ranked": false,
+    "auc": 0.9815413783026735,
+    "auc_low": 0.9749688874547106,
+    "auc_high": 0.987753288473236,
+    "cross_share": 0.7029985595620902,
+    "tau_all": 53.669174452166715,
+    "tau_above": 29.2931957471329
+   },
+   {
+    "metric": "Polos (retrained)",
+    "ranked": true,
+    "auc": 0.98038768474896,
+    "auc_low": 0.9735228101785754,
+    "auc_high": 0.9867290953335118,
+    "cross_share": 0.7154232471379461,
+    "tau_all": 52.6107576053988,
+    "tau_above": 27.51422335610388
+   },
+   {
+    "metric": "Polos (retrained) +dup",
+    "ranked": false,
+    "auc": 0.9810039699792592,
+    "auc_low": 0.9742653582520464,
+    "auc_high": 0.9870317981485256,
+    "cross_share": 0.6939912494789726,
+    "tau_all": 54.30507339345021,
+    "tau_above": 30.53919138966218
+   },
+   {
+    "metric": "Rigel (official ckpt) +dup",
+    "ranked": false,
+    "auc": 0.9835767351137656,
+    "auc_low": 0.9771287949182388,
+    "auc_high": 0.9895235019543818,
+    "cross_share": 0.6886977623441907,
+    "tau_all": 55.01517078267013,
+    "tau_above": 31.473713778334584
+   },
+   {
+    "metric": "Rigel (official ckpt) + refs +dup",
+    "ranked": false,
+    "auc": 0.9859746405992744,
+    "auc_low": 0.9804325290523616,
+    "auc_high": 0.9912283363468499,
+    "cross_share": 0.6619678153658554,
+    "tau_all": 57.52047597896188,
+    "tau_above": 35.73253324737997
+   },
+   {
+    "metric": "DENEB (retrained)",
+    "ranked": true,
+    "auc": 0.9829898307393443,
+    "auc_low": 0.9768107797403863,
+    "auc_high": 0.9887975723507364,
+    "cross_share": 0.7005324209992061,
+    "tau_all": 54.02018684552373,
+    "tau_above": 29.729703019973513
+   },
+   {
+    "metric": "DENEB (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.9826907162038984,
+    "auc_low": 0.9763624881617948,
+    "auc_high": 0.9884979430043995,
+    "cross_share": 0.7077658669786976,
+    "tau_all": 53.43557778303622,
+    "tau_above": 28.698414677347994
+   },
+   {
+    "metric": "Pearl (retrained)",
+    "ranked": true,
+    "auc": 0.9828683476317526,
+    "auc_low": 0.9760694819826471,
+    "auc_high": 0.9888675141632414,
+    "cross_share": 0.6974321962997913,
+    "tau_all": 54.24911120897634,
+    "tau_above": 30.167897938487595
+   },
+   {
+    "metric": "Pearl (retrained) +dup",
+    "ranked": false,
+    "auc": 0.9842830635600569,
+    "auc_low": 0.9778451869928717,
+    "auc_high": 0.9900235515459289,
+    "cross_share": 0.6910519808002559,
+    "tau_all": 54.90888048218921,
+    "tau_above": 31.176676736792654
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours)",
+    "ranked": true,
+    "auc": 0.983646346359902,
+    "auc_low": 0.9777177128565436,
+    "auc_high": 0.9889261638936684,
+    "cross_share": 0.6929273255675426,
+    "tau_all": 54.68723449132645,
+    "tau_above": 30.861029980797326
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours) +dup",
+    "ranked": false,
+    "auc": 0.9836468215219917,
+    "auc_low": 0.9775831842801264,
+    "auc_high": 0.9889828768378767,
+    "cross_share": 0.6821550425937878,
+    "tau_all": 55.55088506595217,
+    "tau_above": 32.44812390055966
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours)",
+    "ranked": true,
+    "auc": 0.9834786141422492,
+    "auc_low": 0.977252237113936,
+    "auc_high": 0.9890388931278843,
+    "cross_share": 0.7036480343891139,
+    "tau_all": 53.835348447331896,
+    "tau_above": 29.31963933035436
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours) +dup",
+    "ranked": false,
+    "auc": 0.9836734305990131,
+    "auc_low": 0.9776343014153581,
+    "auc_high": 0.9891109818178788,
+    "cross_share": 0.6957944564065758,
+    "tau_all": 54.464936983735704,
+    "tau_above": 30.448605867837582
+   }
+  ]
+ },
+ "flickr8k_expert": {
+  "samples": 16992,
+  "lowest": 9796,
+  "above": 7196,
+  "lowest_share": 0.5765065913370998,
+  "lowest_with_single_rating": 0.0,
+  "variant": "c",
+  "cross_pairs": 70492016,
+  "within_pairs": 25887610,
+  "weight_detection": 0.6510579772852746,
+  "weight_ranking": 0.15941925971637527,
+  "metrics": [
+   {
+    "metric": "BLEU-1",
+    "ranked": true,
+    "auc": 0.7143052909708243,
+    "auc_low": 0.7017755476190358,
+    "auc_high": 0.7267297334443128,
+    "cross_share": 0.862634644157068,
+    "tau_all": 32.348612522358295,
+    "tau_above": 27.87353722545507
+   },
+   {
+    "metric": "BLEU-4",
+    "ranked": true,
+    "auc": 0.7063591144846815,
+    "auc_low": 0.6932689078681177,
+    "auc_high": 0.7197455060592781,
+    "cross_share": 0.873443709653087,
+    "tau_all": 30.76368773075,
+    "tau_above": 24.42200649734072
+   },
+   {
+    "metric": "ROUGE-L",
+    "ranked": true,
+    "auc": 0.7154796154503511,
+    "auc_low": 0.7025232463744236,
+    "auc_high": 0.7281644513891299,
+    "cross_share": 0.8682960735815773,
+    "tau_all": 32.313798679900174,
+    "tau_above": 26.695984984555377
+   },
+   {
+    "metric": "METEOR",
+    "ranked": true,
+    "auc": 0.7851031810467727,
+    "auc_low": 0.7738567416986589,
+    "auc_high": 0.7966261458667748,
+    "cross_share": 0.8876641916671125,
+    "tau_all": 41.82182904580184,
+    "tau_above": 29.47002125200184
+   },
+   {
+    "metric": "CIDEr",
+    "ranked": true,
+    "auc": 0.7952346262873231,
+    "auc_low": 0.7836109549410526,
+    "auc_high": 0.8075474602471806,
+    "cross_share": 0.8758767949391971,
+    "tau_all": 43.89084394650324,
+    "tau_above": 34.173237494364884
+   },
+   {
+    "metric": "SPICE",
+    "ranked": true,
+    "auc": 0.80774495795382,
+    "auc_low": 0.7968996087275573,
+    "auc_high": 0.8181151660646354,
+    "cross_share": 0.8926811732546028,
+    "tau_all": 44.88944448434358,
+    "tau_above": 30.218949227861447
+   },
+   {
+    "metric": "CLIP-S",
+    "ranked": true,
+    "auc": 0.843114644359157,
+    "auc_low": 0.8333119183048566,
+    "auc_high": 0.8533722519956053,
+    "cross_share": 0.8684885223094505,
+    "tau_all": 51.4428275319991,
+    "tau_above": 42.43729570285018
+   },
+   {
+    "metric": "RefCLIP-S",
+    "ranked": true,
+    "auc": 0.8494421268927818,
+    "auc_low": 0.8394895775783715,
+    "auc_high": 0.8593527426568388,
+    "cross_share": 0.8583787511456998,
+    "tau_all": 53.00855455925938,
+    "tau_above": 47.09053165846878
+   },
+   {
+    "metric": "text only (SimCSE)",
+    "ranked": true,
+    "auc": 0.8270407814694929,
+    "auc_low": 0.8159486442595477,
+    "auc_high": 0.8375774195125064,
+    "cross_share": 0.8541250039966894,
+    "tau_all": 49.85745849307765,
+    "tau_above": 45.62156775381049
+   },
+   {
+    "metric": "PAC-S",
+    "ranked": true,
+    "auc": 0.8612568691467131,
+    "auc_low": 0.8515928512292461,
+    "auc_high": 0.8714070034021812,
+    "cross_share": 0.8664232494359649,
+    "tau_all": 54.29197950543988,
+    "tau_above": 45.49102923278049
+   },
+   {
+    "metric": "RefPAC-S",
+    "ranked": true,
+    "auc": 0.8688278329279162,
+    "auc_low": 0.8596877328100989,
+    "auc_high": 0.8785391892293306,
+    "cross_share": 0.8597041645399534,
+    "tau_all": 55.863007945543295,
+    "tau_above": 49.16186027318618
+   },
+   {
+    "metric": "PAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8696342008433976,
+    "auc_low": 0.8607513681584128,
+    "auc_high": 0.878635912490675,
+    "cross_share": 0.8639125088432363,
+    "tau_all": 55.71242288383854,
+    "tau_above": 47.55864423166351
+   },
+   {
+    "metric": "RefPAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8756685012384948,
+    "auc_low": 0.8670195648571162,
+    "auc_high": 0.8843964419419312,
+    "cross_share": 0.8600344801285724,
+    "tau_all": 56.87724857486201,
+    "tau_above": 49.936586581823455
+   },
+   {
+    "metric": "PAC-S++",
+    "ranked": true,
+    "auc": 0.8603324665874218,
+    "auc_low": 0.8512589176949749,
+    "auc_high": 0.8701286657840395,
+    "cross_share": 0.8611120843609456,
+    "tau_all": 54.48705949138356,
+    "tau_above": 47.469760777480914
+   },
+   {
+    "metric": "RefPAC-S++",
+    "ranked": true,
+    "auc": 0.8670130529392152,
+    "auc_low": 0.8580689027931451,
+    "auc_high": 0.8766142091021747,
+    "cross_share": 0.8569852640314105,
+    "tau_all": 55.76450049090713,
+    "tau_above": 50.02623477436819
+   },
+   {
+    "metric": "PAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8790975704255642,
+    "auc_low": 0.8704781604720697,
+    "auc_high": 0.8878251437033703,
+    "cross_share": 0.8600216050106322,
+    "tau_all": 57.39727838394908,
+    "tau_above": 50.39779333586908
+   },
+   {
+    "metric": "RefPAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8816121743489362,
+    "auc_low": 0.8731424461728474,
+    "auc_high": 0.890298892024202,
+    "cross_share": 0.8581128466748932,
+    "tau_all": 57.90652157272341,
+    "tau_above": 51.53826155967695
+   },
+   {
+    "metric": "VLM judge",
+    "ranked": true,
+    "auc": 0.8618866000370878,
+    "auc_low": 0.8529849326973333,
+    "auc_high": 0.8710297256978436,
+    "cross_share": 0.8519676530961127,
+    "tau_all": 55.3094139127397,
+    "tau_above": 51.35880295735912
+   },
+   {
+    "metric": "VLM judge + refs",
+    "ranked": true,
+    "auc": 0.862140075551251,
+    "auc_low": 0.852459592173125,
+    "auc_high": 0.8710627565123402,
+    "cross_share": 0.8512950118392874,
+    "tau_all": 55.39188690250306,
+    "tau_above": 51.66910134127385
+   },
+   {
+    "metric": "VLM judge (Qwen 8B)",
+    "ranked": true,
+    "auc": 0.8464874944135518,
+    "auc_low": 0.8365072287574199,
+    "auc_high": 0.8560478684488059,
+    "cross_share": 0.8442425272992475,
+    "tau_all": 53.44043683494053,
+    "tau_above": 52.21293459926629
+   },
+   {
+    "metric": "VLM judge (Qwen 8B) + refs",
+    "ranked": true,
+    "auc": 0.8488565712179377,
+    "auc_low": 0.8380585647330637,
+    "auc_high": 0.8588382591140513,
+    "cross_share": 0.8450106635696648,
+    "tau_all": 53.75692009858337,
+    "tau_above": 52.263129244491026
+   },
+   {
+    "metric": "VLM judge (InternVL 8B)",
+    "ranked": true,
+    "auc": 0.8659318241089885,
+    "auc_low": 0.8570074818153035,
+    "auc_high": 0.8755231597519701,
+    "cross_share": 0.8527054120306297,
+    "tau_all": 55.879282544098885,
+    "tau_above": 51.629369707276695
+   },
+   {
+    "metric": "VLM judge (InternVL 8B) + refs",
+    "ranked": true,
+    "auc": 0.8611816265830728,
+    "auc_low": 0.8508924369960975,
+    "auc_high": 0.8705597946263002,
+    "cross_share": 0.8484088556624981,
+    "tau_all": 55.43322129804004,
+    "tau_above": 52.71123116387617
+   },
+   {
+    "metric": "Polos (official ckpt)",
+    "ranked": true,
+    "auc": 0.8729631735883394,
+    "auc_low": 0.8635226025314905,
+    "auc_high": 0.881983091719671,
+    "cross_share": 0.8603784965901301,
+    "tau_all": 56.44507629157933,
+    "tau_above": 49.43534693321378
+   },
+   {
+    "metric": "Polos (retrained)",
+    "ranked": true,
+    "auc": 0.8610322905220926,
+    "auc_low": 0.851013591355319,
+    "auc_high": 0.870304469628432,
+    "cross_share": 0.8599678161195304,
+    "tau_all": 54.66552315006922,
+    "tau_above": 48.017614705347086
+   },
+   {
+    "metric": "Polos (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8625934460435917,
+    "auc_low": 0.8526701138675494,
+    "auc_high": 0.872162796946011,
+    "cross_share": 0.860078957510642,
+    "tau_all": 54.89481017912643,
+    "tau_above": 48.1807473023275
+   },
+   {
+    "metric": "Rigel (official ckpt)",
+    "ranked": true,
+    "auc": 0.8945701524552795,
+    "auc_low": 0.887260332560635,
+    "auc_high": 0.9024294110483345,
+    "cross_share": 0.8580500380498018,
+    "tau_all": 59.87717125181615,
+    "tau_above": 53.315780013045355
+   },
+   {
+    "metric": "Rigel (official ckpt) + refs",
+    "ranked": true,
+    "auc": 0.8882645021813534,
+    "auc_low": 0.8806435913068906,
+    "auc_high": 0.8963364978891591,
+    "cross_share": 0.8567829500316675,
+    "tau_all": 59.00740705274843,
+    "tau_above": 53.01032497209091
+   },
+   {
+    "metric": "DENEB (retrained)",
+    "ranked": true,
+    "auc": 0.8716249298360257,
+    "auc_low": 0.862722789744328,
+    "auc_high": 0.8805026122306325,
+    "cross_share": 0.85883154288525,
+    "tau_all": 56.3438577892372,
+    "tau_above": 49.89348700918089
+   },
+   {
+    "metric": "DENEB (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.870470550877705,
+    "auc_low": 0.8615926332412875,
+    "auc_high": 0.8793314625170231,
+    "cross_share": 0.8604040745495324,
+    "tau_all": 56.06621060723922,
+    "tau_above": 49.09475255075005
+   },
+   {
+    "metric": "Pearl (retrained)",
+    "ranked": true,
+    "auc": 0.8862480255920047,
+    "auc_low": 0.8778185745822659,
+    "auc_high": 0.8944950635777487,
+    "cross_share": 0.8600156281451846,
+    "tau_all": 58.47997897118554,
+    "tau_above": 51.348923155690535
+   },
+   {
+    "metric": "Pearl (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8815388681748014,
+    "auc_low": 0.8728463404345377,
+    "auc_high": 0.8902470117199088,
+    "cross_share": 0.8582598978189405,
+    "tau_all": 57.88352569395925,
+    "tau_above": 51.45388928936804
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours)",
+    "ranked": true,
+    "auc": 0.8829631996905862,
+    "auc_low": 0.874129327541657,
+    "auc_high": 0.8908690956982142,
+    "cross_share": 0.8585970125865353,
+    "tau_all": 58.07875930388718,
+    "tau_above": 51.515168778528995
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.884604917527114,
+    "auc_low": 0.8757826937122244,
+    "auc_high": 0.8926936172966756,
+    "cross_share": 0.8586489865989344,
+    "tau_all": 58.32420548261402,
+    "tau_above": 51.71386170934937
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours)",
+    "ranked": true,
+    "auc": 0.8841427162474683,
+    "auc_low": 0.8755034523597056,
+    "auc_high": 0.8921746756691779,
+    "cross_share": 0.855742916560419,
+    "tau_all": 58.451942747992334,
+    "tau_above": 52.89264795987889
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8872755603982159,
+    "auc_low": 0.8787588429156677,
+    "auc_high": 0.8952963410525191,
+    "cross_share": 0.8561063842481118,
+    "tau_all": 58.90362404581958,
+    "tau_above": 53.167073162441866
+   }
+  ]
+ },
+ "composite": {
+  "samples": 11982,
+  "lowest": 3386,
+  "above": 8596,
+  "lowest_share": 0.28259055249540976,
+  "lowest_with_single_rating": 1.0,
+  "variant": "c",
+  "cross_pairs": 29106056,
+  "within_pairs": 36941310,
+  "weight_detection": 0.5068328303393721,
+  "weight_ranking": 0.4825090456582888,
+  "metrics": [
+   {
+    "metric": "BLEU-1",
+    "ranked": true,
+    "auc": 0.6710130359125263,
+    "auc_low": 0.66098488478745,
+    "auc_high": 0.680303832852881,
+    "cross_share": 0.5537158364476858,
+    "tau_all": 31.306679459460707,
+    "tau_above": 28.956297051600828
+   },
+   {
+    "metric": "BLEU-4",
+    "ranked": true,
+    "auc": 0.6687150433572999,
+    "auc_low": 0.6587032388766078,
+    "auc_high": 0.6783577898082056,
+    "cross_share": 0.5582085756900294,
+    "tau_all": 30.63740926584892,
+    "tau_above": 28.052001923115373
+   },
+   {
+    "metric": "ROUGE-L",
+    "ranked": true,
+    "auc": 0.6762894979656467,
+    "auc_low": 0.6667299341283901,
+    "auc_high": 0.6851000144600006,
+    "cross_share": 0.549528956850809,
+    "tau_all": 32.51850665889225,
+    "tau_above": 30.359318126979172
+   },
+   {
+    "metric": "METEOR",
+    "ranked": true,
+    "auc": 0.718982966981167,
+    "auc_low": 0.7103545526843513,
+    "auc_high": 0.7275881243290807,
+    "cross_share": 0.5694798858061455,
+    "tau_all": 38.978639884380065,
+    "tau_above": 34.77880600404068
+   },
+   {
+    "metric": "CIDEr",
+    "ranked": true,
+    "auc": 0.7255619758307343,
+    "auc_low": 0.7160229999101957,
+    "auc_high": 0.7341302154374609,
+    "cross_share": 0.6059943809169012,
+    "tau_all": 37.730453689770734,
+    "tau_above": 30.80980739758476
+   },
+   {
+    "metric": "SPICE",
+    "ranked": true,
+    "auc": 0.7451893688378803,
+    "auc_low": 0.7361093930884697,
+    "auc_high": 0.7535895786071666,
+    "cross_share": 0.6151800746526427,
+    "tau_all": 40.40118557071127,
+    "tau_above": 32.22153316121725
+   },
+   {
+    "metric": "CLIP-S",
+    "ranked": true,
+    "auc": 0.824639226283355,
+    "auc_low": 0.8171679182751944,
+    "auc_high": 0.8322994593964935,
+    "cross_share": 0.6113808724090188,
+    "tau_all": 53.82498057161968,
+    "tau_above": 43.35134684119061
+   },
+   {
+    "metric": "RefCLIP-S",
+    "ranked": true,
+    "auc": 0.839059867815825,
+    "auc_low": 0.8320286410264898,
+    "auc_high": 0.8462834227056709,
+    "cross_share": 0.6203018962753333,
+    "tau_all": 55.40743095949215,
+    "tau_above": 43.60145505432382
+   },
+   {
+    "metric": "text only (SimCSE)",
+    "ranked": true,
+    "auc": 0.8450664184800579,
+    "auc_low": 0.8380421656370913,
+    "auc_high": 0.8515560038103108,
+    "cross_share": 0.6346514825841844,
+    "tau_all": 55.114025361193185,
+    "tau_above": 41.731502519415386
+   },
+   {
+    "metric": "PAC-S",
+    "ranked": true,
+    "auc": 0.8354201441789296,
+    "auc_low": 0.8281741077679716,
+    "auc_high": 0.842586463751815,
+    "cross_share": 0.610210424694316,
+    "tau_all": 55.71912053525121,
+    "tau_above": 45.01207288292562
+   },
+   {
+    "metric": "RefPAC-S",
+    "ranked": true,
+    "auc": 0.8500931558710668,
+    "auc_low": 0.8430478820991097,
+    "auc_high": 0.8569375414207014,
+    "cross_share": 0.6191252041088843,
+    "tau_all": 57.31916707476504,
+    "tau_above": 45.245630639867485
+   },
+   {
+    "metric": "PAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8434797899103884,
+    "auc_low": 0.8365357365308358,
+    "auc_high": 0.8502818863071054,
+    "cross_share": 0.602895924196316,
+    "tau_all": 57.75021097272125,
+    "tau_above": 47.52831964943348
+   },
+   {
+    "metric": "RefPAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8505389050306231,
+    "auc_low": 0.8437349463590129,
+    "auc_high": 0.857191954171158,
+    "cross_share": 0.6062342247893868,
+    "tau_all": 58.61253558967506,
+    "tau_above": 47.83249292671901
+   },
+   {
+    "metric": "PAC-S++",
+    "ranked": true,
+    "auc": 0.8488715028927313,
+    "auc_low": 0.8420582683709453,
+    "auc_high": 0.8555899851286795,
+    "cross_share": 0.6066760529442935,
+    "tau_all": 58.29125127907741,
+    "tau_above": 47.51692271514384
+   },
+   {
+    "metric": "RefPAC-S++",
+    "ranked": true,
+    "auc": 0.8562301604861888,
+    "auc_low": 0.8498028832076007,
+    "auc_high": 0.8623304501032562,
+    "cross_share": 0.6117709886712867,
+    "tau_all": 59.02507436111046,
+    "tau_above": 47.49184801614309
+   },
+   {
+    "metric": "PAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8699711324681022,
+    "auc_low": 0.8632362675065403,
+    "auc_high": 0.8764779550640565,
+    "cross_share": 0.6050766447331732,
+    "tau_all": 61.98008726493178,
+    "tau_above": 50.72937853217447
+   },
+   {
+    "metric": "RefPAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8697801584659908,
+    "auc_low": 0.8634368098178568,
+    "auc_high": 0.8760286118820165,
+    "cross_share": 0.6085576172665988,
+    "tau_all": 61.593748562531104,
+    "tau_above": 49.96881180933153
+   },
+   {
+    "metric": "VLM judge",
+    "ranked": true,
+    "auc": 0.8771025349501148,
+    "auc_low": 0.8709342239775314,
+    "auc_high": 0.8829516279773711,
+    "cross_share": 0.6166147435740783,
+    "tau_all": 61.992661417430774,
+    "tau_above": 49.25725767818825
+   },
+   {
+    "metric": "VLM judge + refs",
+    "ranked": true,
+    "auc": 0.890138224155138,
+    "auc_low": 0.8840308072216816,
+    "auc_high": 0.895882067968752,
+    "cross_share": 0.6127110709305702,
+    "tau_all": 64.54424271192299,
+    "tau_above": 51.80684354506585
+   },
+   {
+    "metric": "VLM judge (Qwen 8B)",
+    "ranked": true,
+    "auc": 0.8930918191045877,
+    "auc_low": 0.887279872866678,
+    "auc_high": 0.8987112893995799,
+    "cross_share": 0.6153020876952972,
+    "tau_all": 64.75903243113711,
+    "tau_above": 51.63149748859639
+   },
+   {
+    "metric": "VLM judge (Qwen 8B) + refs",
+    "ranked": true,
+    "auc": 0.8957554743933702,
+    "auc_low": 0.8901086214779644,
+    "auc_high": 0.901214935476291,
+    "cross_share": 0.6113644424399791,
+    "tau_all": 65.61777338850874,
+    "tau_above": 52.8516515413686
+   },
+   {
+    "metric": "VLM judge (InternVL 8B)",
+    "ranked": true,
+    "auc": 0.8800644958561201,
+    "auc_low": 0.8737162664084033,
+    "auc_high": 0.8860615917646597,
+    "cross_share": 0.616590406499701,
+    "tau_all": 62.482050358127736,
+    "tau_above": 49.64926097124544
+   },
+   {
+    "metric": "VLM judge (InternVL 8B) + refs",
+    "ranked": true,
+    "auc": 0.8892625988213587,
+    "auc_low": 0.8829005144022742,
+    "auc_high": 0.894747702046079,
+    "cross_share": 0.6101090532536253,
+    "tau_all": 64.67403283192189,
+    "tau_above": 52.25978687371987
+   },
+   {
+    "metric": "Polos (official ckpt)",
+    "ranked": true,
+    "auc": 0.8540337962656294,
+    "auc_low": 0.8472557400251051,
+    "auc_high": 0.8609115659208169,
+    "cross_share": 0.6173711586017749,
+    "tau_all": 58.129035831051425,
+    "tau_above": 46.09622520399898
+   },
+   {
+    "metric": "Polos (retrained)",
+    "ranked": true,
+    "auc": 0.854534156053297,
+    "auc_low": 0.847838360686854,
+    "auc_high": 0.8613061278886057,
+    "cross_share": 0.6111348088189191,
+    "tau_all": 58.8052086614872,
+    "tau_above": 47.392476709726
+   },
+   {
+    "metric": "Polos (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8500663057887334,
+    "auc_low": 0.8435665527550973,
+    "auc_high": 0.8572767450114013,
+    "cross_share": 0.6114128239151323,
+    "tau_all": 58.03774131959637,
+    "tau_above": 46.74051649116182
+   },
+   {
+    "metric": "Rigel (official ckpt)",
+    "ranked": true,
+    "auc": 0.9055874145229432,
+    "auc_low": 0.8998128000488748,
+    "auc_high": 0.9111115734055889,
+    "cross_share": 0.6415837557007232,
+    "tau_all": 64.08049313161864,
+    "tau_above": 47.60012250080352
+   },
+   {
+    "metric": "Rigel (official ckpt) + refs",
+    "ranked": true,
+    "auc": 0.8997779706051552,
+    "auc_low": 0.8940199139303988,
+    "auc_high": 0.9053208360652538,
+    "cross_share": 0.6113807263612607,
+    "tau_all": 66.28295319516302,
+    "tau_above": 53.3851818056425
+   },
+   {
+    "metric": "DENEB (retrained)",
+    "ranked": true,
+    "auc": 0.8600095457797511,
+    "auc_low": 0.8535432616371847,
+    "auc_high": 0.8664468392342184,
+    "cross_share": 0.6124909020568001,
+    "tau_all": 59.58077145206487,
+    "tau_above": 47.84954863015562
+   },
+   {
+    "metric": "DENEB (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8558516023835955,
+    "auc_low": 0.8491501244212806,
+    "auc_high": 0.8624496658783131,
+    "cross_share": 0.6098383517165203,
+    "tau_all": 59.147133551084245,
+    "tau_above": 47.82434401043466
+   },
+   {
+    "metric": "Pearl (retrained)",
+    "ranked": true,
+    "auc": 0.8756347132706678,
+    "auc_low": 0.8698530960784163,
+    "auc_high": 0.8818770158992545,
+    "cross_share": 0.6112813398910539,
+    "tau_all": 62.29027639365166,
+    "tau_above": 50.18242793869061
+   },
+   {
+    "metric": "Pearl (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8732022756134783,
+    "auc_low": 0.86716900521993,
+    "auc_high": 0.8793980039398943,
+    "cross_share": 0.6183130861365661,
+    "tau_all": 61.183287779645134,
+    "tau_above": 48.39920590531056
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours)",
+    "ranked": true,
+    "auc": 0.85181872459807,
+    "auc_low": 0.8451055165572454,
+    "auc_high": 0.8583481686773653,
+    "cross_share": 0.6005168052456267,
+    "tau_all": 59.38660780075694,
+    "tau_above": 49.167890267227435
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8518777329364033,
+    "auc_low": 0.845021248845487,
+    "auc_high": 0.8583115764062373,
+    "cross_share": 0.6019402748227991,
+    "tau_all": 59.25610721763388,
+    "tau_above": 48.88503120587433
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours)",
+    "ranked": true,
+    "auc": 0.8746115413232215,
+    "auc_low": 0.868098044343172,
+    "auc_high": 0.8807807955631602,
+    "cross_share": 0.6114994347530612,
+    "tau_all": 62.09831668718233,
+    "tau_above": 49.999541668570366
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8770015078648924,
+    "auc_low": 0.8705763881531188,
+    "auc_high": 0.8831620487608542,
+    "cross_share": 0.6147471156313339,
+    "tau_all": 62.16433925912516,
+    "tau_above": 49.634283999332204
+   }
+  ]
+ },
+ "flickr8k_cf": {
+  "samples": 47830,
+  "lowest": 41970,
+  "above": 5860,
+  "lowest_share": 0.8774827514112482,
+  "lowest_with_single_rating": 1.0,
+  "variant": "b",
+  "cross_pairs": 245944200,
+  "within_pairs": 17166870,
+  "weight_detection": 0.23456023066253195,
+  "weight_ranking": 0.014886422679429433,
+  "metrics": [
+   {
+    "metric": "BLEU-1",
+    "ranked": true,
+    "auc": 0.6916145227250734,
+    "auc_low": 0.6815869429283706,
+    "auc_high": 0.7010010886694881,
+    "cross_share": 0.967924990213482,
+    "tau_all": 18.107381605250914,
+    "tau_above": 23.056422690756428
+   },
+   {
+    "metric": "BLEU-4",
+    "ranked": true,
+    "auc": 0.6798185543712761,
+    "auc_low": 0.6709779640364979,
+    "auc_high": 0.6877285735520884,
+    "cross_share": 0.9687212698803779,
+    "tau_all": 16.876821728170462,
+    "tau_above": 20.94058365887046
+   },
+   {
+    "metric": "ROUGE-L",
+    "ranked": true,
+    "auc": 0.7120576313651633,
+    "auc_low": 0.7030123297896143,
+    "auc_high": 0.7210655239140362,
+    "cross_share": 0.9682691132445479,
+    "tau_all": 19.903600004768123,
+    "tau_above": 25.065855833047095
+   },
+   {
+    "metric": "METEOR",
+    "ranked": true,
+    "auc": 0.7383857029358692,
+    "auc_low": 0.7294853739374079,
+    "auc_high": 0.7473316552618899,
+    "cross_share": 0.971602875971695,
+    "tau_all": 22.26870518071021,
+    "tau_above": 25.095484170067166
+   },
+   {
+    "metric": "CIDEr",
+    "ranked": true,
+    "auc": 0.763448851406132,
+    "auc_low": 0.7543180514799509,
+    "auc_high": 0.7712302532508398,
+    "cross_share": 0.9712833736116486,
+    "tau_all": 24.61937441549073,
+    "tau_above": 28.054731495871067
+   },
+   {
+    "metric": "SPICE",
+    "ranked": true,
+    "auc": 0.7509796226135848,
+    "auc_low": 0.7422801218324616,
+    "auc_high": 0.7593579396289962,
+    "cross_share": 0.9787096928247243,
+    "tau_all": 24.476568198571258,
+    "tau_above": 19.866282404030965
+   },
+   {
+    "metric": "CLIP-S",
+    "ranked": true,
+    "auc": 0.8691538629494007,
+    "auc_low": 0.8617830885078369,
+    "auc_high": 0.8754148855220827,
+    "cross_share": 0.9757131326007031,
+    "tau_all": 34.33730159189953,
+    "tau_above": 33.095798487875975
+   },
+   {
+    "metric": "RefCLIP-S",
+    "ranked": true,
+    "auc": 0.8901099436376219,
+    "auc_low": 0.8838529942858889,
+    "auc_high": 0.8961901582397513,
+    "cross_share": 0.9727436291179825,
+    "tau_all": 36.39732960933271,
+    "tau_above": 39.37066613290554
+   },
+   {
+    "metric": "text only (SimCSE)",
+    "ranked": true,
+    "auc": 0.8712303908772803,
+    "auc_low": 0.8651104287652451,
+    "auc_high": 0.8775315967757262,
+    "cross_share": 0.9714442386893617,
+    "tau_all": 34.68219432933032,
+    "tau_above": 39.3038978956854
+   },
+   {
+    "metric": "PAC-S",
+    "ranked": true,
+    "auc": 0.8873420109114181,
+    "auc_low": 0.881020099858414,
+    "auc_high": 0.8935269842368476,
+    "cross_share": 0.9754915538584938,
+    "tau_all": 36.03727866939437,
+    "tau_above": 35.05120572188649
+   },
+   {
+    "metric": "RefPAC-S",
+    "ranked": true,
+    "auc": 0.9032387773324193,
+    "auc_low": 0.8978472194182795,
+    "auc_high": 0.9084918667760208,
+    "cross_share": 0.972697412245555,
+    "tau_all": 37.62404027728972,
+    "tau_above": 40.76659942253006
+   },
+   {
+    "metric": "PAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.8971731718007581,
+    "auc_low": 0.8916156751507522,
+    "auc_high": 0.9027245795519124,
+    "cross_share": 0.9737078090728053,
+    "tau_all": 37.01963564075717,
+    "tau_above": 38.62727970713563
+   },
+   {
+    "metric": "RefPAC-S (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9068291445783231,
+    "auc_low": 0.9013727831736412,
+    "auc_high": 0.9122049977154693,
+    "cross_share": 0.9718666169996826,
+    "tau_all": 37.99148645058033,
+    "tau_above": 42.417346512717266
+   },
+   {
+    "metric": "PAC-S++",
+    "ranked": true,
+    "auc": 0.8967951815899704,
+    "auc_low": 0.8907989893554488,
+    "auc_high": 0.9021858461989414,
+    "cross_share": 0.9739774166263873,
+    "tau_all": 36.974166644150806,
+    "tau_above": 38.18422948932318
+   },
+   {
+    "metric": "RefPAC-S++",
+    "ranked": true,
+    "auc": 0.9067793690601365,
+    "auc_low": 0.9014391321818519,
+    "auc_high": 0.9118371321288302,
+    "cross_share": 0.9720813302227712,
+    "tau_all": 37.97844836318714,
+    "tau_above": 42.079164462510136
+   },
+   {
+    "metric": "PAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9125393951148268,
+    "auc_low": 0.9072291085206742,
+    "auc_high": 0.9172620704237295,
+    "cross_share": 0.972867763401825,
+    "tau_all": 38.48565112050208,
+    "tau_above": 41.43938533343201
+   },
+   {
+    "metric": "RefPAC-S++ (ViT-L/14)",
+    "ranked": true,
+    "auc": 0.9157978618727337,
+    "auc_low": 0.9107271182867046,
+    "auc_high": 0.9205082013029462,
+    "cross_share": 0.9717360217108156,
+    "tau_all": 38.83480904187799,
+    "tau_above": 43.5595476119686
+   },
+   {
+    "metric": "VLM judge",
+    "ranked": true,
+    "auc": 0.9257827019299499,
+    "auc_low": 0.9218644741649817,
+    "auc_high": 0.9297599743459555,
+    "cross_share": 0.9723014186424691,
+    "tau_all": 39.74367000302537,
+    "tau_above": 43.68785432708335
+   },
+   {
+    "metric": "VLM judge + refs",
+    "ranked": true,
+    "auc": 0.9269026043305758,
+    "auc_low": 0.9228070339783262,
+    "auc_high": 0.931091501819069,
+    "cross_share": 0.9714529721019431,
+    "tau_all": 39.88300718368615,
+    "tau_above": 45.18393551934603
+   },
+   {
+    "metric": "VLM judge (Qwen 8B)",
+    "ranked": true,
+    "auc": 0.9251214381148244,
+    "auc_low": 0.920583796129998,
+    "auc_high": 0.929419072560059,
+    "cross_share": 0.9710084883994344,
+    "tau_all": 39.7347834867744,
+    "tau_above": 45.71691558372588
+   },
+   {
+    "metric": "VLM judge (Qwen 8B) + refs",
+    "ranked": true,
+    "auc": 0.926419348372517,
+    "auc_low": 0.922079337101451,
+    "auc_high": 0.9307892079095946,
+    "cross_share": 0.9699019862316569,
+    "tau_all": 39.90156463546641,
+    "tau_above": 47.660983242626564
+   },
+   {
+    "metric": "VLM judge (InternVL 8B)",
+    "ranked": true,
+    "auc": 0.9231396206944502,
+    "auc_low": 0.9188983080701709,
+    "auc_high": 0.9274503454017626,
+    "cross_share": 0.9713668387684785,
+    "tau_all": 39.534958928077906,
+    "tau_above": 44.92476358562959
+   },
+   {
+    "metric": "VLM judge (InternVL 8B) + refs",
+    "ranked": true,
+    "auc": 0.9287722845263275,
+    "auc_low": 0.9244394998238874,
+    "auc_high": 0.933144987695854,
+    "cross_share": 0.9694714741831656,
+    "tau_all": 40.139553836835795,
+    "tau_above": 48.63104603272284
+   },
+   {
+    "metric": "Polos (official ckpt)",
+    "ranked": true,
+    "auc": 0.9049614323086294,
+    "auc_low": 0.8998823967156436,
+    "auc_high": 0.9099617484631546,
+    "cross_share": 0.9723826325097621,
+    "tau_all": 37.79700149881163,
+    "tau_above": 41.4261758435289
+   },
+   {
+    "metric": "Polos (retrained)",
+    "ranked": true,
+    "auc": 0.8971319510685757,
+    "auc_low": 0.8916367511855684,
+    "auc_high": 0.9020725656222299,
+    "cross_share": 0.9741156479626156,
+    "tau_all": 37.00029491825961,
+    "tau_above": 38.00823718981346
+   },
+   {
+    "metric": "Polos (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.8996293732480782,
+    "auc_low": 0.8942504599233292,
+    "auc_high": 0.9046488301104383,
+    "cross_share": 0.9737426595200207,
+    "tau_all": 37.247238700099686,
+    "tau_above": 38.81325120668753
+   },
+   {
+    "metric": "Rigel (official ckpt)",
+    "ranked": true,
+    "auc": 0.9313813539819195,
+    "auc_low": 0.9272923958453938,
+    "auc_high": 0.9355407015795663,
+    "cross_share": 0.970002581672684,
+    "tau_all": 40.363554098858614,
+    "tau_above": 48.05412717450842
+   },
+   {
+    "metric": "Rigel (official ckpt) + refs",
+    "ranked": true,
+    "auc": 0.9314444760234232,
+    "auc_low": 0.9274042664059664,
+    "auc_high": 0.9354199990610311,
+    "cross_share": 0.968878697497064,
+    "tau_all": 40.41571670259583,
+    "tau_above": 49.92004383822633
+   },
+   {
+    "metric": "DENEB (retrained)",
+    "ranked": true,
+    "auc": 0.9075665747216917,
+    "auc_low": 0.902274146500299,
+    "auc_high": 0.9126517379246879,
+    "cross_share": 0.9716339279420324,
+    "tau_all": 38.06944474443005,
+    "tau_above": 42.85514592276178
+   },
+   {
+    "metric": "DENEB (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.9049185655391209,
+    "auc_low": 0.8995427217749337,
+    "auc_high": 0.9100055424055603,
+    "cross_share": 0.9721549796619439,
+    "tau_all": 37.80184175465907,
+    "tau_above": 41.77263571832546
+   },
+   {
+    "metric": "Pearl (retrained)",
+    "ranked": true,
+    "auc": 0.9159912858282487,
+    "auc_low": 0.9108850009181534,
+    "auc_high": 0.9204621744390333,
+    "cross_share": 0.9726933641569709,
+    "tau_all": 38.814080845825195,
+    "tau_above": 42.06279495668948
+   },
+   {
+    "metric": "Pearl (retrained) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.914502192638276,
+    "auc_low": 0.909397582328647,
+    "auc_high": 0.9190684422248734,
+    "cross_share": 0.97252462826243,
+    "tau_all": 38.68188377410567,
+    "tau_above": 42.179817275022174
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours)",
+    "ranked": true,
+    "auc": 0.9173192699807518,
+    "auc_low": 0.9124470525178449,
+    "auc_high": 0.9217829358212459,
+    "cross_share": 0.9709028825334954,
+    "tau_all": 39.00978257480113,
+    "tau_above": 45.04625705400955
+   },
+   {
+    "metric": "ridge SigLIP, Polaris pool (ours) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.9175169916590836,
+    "auc_low": 0.9128306441969509,
+    "auc_high": 0.9220787275265548,
+    "cross_share": 0.9708561666188348,
+    "tau_all": 39.030143178035054,
+    "tau_above": 45.14212836847817
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours)",
+    "ranked": true,
+    "auc": 0.9243260503805335,
+    "auc_low": 0.919880857905848,
+    "auc_high": 0.9286646973419259,
+    "cross_share": 0.9700345435946097,
+    "tau_all": 39.70026310976872,
+    "tau_above": 47.211683461745636
+   },
+   {
+    "metric": "ridge SigLIP, Spica pool (ours) (cleaned pool)",
+    "ranked": false,
+    "auc": 0.9243537111263449,
+    "auc_low": 0.9197603951764147,
+    "auc_high": 0.9288131870548726,
+    "cross_share": 0.9702466636960141,
+    "tau_all": 39.694170863623675,
+    "tau_above": 46.87028697768662
+   }
+  ]
+ }
+}

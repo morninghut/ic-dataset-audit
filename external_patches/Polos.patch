@@ -1,0 +1,511 @@
+diff --git a/evaluate.py b/evaluate.py
+new file mode 100644
+index 0000000..58e71bf
+--- /dev/null
++++ b/evaluate.py
+@@ -0,0 +1,248 @@
++"""Full-dataset Polos correlation and pairwise accuracy evaluation."""
++import argparse
++import ast
++from collections import defaultdict
++import csv
++from datetime import datetime, timezone
++import json
++import math
++from pathlib import Path
++import time
++import warnings
++
++from polos.evaluation_data import (load_composite, load_pascal, load_foil,
++                                   pascal_trials, pairwise_metrics)
++
++ROOT = Path(__file__).resolve().parent
++
++
++def load_records(data_root, name, seed=42):
++    """Keep annotation order and individual human judgments, as in PAC-S."""
++    records, skipped = [], 0
++    if name == 'composite':
++        records, source, skipped = load_composite(data_root)
++    elif name == 'pascal50s':
++        records, source, skipped = load_pascal(data_root, seed)
++    elif name.startswith('foil_'):
++        records, source, skipped = load_foil(data_root, name == 'foil_1ref')
++    elif name.startswith('polaris_'):
++        base = data_root / 'polaris'
++        source = base / f'{name}.csv'
++        with source.open(newline='') as handle:
++            for index, row in enumerate(csv.DictReader(handle)):
++                records.append(dict(id=str(index), image=str(base / 'images' / row['imgid']),
++                                    caption=row['mt'], references=ast.literal_eval(row['refs']),
++                                    human_score=float(row['score'])))
++    else:
++        base = data_root / 'flickr8k'
++        source = base / ('flickr8k.json' if name == 'flickr8k_expert' else 'crowdflower_flickr8k.json')
++        with source.open() as handle:
++            data = json.load(handle)
++        for key, item in data.items():
++            for index, judgment in enumerate(item['human_judgement']):
++                score = float(judgment['rating'])
++                if math.isnan(score):  # Same exclusion as the PAC-S loader.
++                    skipped += 1
++                    continue
++                records.append(dict(id=f'{key}:{index}',
++                                    image=str(base / 'images' / Path(item['image_path']).name),
++                                    caption=' '.join(judgment['caption'].split()),
++                                    references=[' '.join(ref.split()) for ref in item['ground_truth']],
++                                    human_score=score))
++    for row in records:
++        if not isinstance(row['references'], list) or not row['references'] or not all(
++                isinstance(ref, str) and ref.strip() for ref in row['references']):
++            raise ValueError(f"Invalid references in {name}, row {row['id']}")
++        if 'human_score' in row and not math.isfinite(row['human_score']):
++            raise ValueError(f"Non-finite human score in {name}, row {row['id']}")
++    missing = sorted({row['image'] for row in records if not Path(row['image']).is_file()})
++    if missing:
++        raise FileNotFoundError(f'{name}: {len(missing)} missing images; first: {missing[0]}')
++    return records, source, skipped
++
++
++def reference_batches(records, batch_size):
++    """Equal reference counts prevent collate_tensors' zip from dropping refs."""
++    groups = defaultdict(list)
++    for index, row in enumerate(records):
++        groups[len(row['references'])].append(index)
++    for indices in groups.values():
++        for start in range(0, len(indices), batch_size):
++            yield indices[start:start + batch_size]
++
++
++def compute_metrics(predictions, targets):
++    import numpy as np
++    from scipy.stats import pearsonr, spearmanr, kendalltau
++    x, y = np.asarray(predictions, dtype=float), np.asarray(targets, dtype=float)
++    if x.shape != y.shape or x.ndim != 1 or not np.isfinite(x).all() or not np.isfinite(y).all():
++        raise ValueError('Predictions and targets must be aligned, finite 1-D arrays.')
++    names = ('pearson', 'spearman', 'kendall_tau_b', 'kendall_tau_c')
++    if len(x) < 2 or len(np.unique(x)) < 2 or len(np.unique(y)) < 2:
++        return dict.fromkeys(names)  # Undefined correlations are JSON null.
++    with warnings.catch_warnings():
++        warnings.simplefilter('ignore')
++        values = [pearsonr(x, y)[0], spearmanr(x, y)[0],
++                  kendalltau(x, y, variant='b')[0], kendalltau(x, y, variant='c')[0]]
++    return {name: float(value) if math.isfinite(value) else None for name, value in zip(names, values)}
++
++
++def score_records(model, records, batch_size, cuda, output_path, name):
++    from PIL import Image
++    from tqdm import tqdm
++    predictions = [None] * len(records)
++    started = time.perf_counter()
++    # Write each completed batch immediately, preserving source IDs for auditing.
++    with output_path.open('x') as output, tqdm(total=len(records), desc=name) as progress:
++        for indices in reference_batches(records, batch_size):
++            samples = []
++            try:
++                for index in indices:
++                    row = records[index]
++                    with Image.open(row['image']) as image:
++                        rgb = image.convert('RGB')
++                    samples.append({'img': rgb, 'mt': row['caption'], 'refs': row['references']})
++                _, scores = model.predict(samples, batch_size=batch_size, cuda=cuda, show_progress=False)
++                if len(scores) != len(indices):
++                    raise ValueError('Model returned an unexpected number of predictions.')
++                for index, score in zip(indices, scores):
++                    score = float(score)
++                    if not math.isfinite(score):
++                        raise ValueError(f'Non-finite prediction at row {records[index]["id"]}')
++                    predictions[index] = score
++                    output.write(json.dumps({**records[index], 'prediction': score}, ensure_ascii=False, allow_nan=False) + '\n')
++                output.flush()
++                progress.update(len(indices))
++            finally:
++                for sample in samples:
++                    sample['img'].close()
++    return predictions, time.perf_counter() - started
++
++
++def evaluate_dataset(model, records, batch_size, cuda, output_path, name):
++    predictions, seconds = score_records(model, records, batch_size, cuda, output_path, name)
++    metrics = compute_metrics(predictions, [row['human_score'] for row in records])
++    main_metric = 'kendall_tau_b' if name == 'flickr8k_cf' else 'kendall_tau_c'
++    return {'count': len(records), 'seconds': seconds,
++            'metrics': metrics, 'paper_metric': main_metric,
++            'paper_score_x100': None if metrics[main_metric] is None else 100 * metrics[main_metric],
++            'predictions': str(output_path)}
++
++
++def evaluate_pairs(model, records, batch_size, cuda, output_path, name, protocol, seed):
++    original_count = len(records)
++    if name == 'pascal50s':
++        records = pascal_trials(records, protocol, seed)
++    inputs = []
++    for row in records:
++        for side in ('a', 'b'):
++            inputs.append(dict(id=f"{row.get('trial', 0)}:{row['id']}:{side}",
++                               pair_id=row['id'], trial=row.get('trial', 0), side=side,
++                               image=row['image'], references=row['references'],
++                               caption=row[f'caption_{side}']))
++    scores, seconds = score_records(model, inputs, batch_size, cuda, output_path, name)
++    metrics = pairwise_metrics(records, scores, strict=name.startswith('foil_'))
++    pairs_path = output_path.with_name(output_path.stem + '.pairs.jsonl')
++    with pairs_path.open('x') as handle:
++        for i, row in enumerate(records):
++            a, b = scores[2 * i:2 * i + 2]
++            correct = a > b if name.startswith('foil_') else (0 if a > b else 1) == row['preferred']
++            handle.write(json.dumps({**row, 'score_a': a, 'score_b': b, 'correct': correct},
++                                    ensure_ascii=False, allow_nan=False) + '\n')
++    return {'count': original_count, 'scored_pairs': len(records), 'model_inputs': len(inputs),
++            'seconds': seconds, 'metrics': metrics, 'paper_metric': 'accuracy',
++            'paper_score_x100': 100 * metrics['accuracy'], 'predictions': str(output_path),
++            'pair_predictions': str(pairs_path),
++            'protocol': (protocol if name == 'pascal50s' else 'released_strict_original_gt_foil'),
++            'reference_counts': sorted({len(row['references']) for row in records})}
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--dataset', nargs='+', choices=('all', 'polaris', 'flickr8k', 'flickr8k_expert', 'flickr8k_cf', 'composite', 'pascal50s', 'foil', 'foil_1ref', 'foil_4ref'), default=['all'])
++    parser.add_argument('--pascal-protocol', choices=('paper', 'released'), default='paper',
++                        help='paper: five trials of five references; released: all 48 references once.')
++    parser.add_argument('--seed', type=int, default=42, help='Pascal vote tie-break and reference sampling seed.')
++    parser.add_argument('--polaris-split', choices=('train', 'val', 'test', 'all'), default='test')
++    parser.add_argument('--checkpoint', type=Path, default=ROOT / 'checkpoints/reprod/reprod.ckpt')
++    parser.add_argument('--data-root', type=Path, default=ROOT / 'data_en')
++    parser.add_argument('--batch-size', type=int, default=32)
++    parser.add_argument('--device', choices=('auto', 'cpu', 'cuda'), default='auto')
++    parser.add_argument('--output-dir', type=Path, help='New directory; defaults to timestamped experiments/evaluation/<time>.')
++    parser.add_argument('--limit', type=int, help='Debug only: first N valid judgments/pairs per dataset; omitted for full evaluation.')
++    args = parser.parse_args()
++    if args.batch_size < 1 or (args.limit is not None and args.limit < 1):
++        parser.error('--batch-size and --limit must be positive.')
++    if not args.checkpoint.is_file():
++        parser.error(f'Checkpoint not found: {args.checkpoint}')
++    names = []
++    requested = args.dataset
++    if 'all' in requested:
++        requested = ['polaris', 'flickr8k', 'composite', 'pascal50s', 'foil']
++    for dataset in requested:
++        if dataset == 'polaris':
++            splits = ('train', 'val', 'test') if args.polaris_split == 'all' else (args.polaris_split,)
++            names += [f'polaris_{split}' for split in splits]
++        elif dataset == 'flickr8k':
++            names += ['flickr8k_expert', 'flickr8k_cf']
++        elif dataset == 'foil':
++            names += ['foil_1ref', 'foil_4ref']
++        else:
++            names.append(dataset)
++    names = list(dict.fromkeys(names))
++    datasets = {name: load_records(args.data_root.resolve(), name, args.seed) for name in names}
++    for name, (records, _, _) in datasets.items():
++        if not records:
++            parser.error(f'{name} has no valid judgments.')
++
++    import torch
++    from polos.models import load_checkpoint
++    cuda = torch.cuda.is_available() if args.device == 'auto' else args.device == 'cuda'
++    if cuda and not torch.cuda.is_available():
++        parser.error('CUDA is unavailable; use --device cpu.')
++    output_dir = args.output_dir or ROOT / 'experiments/evaluation' / datetime.now().strftime('%Y%m%d-%H%M%S-%f')
++    output_dir = output_dir.resolve()
++    output_dir.mkdir(parents=True, exist_ok=False)
++    report = {'checkpoint': str(args.checkpoint.resolve()), 'data_root': str(args.data_root.resolve()),
++              'device': 'cuda' if cuda else 'cpu', 'batch_size': args.batch_size,
++              'reference_policy': 'all references except Pascal paper protocol; batches grouped by reference count',
++              'pascal_protocol': args.pascal_protocol, 'seed': args.seed,
++              'limit': args.limit, 'full_evaluation': args.limit is None,
++              'started_at': datetime.now(timezone.utc).isoformat(), 'status': 'running', 'results': {}}
++    report_path = output_dir / 'metrics.json'
++
++    def save_report():
++        temporary = report_path.with_suffix('.tmp')
++        temporary.write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + '\n')
++        temporary.replace(report_path)
++
++    save_report()
++    print(f'Results: {output_dir}', flush=True)
++    try:
++        model = load_checkpoint(str(args.checkpoint))
++        for name, (records, source, skipped) in datasets.items():
++            total = len(records)
++            selected = records if args.limit is None else records[:args.limit]
++            if name == 'pascal50s' or name.startswith('foil_'):
++                result = evaluate_pairs(model, selected, args.batch_size, cuda, output_dir / f'{name}.jsonl',
++                                        name, args.pascal_protocol, args.seed)
++            else:
++                result = evaluate_dataset(model, selected, args.batch_size, cuda, output_dir / f'{name}.jsonl', name)
++            result.update(source=str(source), total_valid_records=total, skipped_nan_labels=skipped)
++            result['total_valid_pairs' if name == 'pascal50s' or name.startswith('foil_')
++                   else 'total_valid_judgments'] = total
++            report['results'][name] = result
++            save_report()
++            print(f'{name}: {json.dumps(result["metrics"])}; paper x100={result["paper_score_x100"]}', flush=True)
++        report['status'] = 'complete'
++    except BaseException as error:
++        report['status'] = 'failed'
++        report['error'] = f'{type(error).__name__}: {error}'
++        raise
++    finally:
++        save_report()
++    print(f'Saved metrics: {report_path}', flush=True)
++
++
++if __name__ == '__main__':
++    main()
+diff --git a/polos/evaluation_data.py b/polos/evaluation_data.py
+new file mode 100644
+index 0000000..2deac91
+--- /dev/null
++++ b/polos/evaluation_data.py
+@@ -0,0 +1,116 @@
++"""Adapters for the Composite, PASCAL-50S and FOIL evaluation assets."""
++from collections import Counter, defaultdict
++import json
++from pathlib import Path
++import random
++
++
++def load_composite(root):
++    source = root / 'composite/composite.jsonl'
++    with source.open() as handle:
++        rows = [json.loads(line) for line in handle if line.strip()]
++    for row in rows:
++        row['image'] = str(source.parent / row['image'])
++    return rows, source, 0
++
++
++def matlab_scalar(value):
++    while hasattr(value, 'shape') and len(value.shape) > 0 and value.size == 1:
++        value = value.reshape(-1)[0]
++    return value
++
++
++def load_pascal(root, seed=42):
++    from scipy.io import loadmat
++    base = root / 'pascal'
++    source = base / 'pyCIDErConsensus/pair_pascal.mat'
++    pairs = loadmat(source)
++    triplets = loadmat(base / 'pyCIDErConsensus/consensus_pascal.mat')['triplets'][0]
++    items, categories = pairs['new_input'][0], pairs['category'][0]
++    if len(items) != 4000 or len(triplets) != 48 * len(items):
++        raise ValueError('Expected 4,000 Pascal pairs with 48 judgments each.')
++    rng = random.Random(seed)
++    names = {1: 'HC', 2: 'HI', 3: 'HM', 4: 'MM'}
++    records = []
++    for index, item in enumerate(items):
++        image, a, b = (str(matlab_scalar(item[i])).strip() for i in range(3))
++        votes, refs = Counter(), []
++        for triplet in triplets[index * 48:(index + 1) * 48]:
++            ref, option_a, option_b = (str(matlab_scalar(triplet[i])).strip() for i in range(3))
++            choice = int(matlab_scalar(triplet[3]))
++            if choice not in (1, -1):
++                raise ValueError(f'Invalid Pascal vote: {choice}')
++            votes[option_a if choice == 1 else option_b] += 1
++            refs.append(ref)
++        # Match the released seed=42 tie handling, consuming one draw per pair.
++        label = 0 if votes[a] > votes[b] + rng.random() - .5 else 1
++        records.append(dict(id=str(index), image=str(base / 'VOCdevkit/VOC2010/JPEGImages' / image),
++                            caption_a=a, caption_b=b, references=refs, preferred=label,
++                            category=names[int(matlab_scalar(categories[index]))]))
++    if Counter(r['category'] for r in records) != dict.fromkeys(names.values(), 1000):
++        raise ValueError('Expected 1,000 Pascal pairs in each category.')
++    return records, source, 0
++
++
++def load_foil(root, one_ref):
++    source = root / 'foil/foilv1.0_test_2017.json'
++    with (root / 'coco/captions_val2014.json').open() as handle:
++        coco = json.load(handle)
++    refs = defaultdict(list)
++    for annotation in coco['annotations']:
++        refs[annotation['image_id']].append(annotation['caption'])
++    with source.open() as handle:
++        foil = json.load(handle)
++    images = {image['id']: image['file_name'] for image in foil['images']}
++    groups = {}
++    for annotation in foil['annotations']:
++        group = groups.setdefault(annotation['id'], {'orig': [], 'foil': []})
++        group['foil' if annotation['foil'] else 'orig'].append(annotation)
++    records = []
++    for key, group in groups.items():
++        if len(group['orig']) != 1:
++            raise ValueError(f'FOIL annotation {key} needs exactly one original.')
++        original = group['orig'][0]
++        references = [r for r in refs[original['image_id']] if r != original['caption']]
++        if not references:
++            raise ValueError(f'FOIL annotation {key} has no held-out references.')
++        if one_ref:
++            references = references[:1]
++        for index, changed in enumerate(group['foil']):
++            if changed['image_id'] != original['image_id']:
++                raise ValueError(f'FOIL image mismatch at {key}')
++            records.append(dict(id=f'{key}:{index}',
++                                image=str(root / 'coco/val2014' / images[original['image_id']]),
++                                caption_a=original['caption'], caption_b=changed['caption'],
++                                preferred=0, references=references, category='foil'))
++    return records, source, 0
++
++
++def pascal_trials(records, protocol, seed):
++    if protocol == 'released':
++        return [{**row, 'trial': 0} for row in records]
++    rng = random.Random(seed)
++    return [{**row, 'trial': trial, 'references': rng.sample(row['references'], 5)}
++            for trial in range(5) for row in records]
++
++
++def pairwise_metrics(records, scores, strict=False):
++    """Scores alternate A/B; FOIL requires A>B, Pascal ties select B."""
++    if len(scores) != 2 * len(records) or not records:
++        raise ValueError('Pairwise scores must contain both candidates for every pair.')
++    groups = defaultdict(lambda: [0, 0, 0])
++    for index, row in enumerate(records):
++        a, b = scores[2 * index:2 * index + 2]
++        correct = a > b if strict else (0 if a > b else 1) == row['preferred']
++        group = groups[(row.get('trial', 0), row['category'])]
++        group[0] += int(correct)
++        group[1] += 1
++        group[2] += int(a == b)
++    trials = {}
++    for (trial, category), (correct, count, ties) in groups.items():
++        trials.setdefault(str(trial), {})[category] = dict(accuracy=correct / count,
++                                                         correct=correct, count=count, ties=ties)
++    categories = sorted({row['category'] for row in records})
++    means = {cat: sum(t[cat]['accuracy'] for t in trials.values()) / len(trials) for cat in categories}
++    return {'accuracy': sum(means.values()) / len(means), 'by_category': means, 'trials': trials,
++            'ties': sum(g[2] for g in groups.values())}
+diff --git a/polos/models/estimators/polos_estimator.py b/polos/models/estimators/polos_estimator.py
+index 066d18f..ccb6ed4 100644
+--- a/polos/models/estimators/polos_estimator.py
++++ b/polos/models/estimators/polos_estimator.py
+@@ -31,6 +31,9 @@ class PolosEstimator(Estimator):
+ 
+     class ModelConfig(Estimator.ModelConfig):
+         switch_prob: float = 0.0
++        vision_language_model: str = "clip"
++        siglip_path: str = "google/siglip-so400m-patch14-384"
++        siglip_image_batch_size: int = 4
+ 
+     def __init__(
+         self,
+@@ -62,15 +65,17 @@ class PolosEstimator(Estimator):
+             )
+ 
+         parallel_feature_extraction = True
++        vision_language_model = getattr(self.hparams, "vision_language_model", "clip")
++        vl_dim = 1152 if vision_language_model == "siglip" else 512
+         if parallel_feature_extraction:
+             input_emb_sz = (
+-                self.encoder.output_units * 4 + 512*6
++                self.encoder.output_units * 4 + vl_dim*6
+                 if self.hparams.pool != "cls+avg"
+                 else self.encoder.output_units * 2 * 8
+             )
+         else:
+             input_emb_sz = (
+-                self.encoder.output_units * 2 + 512*3
++                self.encoder.output_units * 2 + vl_dim*3
+                 if self.hparams.pool != "cls+avg"
+                 else self.encoder.output_units * 2 * 8
+             )
+@@ -93,7 +98,20 @@ class PolosEstimator(Estimator):
+             torch.nn.Sigmoid()
+         ])
+ 
+-        self.clip, self.clip_preprocess = clip.load("ViT-B/32", device=self.device)
++        if vision_language_model == "siglip":
++            from polos.siglip_adapter import SiglipAdapter
++            self.clip = SiglipAdapter(self.hparams.siglip_path,
++                                      self.hparams.siglip_image_batch_size)
++            self.clip_preprocess = self.clip.preprocess
++            self.clip_tokenize = self.clip.tokenize
++        elif vision_language_model == "clip":
++            self.clip, self.clip_preprocess = clip.load("ViT-B/32", device=self.device)
++            self.clip_tokenize = clip.tokenize
++        else:
++            raise ValueError(vision_language_model)
++        # The released optimizer never contains CLIP parameters. Disabling their
++        # unused gradients preserves the optimizer update and saves GPU memory.
++        self.clip.requires_grad_(False)
+         self.parallel_feature_extraction = parallel_feature_extraction
+ 
+ 
+@@ -194,12 +212,12 @@ class PolosEstimator(Estimator):
+ 
+         refs_clip = []
+         for ref_list in refs: # (ref_cnt, B, L)
+-            subset = [clip.tokenize("A photo depicts " + ref,truncate=True).to(self.device) for ref in ref_list]
++            subset = [self.clip_tokenize("A photo depicts " + ref,truncate=True).to(self.device) for ref in ref_list]
+             subset = torch.cat(subset,dim=0)
+             refs_tensor = self.clip.encode_text(subset)
+             refs_clip.append(refs_tensor) 
+         
+-        mts_clip = clip.tokenize(["A photo depicts " + x for x in mt],truncate=True).to(self.device)
++        mts_clip = self.clip_tokenize(["A photo depicts " + x for x in mt],truncate=True).to(self.device)
+         imgs_clip = torch.cat([self.clip_preprocess(img).unsqueeze(0) for img in imgs],dim=0).to(self.device)
+ 
+         imgs_clip = self.clip.encode_image(imgs_clip)
+diff --git a/polos/models/model_base.py b/polos/models/model_base.py
+index b148af6..42ed574 100644
+--- a/polos/models/model_base.py
++++ b/polos/models/model_base.py
+@@ -112,6 +112,7 @@ class ModelBase(ptl.LightningModule):
+         # Optimizer
+         optimizer: str = "Adam"
+         learning_rate: float = 1e-05
++        adam_betas: tuple = (0.9, 0.999)
+ 
+         # Scheduler
+         scheduler: str = "constant"
+@@ -210,8 +211,11 @@ class ModelBase(ptl.LightningModule):
+         :param parameters: Module.parameters.
+         """
+         if hasattr(torch.optim, self.hparams.optimizer):
++            options = {}
++            if self.hparams.optimizer == "Adam":
++                options["betas"] = tuple(getattr(self.hparams, "adam_betas", (0.9, 0.999)))
+             return getattr(torch.optim, self.hparams.optimizer)(
+-                params=parameters, lr=self.hparams.learning_rate
++                params=parameters, lr=self.hparams.learning_rate, **options
+             )
+         else:
+             raise Exception(f"{self.hparams.optimizer} invalid optimizer!")
+diff --git a/polos/siglip_adapter.py b/polos/siglip_adapter.py
+new file mode 100644
+index 0000000..99f1f21
+--- /dev/null
++++ b/polos/siglip_adapter.py
+@@ -0,0 +1,33 @@
++"""SigLIP's native image and text representations behind the CLIP interface."""
++import torch
++from transformers import SiglipModel, SiglipProcessor
++
++
++class SiglipAdapter(torch.nn.Module):
++    def __init__(self, path, image_batch_size=4):
++        super().__init__()
++        self.model = SiglipModel.from_pretrained(path, local_files_only=True)
++        self.processor = SiglipProcessor.from_pretrained(path, local_files_only=True)
++        self.image_batch_size = image_batch_size
++        assert self.model.config.vision_config.hidden_size == 1152
++        assert self.model.config.text_config.hidden_size == 1152
++        assert self.model.config.vision_config.image_size == 384
++        self.requires_grad_(False)
++
++    def preprocess(self, image):
++        return self.processor.image_processor(images=image, return_tensors="pt")["pixel_values"][0]
++
++    def tokenize(self, texts, truncate=True):
++        if isinstance(texts, str):
++            texts = [texts]
++        return self.processor.tokenizer(texts, padding="max_length", max_length=64,
++                                        truncation=truncate, return_tensors="pt")["input_ids"]
++
++    def encode_text(self, tokens):
++        # Like the released CLIP encode_text, return unnormalised features.
++        return self.model.get_text_features(input_ids=tokens)
++
++    def encode_image(self, images):
++        # Chunk only frozen feature extraction; the training batch remains 64.
++        return torch.cat([self.model.get_image_features(pixel_values=x)
++                          for x in images.split(self.image_batch_size)], dim=0)

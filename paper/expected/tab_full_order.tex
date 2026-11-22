@@ -1,0 +1,60 @@
+\begin{tabular}{lrrr}
+\toprule
+Metric & Polaris test & Spica test & Flickr8k-Expert \\
+\midrule
+Judge InternVL-8B +\,ref & 72.83\enspace1\,[1,\,6] & 73.14\enspace1\,[1,\,5] & 84.28\enspace13\,[7,\,18] \\
+Judge Qwen-8B +\,ref & 72.37\enspace2\,[1,\,7] & 72.63\enspace2\,[1,\,6] & 83.22\enspace20\,[17,\,23] \\
+Judge Qwen-4B +\,ref & 72.06\enspace3\,[1,\,7] & 72.07\enspace3\,[1,\,7] & 84.38\enspace12\,[7,\,17] \\
+Polos & 72.04\enspace4\,[1,\,8] & 69.98\enspace7\,[2,\,11] & 83.05\enspace21\,[18,\,24] \\
+Ridge SigLIP (Polaris) & 70.79\enspace5\,[2,\,11] & 69.66\enspace9\,[3,\,11] & 85.44\enspace4\,[4,\,7] \\
+Ridge CLIP (Polaris) & 70.62\enspace6\,[2,\,12] & 67.16\enspace11\,[8,\,19] & 84.17\enspace15\,[9,\,18] \\
+Judge Qwen-8B & 70.58\enspace7\,[3,\,13] & 70.78\enspace5\,[1,\,10] & 82.72\enspace24\,[20,\,24] \\
+DENEB & 70.52\enspace8\,[3,\,12] & 69.79\enspace8\,[2,\,11] & 84.48\enspace10\,[7,\,15] \\
+Pearl & 69.48\enspace9\,[5,\,15] & 68.07\enspace10\,[6,\,15] & 85.32\enspace5\,[4,\,7] \\
+Judge InternVL-8B & 69.35\enspace10\,[5,\,17] & 70.88\enspace4\,[2,\,11] & 84.38\enspace11\,[7,\,17] \\
+Judge Qwen-4B & 69.35\enspace11\,[5,\,18] & 70.54\enspace6\,[2,\,11] & 83.75\enspace18\,[13,\,21] \\
+Polos (official) & 69.33\enspace12\,[5,\,16] & -- & 83.92\enspace16\,[12,\,19] \\
+Ridge SigLIP (Spica) & 68.11\enspace13\,[9,\,20] & 65.63\enspace13\,[10,\,26] & 85.98\enspace3\,[2,\,3] \\
+RefPAC-S (L/14) & 67.85\enspace14\,[9,\,20] & 64.89\enspace15\,[10,\,27] & 84.71\enspace9\,[6,\,13] \\
+Ridge CLIP (Spica) & 67.68\enspace15\,[10,\,21] & 64.25\enspace19\,[12,\,29] & 84.75\enspace8\,[5,\,13] \\
+PAC-S (L/14) & 67.58\enspace16\,[9,\,22] & 62.83\enspace25\,[14,\,30] & 84.27\enspace14\,[9,\,18] \\
+CIDEr & 66.61\enspace17\,[10,\,26] & 63.75\enspace22\,[12,\,30] & 74.58\enspace29\,[28,\,30] \\
+RefPAC-S & 66.50\enspace18\,[13,\,25] & 65.53\enspace14\,[10,\,25] & 83.87\enspace17\,[12,\,19] \\
+METEOR & 66.14\enspace19\,[12,\,27] & 64.68\enspace17\,[10,\,28] & 74.10\enspace30\,[29,\,30] \\
+PAC-S++ (L/14) & 65.72\enspace20\,[15,\,28] & 63.78\enspace21\,[12,\,30] & 84.81\enspace7\,[6,\,13] \\
+RefPAC-S++ (L/14) & 65.37\enspace21\,[16,\,29] & 65.70\enspace12\,[10,\,24] & 85.08\enspace6\,[4,\,9] \\
+RefCLIP-S & 64.95\enspace22\,[17,\,30] & 63.71\enspace23\,[14,\,28] & 81.62\enspace25\,[25,\,26] \\
+BLEU-1 & 64.84\enspace23\,[16,\,30] & 62.74\enspace27\,[14,\,30] & 69.32\enspace31\,[31,\,32] \\
+Text-only SimCSE & 64.75\enspace24\,[16,\,31] & 64.05\enspace20\,[11,\,30] & 79.99\enspace27\,[27,\,27] \\
+RefPAC-S++ & 64.74\enspace25\,[18,\,30] & 62.35\enspace29\,[18,\,30] & 83.45\enspace19\,[16,\,22] \\
+ROUGE-L & 64.13\enspace26\,[19,\,31] & 61.81\enspace30\,[17,\,30] & 68.86\enspace32\,[31,\,33] \\
+CLIP-S & 64.04\enspace27\,[18,\,31] & 62.75\enspace26\,[13,\,30] & 81.14\enspace26\,[25,\,26] \\
+PAC-S & 63.89\enspace28\,[19,\,31] & 64.50\enspace18\,[10,\,29] & 82.91\enspace23\,[19,\,24] \\
+BLEU-4 & 63.63\enspace29\,[19,\,31] & 63.20\enspace24\,[12,\,30] & 67.78\enspace33\,[32,\,33] \\
+PAC-S++ & 63.57\enspace30\,[21,\,31] & 62.66\enspace28\,[14,\,30] & 82.98\enspace22\,[19,\,24] \\
+SPICE & 62.46\enspace31\,[24,\,31] & 64.76\enspace16\,[10,\,28] & 75.37\enspace28\,[28,\,29] \\
+Rigel & -- & -- & 86.63\enspace1\,[1,\,2] \\
+Rigel +\,ref & -- & -- & 86.52\enspace2\,[1,\,3] \\
+\addlinespace
+Rigel$^{\dagger}$ & 67.97 & 68.55 & -- \\
+Rigel +\,ref$^{\dagger}$ & 72.59 & 73.58 & -- \\
+DENEB$^{\dagger}$ & 70.44 & -- & -- \\
+Pearl$^{\dagger}$ & 72.25 & 71.08 & -- \\
+Ridge SigLIP (Spica)$^{\dagger}$ & 69.21 & 67.51 & -- \\
+Ridge CLIP (Spica)$^{\dagger}$ & 68.61 & 66.02 & -- \\
+Polos (official)$^{\dagger}$ & -- & 66.93 & -- \\
+Polos$^{\dagger}$ & -- & 72.68 & -- \\
+Ridge SigLIP (Polaris)$^{\dagger}$ & -- & 70.65 & -- \\
+Ridge CLIP (Polaris)$^{\dagger}$ & -- & 68.84 & -- \\
+\addlinespace
+Polos$^{\ddagger}$ & 71.67 & -- & 83.40 \\
+Ridge SigLIP (Polaris)$^{\ddagger}$ & 70.58 & -- & 85.72 \\
+Ridge CLIP (Polaris)$^{\ddagger}$ & 70.48 & -- & 84.21 \\
+DENEB$^{\ddagger}$ & -- & 69.88 & 84.15 \\
+Pearl$^{\ddagger}$ & -- & -- & 84.55 \\
+Ridge SigLIP (Spica)$^{\ddagger}$ & -- & -- & 86.05 \\
+Ridge CLIP (Spica)$^{\ddagger}$ & -- & -- & 84.73 \\
+\midrule
+Human reference & 66.38 & 68.52 & 77.67 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,8 @@
+# Enough for dedup/dedup.py, setup_data.py and reproduce.py (CPU only, Python 3.10 or later).
+# The versions are the ones the shipped result files were computed with; newer ones should work,
+# and reproduce.py reports the largest numerical difference if they do not agree exactly.
+numpy==1.26.4
+scipy==1.15.3
+matplotlib==3.8.4
+pyarrow==25.0.1
+pillow==12.3.0

@@ -1,0 +1,14 @@
+\begin{tabular}{lrrrlrrrrr}
+\toprule
+& Lowest & & & \multicolumn{4}{c}{Best ranked metric} & \multicolumn{2}{c}{Range, non-text metrics} \\
+\cmidrule(lr){5-8} \cmidrule(l){9-10}
+Evaluation set & (\%) & $w_{\text{det}}$ & $w_{\text{rank}}$ & name & $\tau$ & det. (\%) & AUC & AUC & $\tau(A)$ \\
+\midrule
+Polaris test & 24 & 0.45 & 0.55 & Judge InternVL-8B +\,ref & 60.5 & 70 & 0.967 & 0.96--0.97 & 20--33 \\
+Spica test & 26 & 0.48 & 0.51 & Judge InternVL-8B +\,ref & 63.1 & 73 & 0.974 & 0.96--0.98 & 17--34 \\
+Nebula test & 26 & 0.39 & 0.54 & Judge InternVL-8B +\,ref & 55.9 & 68 & 0.984 & 0.98--0.98 & 17--33 \\
+Flickr8k-Expert & 58 & 0.65 & 0.16 & Rigel & 59.9 & 86 & 0.895 & 0.84--0.89 & 42--53 \\
+Composite & 28 & 0.51 & 0.48 & Rigel +\,ref & 66.3 & 61 & 0.900 & 0.82--0.91 & 43--53 \\
+Flickr8k-CF & 88 & -- & -- & Rigel +\,ref & 40.4 & 97 & 0.931 & 0.87--0.93 & 33--50 \\
+\bottomrule
+\end{tabular}

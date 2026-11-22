@@ -1,0 +1,807 @@
+{
+  "near": 0.9,
+  "cosines": [
+    0.99,
+    0.97
+  ],
+  "pools": {
+    "polaris_train": {
+      "polaris_test": {
+        "rows": 26122,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 26122,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 2738,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 8,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 8,
+            "rows": 66,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "polaris_val": {
+        "rows": 26268,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 26268,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 2739,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 3,
+            "rows": 26,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "nebula_test": {
+        "rows": 3298,
+        "pair": 806,
+        "picture_only": 44,
+        "absent": 2448,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 2448,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 1,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 7,
+            "rows": 7,
+            "pair": 0,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 807
+      },
+      "nebula_valid": {
+        "rows": 3298,
+        "pair": 740,
+        "picture_only": 49,
+        "absent": 2509,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 2509,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 1,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 6,
+            "rows": 6,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 740
+      },
+      "spica_test": {
+        "rows": 15238,
+        "pair": 6603,
+        "picture_only": 1776,
+        "absent": 6859,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 2440,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 1,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 7,
+            "rows": 28,
+            "pair": 0,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 6604
+      },
+      "spica_val": {
+        "rows": 8773,
+        "pair": 2374,
+        "picture_only": 1116,
+        "absent": 5283,
+        "picture_only_same_after_normalization": 3,
+        "picture_only_near": 13,
+        "absent_pictures": 2383,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 9,
+            "rows": 16,
+            "pair": 2,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 2392
+      },
+      "composite": {
+        "rows": 11982,
+        "pair": 0,
+        "picture_only": 1923,
+        "absent": 10059,
+        "picture_only_same_after_normalization": 25,
+        "picture_only_near": 30,
+        "absent_pictures": 3323,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 1,
+            "rows": 3,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 55
+      },
+      "flickr8k_expert": {
+        "rows": 16992,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 16992,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "flickr8k_cf": {
+        "rows": 47830,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 47830,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "pascal50s": {
+        "rows": 40000,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 40000,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "foil_1ref": {
+        "rows": 198960,
+        "pair": 8,
+        "picture_only": 34132,
+        "absent": 164820,
+        "picture_only_same_after_normalization": 75,
+        "picture_only_near": 263,
+        "absent_pictures": 26703,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 6,
+            "rows": 38,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 65,
+            "rows": 392,
+            "pair": 0,
+            "pair_after_normalization": 2
+          }
+        },
+        "pair_upper": 348
+      }
+    },
+    "nebula_train": {
+      "polaris_test": {
+        "rows": 26122,
+        "pair": 13111,
+        "picture_only": 7731,
+        "absent": 5280,
+        "picture_only_same_after_normalization": 71,
+        "picture_only_near": 168,
+        "absent_pictures": 546,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 3,
+            "rows": 25,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 13350
+      },
+      "polaris_val": {
+        "rows": 26268,
+        "pair": 13130,
+        "picture_only": 7774,
+        "absent": 5364,
+        "picture_only_same_after_normalization": 59,
+        "picture_only_near": 106,
+        "absent_pictures": 569,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 7,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 7,
+            "rows": 76,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 13295
+      },
+      "nebula_test": {
+        "rows": 3298,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 3298,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 3298,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 1,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 30,
+            "rows": 30,
+            "pair": 1,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 2
+      },
+      "nebula_valid": {
+        "rows": 3298,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 3298,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 3298,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 2,
+            "rows": 2,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 20,
+            "rows": 20,
+            "pair": 1,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 1
+      },
+      "spica_test": {
+        "rows": 15238,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 15238,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 3287,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 1,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 29,
+            "rows": 140,
+            "pair": 0,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 1
+      },
+      "spica_val": {
+        "rows": 8773,
+        "pair": 3664,
+        "picture_only": 2928,
+        "absent": 2181,
+        "picture_only_same_after_normalization": 19,
+        "picture_only_near": 46,
+        "absent_pictures": 1043,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 7,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 14,
+            "rows": 28,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 3729
+      },
+      "composite": {
+        "rows": 11982,
+        "pair": 1,
+        "picture_only": 4016,
+        "absent": 7965,
+        "picture_only_same_after_normalization": 40,
+        "picture_only_near": 44,
+        "absent_pictures": 2625,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 3,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 4,
+            "rows": 12,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 85
+      },
+      "flickr8k_expert": {
+        "rows": 16992,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 16992,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 15,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 1,
+            "rows": 15,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "flickr8k_cf": {
+        "rows": 47830,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 47830,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 10,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 1,
+            "rows": 10,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "pascal50s": {
+        "rows": 40000,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 40000,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "foil_1ref": {
+        "rows": 198960,
+        "pair": 13,
+        "picture_only": 115141,
+        "absent": 83806,
+        "picture_only_same_after_normalization": 170,
+        "picture_only_near": 632,
+        "absent_pictures": 13572,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 8,
+            "rows": 46,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 135,
+            "rows": 878,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 815
+      }
+    },
+    "spica_train": {
+      "polaris_test": {
+        "rows": 26122,
+        "pair": 17856,
+        "picture_only": 5987,
+        "absent": 2279,
+        "picture_only_same_after_normalization": 19,
+        "picture_only_near": 22,
+        "absent_pictures": 243,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 25,
+            "rows": 241,
+            "pair": 31,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 29,
+            "rows": 275,
+            "pair": 31,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 17928
+      },
+      "polaris_val": {
+        "rows": 26268,
+        "pair": 18108,
+        "picture_only": 6120,
+        "absent": 2040,
+        "picture_only_same_after_normalization": 8,
+        "picture_only_near": 31,
+        "absent_pictures": 222,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 17,
+            "rows": 225,
+            "pair": 11,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 23,
+            "rows": 281,
+            "pair": 11,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 18158
+      },
+      "nebula_test": {
+        "rows": 3298,
+        "pair": 4,
+        "picture_only": 1290,
+        "absent": 2004,
+        "picture_only_same_after_normalization": 5,
+        "picture_only_near": 25,
+        "absent_pictures": 2004,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 98,
+            "rows": 98,
+            "pair": 7,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 133,
+            "rows": 133,
+            "pair": 8,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 43
+      },
+      "nebula_valid": {
+        "rows": 3298,
+        "pair": 3148,
+        "picture_only": 63,
+        "absent": 87,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 87,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 7,
+            "rows": 7,
+            "pair": 1,
+            "pair_after_normalization": 1
+          },
+          "0.97": {
+            "pictures": 8,
+            "rows": 8,
+            "pair": 1,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 3150
+      },
+      "spica_test": {
+        "rows": 15238,
+        "pair": 342,
+        "picture_only": 5794,
+        "absent": 9102,
+        "picture_only_same_after_normalization": 42,
+        "picture_only_near": 138,
+        "absent_pictures": 1998,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 98,
+            "rows": 681,
+            "pair": 49,
+            "pair_after_normalization": 5
+          },
+          "0.97": {
+            "pictures": 133,
+            "rows": 841,
+            "pair": 50,
+            "pair_after_normalization": 6
+          }
+        },
+        "pair_upper": 578
+      },
+      "spica_val": {
+        "rows": 8773,
+        "pair": 190,
+        "picture_only": 3481,
+        "absent": 5102,
+        "picture_only_same_after_normalization": 28,
+        "picture_only_near": 38,
+        "absent_pictures": 1661,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 51,
+            "rows": 354,
+            "pair": 32,
+            "pair_after_normalization": 1
+          },
+          "0.97": {
+            "pictures": 75,
+            "rows": 449,
+            "pair": 33,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 290
+      },
+      "composite": {
+        "rows": 11982,
+        "pair": 1,
+        "picture_only": 5705,
+        "absent": 6276,
+        "picture_only_same_after_normalization": 96,
+        "picture_only_near": 109,
+        "absent_pictures": 2062,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 3,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 2,
+            "rows": 6,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 206
+      },
+      "flickr8k_expert": {
+        "rows": 16992,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 16992,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 15,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 1,
+            "rows": 15,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "flickr8k_cf": {
+        "rows": 47830,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 47830,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 1,
+            "rows": 10,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 1,
+            "rows": 10,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "pascal50s": {
+        "rows": 40000,
+        "pair": 0,
+        "picture_only": 0,
+        "absent": 40000,
+        "picture_only_same_after_normalization": 0,
+        "picture_only_near": 0,
+        "absent_pictures": 1000,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 0,
+            "rows": 0,
+            "pair": 0,
+            "pair_after_normalization": 0
+          }
+        },
+        "pair_upper": 0
+      },
+      "foil_1ref": {
+        "rows": 198960,
+        "pair": 20,
+        "picture_only": 169094,
+        "absent": 29846,
+        "picture_only_same_after_normalization": 229,
+        "picture_only_near": 867,
+        "absent_pictures": 4834,
+        "absent_pictures_matching_a_pool_picture": {
+          "0.99": {
+            "pictures": 4,
+            "rows": 32,
+            "pair": 0,
+            "pair_after_normalization": 0
+          },
+          "0.97": {
+            "pictures": 81,
+            "rows": 534,
+            "pair": 0,
+            "pair_after_normalization": 1
+          }
+        },
+        "pair_upper": 1117
+      }
+    }
+  }
+}

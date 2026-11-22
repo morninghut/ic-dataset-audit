@@ -1,0 +1,170 @@
+{
+  "pools": [
+    "polaris_train",
+    "nebula_train",
+    "spica_train"
+  ],
+  "evaluation_sets": [
+    "composite",
+    "flickr8k_expert",
+    "flickr8k_cf",
+    "pascal50s",
+    "foil_1ref",
+    "foil_4ref",
+    "polaris_test",
+    "polaris_val",
+    "nebula_test",
+    "nebula_valid",
+    "spica_test",
+    "spica_val"
+  ],
+  "datasets": {
+    "composite": {
+      "rows": 11982,
+      "duplicated_rows": 1,
+      "duplicated_pairs": 1,
+      "rows_per_pool": {
+        "polaris_train": 0,
+        "nebula_train": 1,
+        "spica_train": 1
+      }
+    },
+    "flickr8k_expert": {
+      "rows": 16992,
+      "duplicated_rows": 0,
+      "duplicated_pairs": 0,
+      "rows_per_pool": {
+        "polaris_train": 0,
+        "nebula_train": 0,
+        "spica_train": 0
+      }
+    },
+    "flickr8k_cf": {
+      "rows": 47830,
+      "duplicated_rows": 0,
+      "duplicated_pairs": 0,
+      "rows_per_pool": {
+        "polaris_train": 0,
+        "nebula_train": 0,
+        "spica_train": 0
+      }
+    },
+    "pascal50s": {
+      "rows": 40000,
+      "duplicated_rows": 0,
+      "duplicated_pairs": 0,
+      "rows_per_pool": {
+        "polaris_train": 0,
+        "nebula_train": 0,
+        "spica_train": 0
+      }
+    },
+    "foil_1ref": {
+      "rows": 198960,
+      "duplicated_rows": 20,
+      "duplicated_pairs": 19,
+      "rows_per_pool": {
+        "polaris_train": 8,
+        "nebula_train": 13,
+        "spica_train": 20
+      }
+    },
+    "foil_4ref": {
+      "rows": 198960,
+      "duplicated_rows": 20,
+      "duplicated_pairs": 19,
+      "rows_per_pool": {
+        "polaris_train": 8,
+        "nebula_train": 13,
+        "spica_train": 20
+      }
+    },
+    "polaris_test": {
+      "rows": 26122,
+      "duplicated_rows": 18504,
+      "duplicated_pairs": 2890,
+      "rows_per_pool": {
+        "polaris_train": 0,
+        "nebula_train": 13111,
+        "spica_train": 17856
+      }
+    },
+    "polaris_val": {
+      "rows": 26268,
+      "duplicated_rows": 18682,
+      "duplicated_pairs": 2908,
+      "rows_per_pool": {
+        "polaris_train": 0,
+        "nebula_train": 13130,
+        "spica_train": 18108
+      }
+    },
+    "nebula_test": {
+      "rows": 3298,
+      "duplicated_rows": 806,
+      "duplicated_pairs": 806,
+      "rows_per_pool": {
+        "polaris_train": 806,
+        "nebula_train": 0,
+        "spica_train": 3
+      }
+    },
+    "nebula_valid": {
+      "rows": 3298,
+      "duplicated_rows": 3177,
+      "duplicated_pairs": 3177,
+      "rows_per_pool": {
+        "polaris_train": 740,
+        "nebula_train": 0,
+        "spica_train": 3148
+      }
+    },
+    "spica_test": {
+      "rows": 15238,
+      "duplicated_rows": 6709,
+      "duplicated_pairs": 1047,
+      "rows_per_pool": {
+        "polaris_train": 6603,
+        "nebula_train": 0,
+        "spica_train": 338
+      }
+    },
+    "spica_val": {
+      "rows": 8773,
+      "duplicated_rows": 4447,
+      "duplicated_pairs": 1376,
+      "rows_per_pool": {
+        "polaris_train": 2374,
+        "nebula_train": 3664,
+        "spica_train": 190
+      }
+    },
+    "polaris_train": {
+      "rows": 78630,
+      "duplicated_rows": 55121,
+      "duplicated_pairs": 8699,
+      "rows_per_pool": {
+        "nebula_train": 39196,
+        "spica_train": 53447
+      }
+    },
+    "nebula_train": {
+      "rows": 26382,
+      "duplicated_rows": 25421,
+      "duplicated_pairs": 25421,
+      "rows_per_pool": {
+        "polaris_train": 6163,
+        "spica_train": 25164
+      }
+    },
+    "spica_train": {
+      "rows": 160576,
+      "duplicated_rows": 93881,
+      "duplicated_pairs": 27700,
+      "rows_per_pool": {
+        "polaris_train": 53510,
+        "nebula_train": 77893
+      }
+    }
+  }
+}

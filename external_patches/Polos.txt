@@ -1,0 +1,3 @@
+https://github.com/YuigaWada/Polos
+commit 82a4504972dcac715e5b2a3fd4d6ebb79a169163
+changes: see Polos.patch (evaluate.py and polos/); the package Polos-revised/revision/ of this repository is added on top

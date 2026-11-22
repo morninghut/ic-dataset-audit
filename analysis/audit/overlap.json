@@ -1,0 +1,346 @@
+{
+ "benchmark_in_training_pool": {
+  "nebula_train": {
+   "coco_val2014": {
+    "images_a": 26382,
+    "images_b": 32150,
+    "share_of_a": 0.7042,
+    "share_of_b": 0.5779,
+    "shared_images": 18578
+   },
+   "composite": {
+    "images_a": 26382,
+    "images_b": 3964,
+    "share_of_a": 0.0508,
+    "share_of_b": 0.3378,
+    "shared_images": 1339
+   },
+   "flickr8k": {
+    "images_a": 26382,
+    "images_b": 8090,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0001,
+    "shared_images": 1
+   },
+   "nebula_test": {
+    "images_a": 26382,
+    "images_b": 3298,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "nebula_valid": {
+    "images_a": 26382,
+    "images_b": 3298,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "pascal": {
+    "images_a": 26382,
+    "images_b": 1000,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "polaris_test": {
+    "images_a": 26382,
+    "images_b": 2738,
+    "share_of_a": 0.0831,
+    "share_of_b": 0.8006,
+    "shared_images": 2192
+   },
+   "polaris_val": {
+    "images_a": 26382,
+    "images_b": 2739,
+    "share_of_a": 0.0823,
+    "share_of_b": 0.7923,
+    "shared_images": 2170
+   },
+   "spica_test": {
+    "images_a": 26382,
+    "images_b": 3287,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "spica_val": {
+    "images_a": 26382,
+    "images_b": 2932,
+    "share_of_a": 0.0716,
+    "share_of_b": 0.6443,
+    "shared_images": 1889
+   }
+  },
+  "polaris_train": {
+   "coco_val2014": {
+    "images_a": 8214,
+    "images_b": 32150,
+    "share_of_a": 0.6631,
+    "share_of_b": 0.1694,
+    "shared_images": 5447
+   },
+   "composite": {
+    "images_a": 8214,
+    "images_b": 3964,
+    "share_of_a": 0.078,
+    "share_of_b": 0.1617,
+    "shared_images": 641
+   },
+   "flickr8k": {
+    "images_a": 8214,
+    "images_b": 8090,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "nebula_test": {
+    "images_a": 8214,
+    "images_b": 3298,
+    "share_of_a": 0.1035,
+    "share_of_b": 0.2577,
+    "shared_images": 850
+   },
+   "nebula_valid": {
+    "images_a": 8214,
+    "images_b": 3298,
+    "share_of_a": 0.0961,
+    "share_of_b": 0.2392,
+    "shared_images": 789
+   },
+   "pascal": {
+    "images_a": 8214,
+    "images_b": 1000,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "polaris_test": {
+    "images_a": 8214,
+    "images_b": 2738,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "polaris_val": {
+    "images_a": 8214,
+    "images_b": 2739,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "spica_test": {
+    "images_a": 8214,
+    "images_b": 3287,
+    "share_of_a": 0.1031,
+    "share_of_b": 0.2577,
+    "shared_images": 847
+   },
+   "spica_val": {
+    "images_a": 8214,
+    "images_b": 2932,
+    "share_of_a": 0.0668,
+    "share_of_b": 0.1872,
+    "shared_images": 549
+   }
+  },
+  "spica_train": {
+   "coco_val2014": {
+    "images_a": 57999,
+    "images_b": 32150,
+    "share_of_a": 0.471,
+    "share_of_b": 0.8496,
+    "shared_images": 27316
+   },
+   "composite": {
+    "images_a": 57999,
+    "images_b": 3964,
+    "share_of_a": 0.0328,
+    "share_of_b": 0.4798,
+    "shared_images": 1902
+   },
+   "flickr8k": {
+    "images_a": 57999,
+    "images_b": 8090,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0001,
+    "shared_images": 1
+   },
+   "nebula_test": {
+    "images_a": 57999,
+    "images_b": 3298,
+    "share_of_a": 0.0223,
+    "share_of_b": 0.3924,
+    "shared_images": 1294
+   },
+   "nebula_valid": {
+    "images_a": 57999,
+    "images_b": 3298,
+    "share_of_a": 0.0554,
+    "share_of_b": 0.9736,
+    "shared_images": 3211
+   },
+   "pascal": {
+    "images_a": 57999,
+    "images_b": 1000,
+    "share_of_a": 0.0,
+    "share_of_b": 0.0,
+    "shared_images": 0
+   },
+   "polaris_test": {
+    "images_a": 57999,
+    "images_b": 2738,
+    "share_of_a": 0.043,
+    "share_of_b": 0.9112,
+    "shared_images": 2495
+   },
+   "polaris_val": {
+    "images_a": 57999,
+    "images_b": 2739,
+    "share_of_a": 0.0434,
+    "share_of_b": 0.9189,
+    "shared_images": 2517
+   },
+   "spica_test": {
+    "images_a": 57999,
+    "images_b": 3287,
+    "share_of_a": 0.0222,
+    "share_of_b": 0.3922,
+    "shared_images": 1289
+   },
+   "spica_val": {
+    "images_a": 57999,
+    "images_b": 2932,
+    "share_of_a": 0.0219,
+    "share_of_b": 0.4335,
+    "shared_images": 1271
+   }
+  }
+ },
+ "cross_dataset": {
+  "composite_vs_coco_val2014": {
+   "images_a": 3964,
+   "images_b": 32150,
+   "share_of_a": 0.4019,
+   "share_of_b": 0.0495,
+   "shared_images": 1593
+  },
+  "flickr8k_vs_spica_train": {
+   "images_a": 8090,
+   "images_b": 57999,
+   "share_of_a": 0.0001,
+   "share_of_b": 0.0,
+   "shared_images": 1
+  },
+  "nebula_train_vs_nebula_test": {
+   "images_a": 26382,
+   "images_b": 3298,
+   "share_of_a": 0.0,
+   "share_of_b": 0.0,
+   "shared_images": 0
+  },
+  "polaris_train_vs_polaris_test": {
+   "images_a": 8214,
+   "images_b": 2738,
+   "share_of_a": 0.0,
+   "share_of_b": 0.0,
+   "shared_images": 0
+  },
+  "spica_test_vs_nebula_test": {
+   "images_a": 3287,
+   "images_b": 3298,
+   "share_of_a": 1.0,
+   "share_of_b": 0.9967,
+   "shared_images": 3287
+  },
+  "spica_train_vs_nebula_train": {
+   "images_a": 57999,
+   "images_b": 26382,
+   "share_of_a": 0.4417,
+   "share_of_b": 0.971,
+   "shared_images": 25617
+  },
+  "spica_train_vs_spica_test": {
+   "images_a": 57999,
+   "images_b": 3287,
+   "share_of_a": 0.0222,
+   "share_of_b": 0.3922,
+   "shared_images": 1289
+  },
+  "spica_train_vs_spica_val": {
+   "images_a": 57999,
+   "images_b": 2932,
+   "share_of_a": 0.0219,
+   "share_of_b": 0.4335,
+   "shared_images": 1271
+  },
+  "spica_val_vs_nebula_valid": {
+   "images_a": 2932,
+   "images_b": 3298,
+   "share_of_a": 0.0798,
+   "share_of_b": 0.071,
+   "shared_images": 234
+  },
+  "spica_val_vs_spica_test": {
+   "images_a": 2932,
+   "images_b": 3287,
+   "share_of_a": 0.0297,
+   "share_of_b": 0.0265,
+   "shared_images": 87
+  }
+ },
+ "dataset_sizes": {
+  "coco_val2014": {
+   "names": 32150,
+   "unique_images": 32150
+  },
+  "composite": {
+   "names": 3964,
+   "unique_images": 3964
+  },
+  "flickr8k": {
+   "names": 8091,
+   "unique_images": 8090
+  },
+  "nebula_test": {
+   "names": 3298,
+   "unique_images": 3298
+  },
+  "nebula_train": {
+   "names": 26382,
+   "unique_images": 26382
+  },
+  "nebula_valid": {
+   "names": 3298,
+   "unique_images": 3298
+  },
+  "pascal": {
+   "names": 1000,
+   "unique_images": 1000
+  },
+  "polaris_test": {
+   "names": 2738,
+   "unique_images": 2738
+  },
+  "polaris_train": {
+   "names": 8214,
+   "unique_images": 8214
+  },
+  "polaris_val": {
+   "names": 2739,
+   "unique_images": 2739
+  },
+  "spica_test": {
+   "names": 3287,
+   "unique_images": 3287
+  },
+  "spica_train": {
+   "names": 69280,
+   "unique_images": 57999
+  },
+  "spica_val": {
+   "names": 2968,
+   "unique_images": 2932
+  }
+ }
+}

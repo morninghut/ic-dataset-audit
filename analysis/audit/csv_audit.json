@@ -1,0 +1,283 @@
+{
+ "composition": {
+  "rows_without_references": 148810,
+  "total_images": 75535,
+  "total_rows": 333397
+ },
+ "leakage": {
+  "test_vs_train": {
+   "shared_imgids": 0,
+   "shared_reference_keys": 1251
+  },
+  "test_vs_val": {
+   "shared_imgids": 0,
+   "shared_reference_keys": 87
+  },
+  "train_vs_val": {
+   "shared_imgids": 0,
+   "shared_reference_keys": 1258
+  }
+ },
+ "provenance": {
+  "polaris_test": {
+   "images": 2738,
+   "in_no_spica_split": 0,
+   "in_spica_test": 261,
+   "in_spica_train": 2355,
+   "in_spica_val": 122
+  },
+  "polaris_train": {
+   "images": 8214,
+   "in_no_spica_split": 0,
+   "in_spica_test": 847,
+   "in_spica_train": 7058,
+   "in_spica_val": 309
+  },
+  "polaris_val": {
+   "images": 2739,
+   "in_no_spica_split": 0,
+   "in_spica_test": 259,
+   "in_spica_train": 2371,
+   "in_spica_val": 109
+  },
+  "spica_test": {
+   "images": 3287,
+   "in_no_polaris_split": 1920,
+   "in_polaris_test": 261,
+   "in_polaris_train": 847,
+   "in_polaris_val": 259
+  },
+  "spica_train": {
+   "images": 69280,
+   "in_no_polaris_split": 57496,
+   "in_polaris_test": 2355,
+   "in_polaris_train": 7058,
+   "in_polaris_val": 2371
+  },
+  "spica_val": {
+   "images": 2968,
+   "in_no_polaris_split": 2428,
+   "in_polaris_test": 122,
+   "in_polaris_train": 309,
+   "in_polaris_val": 109
+  }
+ },
+ "reference_key_collisions": {
+  "examples": [
+   {
+    "imgids": [
+     "5333e6e4a49a00f3271af2568ad76656",
+     "f36d50d5e36216db84d800dcabfea07a"
+    ]
+   },
+   {
+    "imgids": [
+     "1a6b7e014367e78b54ed23d26a2e041c",
+     "97312773e139a65e8f7fb8efcea39830"
+    ]
+   },
+   {
+    "imgids": [
+     "0ff7804130382cfc028652dbce4ce966",
+     "c11e0f42b3357371283517acccb1d034"
+    ]
+   },
+   {
+    "imgids": [
+     "1b8035127bab16a0abaf3812177dfa7b",
+     "5999c8af7de795f02bb2248b32783c51"
+    ]
+   },
+   {
+    "imgids": [
+     "6582be1d60bde2d8348b7b049a026f5d",
+     "66eb97a6d940680450bc1022d0d231e8"
+    ]
+   }
+  ],
+  "imgid_count_histogram": {
+   "2": 13470
+  },
+  "reference_keys_with_multiple_imgids": 13470,
+  "split_pattern": {
+   "test+train": 1251,
+   "test+val": 87,
+   "train": 10838,
+   "train+val": 1258,
+   "val": 36
+  }
+ },
+ "splits": {
+  "test": {
+   "annotations_per_sample_histogram": {
+    "1": 4803,
+    "11": 2,
+    "12": 3,
+    "13": 2,
+    "14": 4,
+    "15": 1,
+    "16": 3,
+    "2": 23,
+    "3": 27,
+    "4": 83,
+    "5": 235,
+    "6": 532,
+    "7": 331,
+    "8": 385,
+    "9": 1
+   },
+   "group_mean_oracle": {
+    "kendall_tau_c_all": 0.7578370512538503,
+    "kendall_tau_c_multi": 0.49498350272949415
+   },
+   "human_leave_one_out": {
+    "kendall_tau_c": 0.3110736852062268,
+    "pearson": 0.41860672986321035,
+    "rows": 10435
+   },
+   "images": 3287,
+   "images_without_references": 0,
+   "mean_score": 0.5119274182963643,
+   "mean_score_without_references": null,
+   "reference_count_histogram": {
+    "10": 2531,
+    "5": 12692,
+    "6": 15
+   },
+   "rows": 15238,
+   "rows_with_malformed_refs": 0,
+   "rows_with_references": 15238,
+   "rows_without_references": 0,
+   "samples": 6435,
+   "score_histogram": {
+    "0.0": 4008,
+    "0.25": 841,
+    "0.5": 3500,
+    "0.75": 4194,
+    "1.0": 2695
+   },
+   "singleton_oracle_kendall_tau_c": 0.5889765228475912,
+   "singleton_oracle_pearson": 0.6166884414857965,
+   "singleton_row_share": 0.3151988449927812,
+   "singleton_zero_share": 0.23861399133744585,
+   "zero_share_in_multi": 0.035649257307139436,
+   "zero_share_in_singletons": 0.7570268582136165
+  },
+  "train": {
+   "annotations_per_sample_histogram": {
+    "1": 68649,
+    "10": 14,
+    "11": 16,
+    "12": 41,
+    "13": 37,
+    "14": 30,
+    "15": 17,
+    "16": 5,
+    "2": 1377,
+    "20": 2,
+    "21": 3,
+    "22": 1,
+    "23": 1,
+    "24": 1,
+    "3": 493,
+    "4": 777,
+    "5": 1850,
+    "6": 4388,
+    "7": 3133,
+    "8": 3102,
+    "9": 5
+   },
+   "group_mean_oracle": {
+    "kendall_tau_c_all": 0.7986119032705606,
+    "kendall_tau_c_multi": 0.49889784880417076
+   },
+   "human_leave_one_out": {
+    "kendall_tau_c": 0.301543427681438,
+    "pearson": 0.399696480082085,
+    "rows": 91927
+   },
+   "images": 69280,
+   "images_without_references": 17735,
+   "mean_score": 0.6196078684879083,
+   "mean_score_without_references": 0.700680397822727,
+   "reference_count_histogram": {
+    "0": 148810,
+    "10": 22104,
+    "5": 138068,
+    "6": 400,
+    "7": 4
+   },
+   "rows": 309386,
+   "rows_with_malformed_refs": 0,
+   "rows_with_references": 160576,
+   "rows_without_references": 148810,
+   "samples": 83942,
+   "score_histogram": {
+    "0.0": 45877,
+    "0.25": 22029,
+    "0.5": 65688,
+    "0.75": 89781,
+    "1.0": 86011
+   },
+   "singleton_oracle_kendall_tau_c": 0.36737146525348524,
+   "singleton_oracle_pearson": 0.3912761926411289,
+   "singleton_row_share": 0.4275171881227581,
+   "singleton_zero_share": 0.21574830609804704,
+   "zero_share_in_multi": 0.03589804953930836,
+   "zero_share_in_singletons": 0.5046541100380195
+  },
+  "val": {
+   "annotations_per_sample_histogram": {
+    "1": 4104,
+    "10": 1,
+    "12": 2,
+    "14": 4,
+    "16": 1,
+    "2": 209,
+    "3": 76,
+    "4": 38,
+    "5": 80,
+    "6": 204,
+    "7": 141,
+    "8": 142,
+    "9": 2
+   },
+   "group_mean_oracle": {
+    "kendall_tau_c_all": 0.8079085313634367,
+    "kendall_tau_c_multi": 0.49826783209074715
+   },
+   "human_leave_one_out": {
+    "kendall_tau_c": 0.25381864341213106,
+    "pearson": 0.33684030329965226,
+    "rows": 4669
+   },
+   "images": 2968,
+   "images_without_references": 0,
+   "mean_score": 0.5577624529807363,
+   "mean_score_without_references": null,
+   "reference_count_histogram": {
+    "10": 1010,
+    "5": 7753,
+    "6": 10
+   },
+   "rows": 8773,
+   "rows_with_malformed_refs": 0,
+   "rows_with_references": 8773,
+   "rows_without_references": 0,
+   "samples": 5004,
+   "score_histogram": {
+    "0.0": 1960,
+    "0.25": 497,
+    "0.5": 1846,
+    "0.75": 2496,
+    "1.0": 1974
+   },
+   "singleton_oracle_kendall_tau_c": 0.303269688434156,
+   "singleton_oracle_pearson": 0.32891558330796494,
+   "singleton_row_share": 0.46779892853071925,
+   "singleton_zero_share": 0.20357916334207227,
+   "zero_share_in_multi": 0.037267080745341616,
+   "zero_share_in_singletons": 0.4351851851851852
+  }
+ }
+}

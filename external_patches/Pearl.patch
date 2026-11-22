@@ -1,0 +1,56 @@
+diff --git a/pearl/models/model_base.py b/pearl/models/model_base.py
+index a614f33..51e1ab4 100644
+--- a/pearl/models/model_base.py
++++ b/pearl/models/model_base.py
+@@ -526,8 +526,14 @@ class SpicaDataset(Dataset):
+         self.stella_features_path = stella_features_path
+ 
+         # Filter out entries with broken image files
+-        for data in self.dataset:
+-            assert self.is_image_ok(path.join(img_dir_path, f"{data['imgid']}"))
++        # PEARL_SKIP_IMAGES=1 skips opening every training image.  PearlEstimator
++        # scores precomputed features only: `img` reaches forward() and is never
++        # read, so the decoded image has no effect on the model's output.  The
++        # images are verified once outside training instead.
++        self.skip_images = os.environ.get("PEARL_SKIP_IMAGES") == "1"
++        if not self.skip_images:
++            for data in self.dataset:
++                assert self.is_image_ok(path.join(img_dir_path, f"{data['imgid']}"))
+ 
+         if self.features_path:
+             features = load_clip_features(features_path)
+@@ -563,8 +569,7 @@ class SpicaDataset(Dataset):
+ 
+         labels = deepcopy(data)
+ 
+-        img = Image.open(img_name).convert("RGB")
+-        labels["img"] = img
++        labels["img"] = img_name if self.skip_images else Image.open(img_name).convert("RGB")
+ 
+         mt_text = data["mt"]
+         if len(data["refs"]) == 0:
+diff --git a/pearl/models/utils.py b/pearl/models/utils.py
+index aee5df9..71769a2 100644
+--- a/pearl/models/utils.py
++++ b/pearl/models/utils.py
+@@ -3,7 +3,20 @@ import torch
+ from pathlib import Path
+ import numpy as np
+ 
++_FEATURE_CACHE = {}
++
++
+ def load_clip_features(feature_dir: str, img=True, mt=True, ref=True, num_splits: int = 5):
++    # The train, validation and test datasets point at the same feature
++    # directory here; reading it once per process keeps memory at one copy.
++    # The datasets only read from the returned dictionaries.
++    key = (str(feature_dir), img, mt, ref, num_splits)
++    if key not in _FEATURE_CACHE:
++        _FEATURE_CACHE[key] = _load_clip_features(feature_dir, img, mt, ref, num_splits)
++    return _FEATURE_CACHE[key]
++
++
++def _load_clip_features(feature_dir: str, img=True, mt=True, ref=True, num_splits: int = 5):
+     """
+     Function to load and merge split-saved features
+     

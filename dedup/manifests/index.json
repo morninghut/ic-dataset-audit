@@ -1,0 +1,497 @@
+{
+ "evaluation_sets": [
+  "polaris_test",
+  "polaris_val",
+  "nebula_test",
+  "nebula_valid",
+  "spica_test",
+  "spica_val",
+  "flickr8k_expert",
+  "flickr8k_cf",
+  "composite",
+  "pascal50s",
+  "foil_1ref",
+  "foil_4ref"
+ ],
+ "sources": {
+  "spica": {
+   "repository": "hiranohachiman/Spica",
+   "revision": "c382725"
+  },
+  "nebula": {
+   "repository": "Ka2ukiMatsuda/Nebula",
+   "revision": "a4c99b14818d834bca2b9a8b1fa3741deda94b47"
+  },
+  "polaris": {
+   "repository": "yuwd/Polaris",
+   "note": "CSV files as downloaded by the Polos repository"
+  }
+ },
+ "training": {
+  "spica_train": {
+   "dataset": "spica",
+   "file": "spica_train.csv",
+   "against": [
+    "spica_test",
+    "polaris_test",
+    "polaris_val",
+    "nebula_test",
+    "nebula_valid",
+    "flickr8k_expert",
+    "flickr8k_cf",
+    "composite",
+    "pascal50s",
+    "foil_1ref",
+    "foil_4ref"
+   ],
+   "rows": 309386,
+   "kept": {
+    "dedup": 266893,
+    "random": 266893,
+    "matched": 266893,
+    "relaxed": 264015
+   },
+   "rows_duplicated_in": {
+    "polaris_test": 17872,
+    "polaris_val": 18187,
+    "nebula_test": 19,
+    "nebula_valid": 9746,
+    "spica_test": 76,
+    "spica_val": 347,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 1,
+    "pascal50s": 0,
+    "foil_1ref": 85,
+    "foil_4ref": 85
+   },
+   "rows_duplicated_in_relaxed": {
+    "polaris_test": 18069,
+    "polaris_val": 18415,
+    "nebula_test": 129,
+    "nebula_valid": 9957,
+    "spica_test": 233,
+    "spica_val": 573,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 753,
+    "pascal50s": 0,
+    "foil_1ref": 3201,
+    "foil_4ref": 3201
+   }
+  },
+  "spica_val": {
+   "dataset": "spica",
+   "file": "spica_val.csv",
+   "against": [
+    "spica_test",
+    "polaris_test",
+    "polaris_val",
+    "nebula_test",
+    "nebula_valid",
+    "flickr8k_expert",
+    "flickr8k_cf",
+    "composite",
+    "pascal50s",
+    "foil_1ref",
+    "foil_4ref"
+   ],
+   "rows": 8773,
+   "kept": {
+    "dedup": 6700,
+    "random": 6700,
+    "matched": 6700,
+    "relaxed": 6568
+   },
+   "rows_duplicated_in": {
+    "polaris_test": 928,
+    "polaris_val": 852,
+    "nebula_test": 0,
+    "nebula_valid": 443,
+    "spica_test": 6,
+    "spica_val": 8773,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 0,
+    "pascal50s": 0,
+    "foil_1ref": 9,
+    "foil_4ref": 9
+   },
+   "rows_duplicated_in_relaxed": {
+    "polaris_test": 931,
+    "polaris_val": 854,
+    "nebula_test": 2,
+    "nebula_valid": 450,
+    "spica_test": 8,
+    "spica_val": 8773,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 70,
+    "pascal50s": 0,
+    "foil_1ref": 151,
+    "foil_4ref": 151
+   }
+  },
+  "nebula_train": {
+   "dataset": "nebula",
+   "file": "data/train-*.parquet",
+   "against": [
+    "spica_test",
+    "polaris_test",
+    "polaris_val",
+    "nebula_test",
+    "nebula_valid",
+    "flickr8k_expert",
+    "flickr8k_cf",
+    "composite",
+    "pascal50s",
+    "foil_1ref",
+    "foil_4ref"
+   ],
+   "rows": 26382,
+   "kept": {
+    "dedup": 22271,
+    "random": 22271,
+    "relaxed": 21746
+   },
+   "rows_duplicated_in": {
+    "polaris_test": 2057,
+    "polaris_val": 2042,
+    "nebula_test": 0,
+    "nebula_valid": 0,
+    "spica_test": 0,
+    "spica_val": 1218,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 1,
+    "pascal50s": 0,
+    "foil_1ref": 13,
+    "foil_4ref": 13
+   },
+   "rows_duplicated_in_relaxed": {
+    "polaris_test": 2059,
+    "polaris_val": 2044,
+    "nebula_test": 3,
+    "nebula_valid": 2,
+    "spica_test": 3,
+    "spica_val": 1238,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 81,
+    "pascal50s": 0,
+    "foil_1ref": 625,
+    "foil_4ref": 625
+   }
+  },
+  "polaris_train": {
+   "dataset": "polaris",
+   "file": "polaris_train.csv",
+   "against": [
+    "polaris_test",
+    "polaris_val",
+    "nebula_test",
+    "nebula_valid",
+    "spica_test",
+    "spica_val",
+    "flickr8k_expert",
+    "flickr8k_cf",
+    "composite",
+    "pascal50s",
+    "foil_1ref",
+    "foil_4ref"
+   ],
+   "rows": 78630,
+   "kept": {
+    "dedup": 65051,
+    "relaxed": 63287
+   },
+   "rows_duplicated_in": {
+    "polaris_test": 0,
+    "polaris_val": 0,
+    "nebula_test": 5182,
+    "nebula_valid": 4603,
+    "spica_test": 6603,
+    "spica_val": 2516,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 0,
+    "pascal50s": 0,
+    "foil_1ref": 54,
+    "foil_4ref": 54
+   },
+   "rows_duplicated_in_relaxed": {
+    "polaris_test": 0,
+    "polaris_val": 8,
+    "nebula_test": 5249,
+    "nebula_valid": 4676,
+    "spica_test": 6625,
+    "spica_val": 2621,
+    "flickr8k_expert": 0,
+    "flickr8k_cf": 0,
+    "composite": 392,
+    "pascal50s": 0,
+    "foil_1ref": 1763,
+    "foil_4ref": 1763
+   }
+  }
+ },
+ "evaluation": {
+  "polaris_test": {
+   "samples": 26122,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 2279,
+     "image_only": 5987,
+     "duplicated": 17856
+    },
+    "nebula_train": {
+     "unseen_image": 5280,
+     "image_only": 7731,
+     "duplicated": 13111
+    },
+    "polaris_train": {
+     "unseen_image": 26122,
+     "image_only": 0,
+     "duplicated": 0
+    }
+   },
+   "dataset": "polaris",
+   "file": "polaris_test.csv"
+  },
+  "polaris_val": {
+   "samples": 26268,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 2040,
+     "image_only": 6120,
+     "duplicated": 18108
+    },
+    "nebula_train": {
+     "unseen_image": 5364,
+     "image_only": 7774,
+     "duplicated": 13130
+    },
+    "polaris_train": {
+     "unseen_image": 26268,
+     "image_only": 0,
+     "duplicated": 0
+    }
+   },
+   "dataset": "polaris",
+   "file": "polaris_val.csv"
+  },
+  "spica_test": {
+   "samples": 15238,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 9102,
+     "image_only": 5794,
+     "duplicated": 342
+    },
+    "nebula_train": {
+     "unseen_image": 15238,
+     "image_only": 0,
+     "duplicated": 0
+    },
+    "polaris_train": {
+     "unseen_image": 6859,
+     "image_only": 1776,
+     "duplicated": 6603
+    }
+   },
+   "dataset": "spica",
+   "file": "spica_test.csv"
+  },
+  "spica_val": {
+   "samples": 8773,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 5102,
+     "image_only": 3481,
+     "duplicated": 190
+    },
+    "nebula_train": {
+     "unseen_image": 2181,
+     "image_only": 2928,
+     "duplicated": 3664
+    },
+    "polaris_train": {
+     "unseen_image": 5283,
+     "image_only": 1116,
+     "duplicated": 2374
+    }
+   },
+   "dataset": "spica",
+   "file": "spica_val.csv"
+  },
+  "nebula_test": {
+   "samples": 3298,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 2004,
+     "image_only": 1290,
+     "duplicated": 4
+    },
+    "nebula_train": {
+     "unseen_image": 3298,
+     "image_only": 0,
+     "duplicated": 0
+    },
+    "polaris_train": {
+     "unseen_image": 2448,
+     "image_only": 44,
+     "duplicated": 806
+    }
+   },
+   "dataset": "nebula",
+   "file": "data/test-*.parquet"
+  },
+  "nebula_valid": {
+   "samples": 3298,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 87,
+     "image_only": 63,
+     "duplicated": 3148
+    },
+    "nebula_train": {
+     "unseen_image": 3298,
+     "image_only": 0,
+     "duplicated": 0
+    },
+    "polaris_train": {
+     "unseen_image": 2509,
+     "image_only": 49,
+     "duplicated": 740
+    }
+   },
+   "dataset": "nebula",
+   "file": "data/valid-*.parquet"
+  },
+  "flickr8k_expert": {
+   "samples": 16992,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 16992,
+     "image_only": 0,
+     "duplicated": 0
+    },
+    "nebula_train": {
+     "unseen_image": 16992,
+     "image_only": 0,
+     "duplicated": 0
+    },
+    "polaris_train": {
+     "unseen_image": 16992,
+     "image_only": 0,
+     "duplicated": 0
+    }
+   },
+   "key": "sample_id, the identifier used by the Polos evaluation files"
+  },
+  "flickr8k_cf": {
+   "samples": 47830,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 47830,
+     "image_only": 0,
+     "duplicated": 0
+    },
+    "nebula_train": {
+     "unseen_image": 47830,
+     "image_only": 0,
+     "duplicated": 0
+    },
+    "polaris_train": {
+     "unseen_image": 47830,
+     "image_only": 0,
+     "duplicated": 0
+    }
+   },
+   "key": "sample_id, the identifier used by the Polos evaluation files"
+  },
+  "composite": {
+   "samples": 11982,
+   "groups": {
+    "spica_train": {
+     "unseen_image": 6276,
+     "image_only": 5705,
+     "duplicated": 1
+    },
+    "nebula_train": {
+     "unseen_image": 7965,
+     "image_only": 4016,
+     "duplicated": 1
+    },
+    "polaris_train": {
+     "unseen_image": 10059,
+     "image_only": 1923,
+     "duplicated": 0
+    }
+   },
+   "key": "sample_id, the identifier used by the Polos evaluation files"
+  }
+ },
+ "fingerprint": "first 8 bytes (big endian) of sha1(image identifier + \"\\x1f\" + candidate caption), both exactly as stored in the released file",
+ "pair": "two rows hold the same pair if their images have identical decoded pixels and their candidate captions are identical strings",
+ "content": {
+  "sets": {
+   "polaris_test": {
+    "pairs": 8726,
+    "images": 2738
+   },
+   "polaris_val": {
+    "pairs": 8738,
+    "images": 2739
+   },
+   "nebula_test": {
+    "pairs": 3298,
+    "images": 3298
+   },
+   "nebula_valid": {
+    "pairs": 3298,
+    "images": 3298
+   },
+   "spica_test": {
+    "pairs": 6435,
+    "images": 3287
+   },
+   "spica_val": {
+    "pairs": 5002,
+    "images": 2932
+   },
+   "flickr8k_expert": {
+    "pairs": 5664,
+    "images": 1000
+   },
+   "flickr8k_cf": {
+    "pairs": 47830,
+    "images": 1000
+   },
+   "composite": {
+    "pairs": 11962,
+    "images": 3964
+   },
+   "pascal50s": {
+    "pairs": 5547,
+    "images": 1000
+   },
+   "foil_1ref": {
+    "pairs": 198897,
+    "images": 32150
+   },
+   "foil_4ref": {
+    "pairs": 198897,
+    "images": 32150
+   }
+  },
+  "image": "sha1 of \"<width>x<height>|\" followed by the RGB bytes of the decoded image",
+  "images_key": "first 8 bytes of the image hash",
+  "pairs_key": "first 16 bytes of sha1(image hash in hex + \"\\x1f\" + candidate caption), as two uint64"
+ },
+ "relaxed": {
+  "image": "the same picture, or cosine >= 0.97 between SigLIP so400m-patch14-384 image features",
+  "candidate": "identical after lower-casing and removing punctuation, or difflib ratio >= 0.9 between the normalized strings",
+  "field": "duplicated_in_relaxed, same bit layout as duplicated_in; a superset of it"
+ }
+}

@@ -1,0 +1,513 @@
+{
+  "columns": [
+    "polaris_test/all",
+    "polaris_test/pair",
+    "polaris_test/not pair",
+    "polaris_test/pair above",
+    "polaris_test/not pair above"
+  ],
+  "sizes": {
+    "all": 26122,
+    "pair": 13111,
+    "not pair": 13011,
+    "pair above": 12659,
+    "not pair above": 7266
+  },
+  "runs": {
+    "pairclean_s12": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.56515144895512,
+            "polaris_test/pair": 28.982365685817253,
+            "polaris_test/not pair": 67.77315784794902,
+            "polaris_test/pair above": 29.304608416464077,
+            "polaris_test/not pair above": 27.42721897101548
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 58.02228845898634,
+            "polaris_test/pair": 29.61561212689215,
+            "polaris_test/not pair": 68.06571284127894,
+            "polaris_test/pair above": 29.951939158638147,
+            "polaris_test/not pair above": 28.19441637978843
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 57.84581607352531,
+            "polaris_test/pair": 29.126194897505712,
+            "polaris_test/not pair": 68.0766765280185,
+            "polaris_test/pair above": 29.43096742526149,
+            "polaris_test/not pair above": 28.109226100662976
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.14114416952473,
+            "polaris_test/pair": 29.68571752367494,
+            "polaris_test/not pair": 68.17778345810169,
+            "polaris_test/pair above": 30.03949553136821,
+            "polaris_test/not pair above": 28.463129936617186
+          }
+        },
+        "4": {
+          "tau": {
+            "polaris_test/all": 58.31448403916435,
+            "polaris_test/pair": 29.98838918269597,
+            "polaris_test/not pair": 68.26777016173699,
+            "polaris_test/pair above": 30.337061728251612,
+            "polaris_test/not pair above": 28.746622739071537
+          }
+        }
+      }
+    },
+    "pairclean_s13": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.532528220149906,
+            "polaris_test/pair": 29.208538633719407,
+            "polaris_test/not pair": 67.61347996153802,
+            "polaris_test/pair above": 29.462110376372237,
+            "polaris_test/not pair above": 26.807551366149575
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 58.067580607626404,
+            "polaris_test/pair": 29.887269812251393,
+            "polaris_test/not pair": 67.97680714770468,
+            "polaris_test/pair above": 30.288742312200167,
+            "polaris_test/not pair above": 27.91785355853651
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.361022232986706,
+            "polaris_test/pair": 30.2395071095546,
+            "polaris_test/not pair": 68.20332896634804,
+            "polaris_test/pair above": 30.684063927892062,
+            "polaris_test/not pair above": 28.520751821134155
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 57.97386965654279,
+            "polaris_test/pair": 29.484040161160152,
+            "polaris_test/not pair": 68.07619066420689,
+            "polaris_test/pair above": 29.795337457161775,
+            "polaris_test/not pair above": 28.01290845376133
+          }
+        }
+      }
+    },
+    "pairclean_s14": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.15549715038223,
+            "polaris_test/pair": 28.29710884727024,
+            "polaris_test/not pair": 67.55985034354943,
+            "polaris_test/pair above": 28.46253563407688,
+            "polaris_test/not pair above": 26.576124340834156
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 58.139625174133435,
+            "polaris_test/pair": 29.663551803976024,
+            "polaris_test/not pair": 68.20085977396812,
+            "polaris_test/pair above": 30.011246386935614,
+            "polaris_test/not pair above": 28.535430046625592
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.28939570163199,
+            "polaris_test/pair": 29.88532389446666,
+            "polaris_test/not pair": 68.30558779239793,
+            "polaris_test/pair above": 30.30713687172879,
+            "polaris_test/not pair above": 28.906052714780987
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.11168386575882,
+            "polaris_test/pair": 29.462713600326552,
+            "polaris_test/not pair": 68.26110688660648,
+            "polaris_test/pair above": 29.76259866901575,
+            "polaris_test/not pair above": 28.536490758034127
+          }
+        }
+      }
+    },
+    "randomdrop_s12": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 56.317175464516986,
+            "polaris_test/pair": 27.013933137834428,
+            "polaris_test/not pair": 67.07386986556327,
+            "polaris_test/pair above": 27.112086416039837,
+            "polaris_test/not pair above": 25.158897725877672
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 58.221213105800196,
+            "polaris_test/pair": 30.079205951057542,
+            "polaris_test/not pair": 68.07771618796794,
+            "polaris_test/pair above": 30.443010996446656,
+            "polaris_test/not pair above": 28.244077877734675
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.546132301840146,
+            "polaris_test/pair": 30.602588026441513,
+            "polaris_test/not pair": 68.2411938542794,
+            "polaris_test/pair above": 31.038233249650276,
+            "polaris_test/not pair above": 28.721206073320367
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.679857387186885,
+            "polaris_test/pair": 30.80343931922406,
+            "polaris_test/not pair": 68.3194814299041,
+            "polaris_test/pair above": 31.224468596511645,
+            "polaris_test/not pair above": 28.90719424229684
+          }
+        },
+        "4": {
+          "tau": {
+            "polaris_test/all": 58.71835985358109,
+            "polaris_test/pair": 30.87407409872258,
+            "polaris_test/not pair": 68.3285607329853,
+            "polaris_test/pair above": 31.316554550482607,
+            "polaris_test/not pair above": 28.838803611479896
+          }
+        },
+        "5": {
+          "tau": {
+            "polaris_test/all": 58.57914352295587,
+            "polaris_test/pair": 30.546717789058565,
+            "polaris_test/not pair": 68.3074869439533,
+            "polaris_test/pair above": 30.946646514772723,
+            "polaris_test/not pair above": 28.757027812888587
+          }
+        },
+        "6": {
+          "tau": {
+            "polaris_test/all": 58.34810820752793,
+            "polaris_test/pair": 30.08407801725998,
+            "polaris_test/not pair": 68.22199558816756,
+            "polaris_test/pair above": 30.407949175452615,
+            "polaris_test/not pair above": 28.455523120515984
+          }
+        }
+      }
+    },
+    "randomdrop_s13": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.55416053174739,
+            "polaris_test/pair": 29.28173452025747,
+            "polaris_test/not pair": 67.60356774906549,
+            "polaris_test/pair above": 29.513847779149916,
+            "polaris_test/not pair above": 26.77303783731854
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 58.398205012598616,
+            "polaris_test/pair": 30.402575892524276,
+            "polaris_test/not pair": 68.19001718398403,
+            "polaris_test/pair above": 30.80701992653604,
+            "polaris_test/not pair above": 28.59470866134255
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.618264432239734,
+            "polaris_test/pair": 30.814163682261906,
+            "polaris_test/not pair": 68.26625497550386,
+            "polaris_test/pair above": 31.296865349438402,
+            "polaris_test/not pair above": 28.787737933669018
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.3950175403593,
+            "polaris_test/pair": 30.44962259986239,
+            "polaris_test/not pair": 68.12712957136043,
+            "polaris_test/pair above": 30.782729589514208,
+            "polaris_test/not pair above": 28.165009418738485
+          }
+        }
+      }
+    },
+    "randomdrop_s14": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.59289747885805,
+            "polaris_test/pair": 29.113003960056126,
+            "polaris_test/not pair": 67.74127248151666,
+            "polaris_test/pair above": 29.399629778704313,
+            "polaris_test/not pair above": 27.296604988571215
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 57.83784629379867,
+            "polaris_test/pair": 29.232154338494087,
+            "polaris_test/not pair": 67.9732687595813,
+            "polaris_test/pair above": 29.456023231559886,
+            "polaris_test/not pair above": 27.848179972015906
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.418045744971934,
+            "polaris_test/pair": 30.221496462434907,
+            "polaris_test/not pair": 68.277502205866,
+            "polaris_test/pair above": 30.60288424704853,
+            "polaris_test/not pair above": 28.653138706932683
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.42517212687158,
+            "polaris_test/pair": 30.10830454824512,
+            "polaris_test/not pair": 68.349764479511,
+            "polaris_test/pair above": 30.468647560957056,
+            "polaris_test/not pair above": 28.80787124640435
+          }
+        },
+        "4": {
+          "tau": {
+            "polaris_test/all": 58.58177446986972,
+            "polaris_test/pair": 30.436367671095514,
+            "polaris_test/not pair": 68.3770171566516,
+            "polaris_test/pair above": 30.82495354043508,
+            "polaris_test/not pair above": 28.86093712287132
+          }
+        },
+        "5": {
+          "tau": {
+            "polaris_test/all": 58.710564102511185,
+            "polaris_test/pair": 30.706216147393317,
+            "polaris_test/not pair": 68.42124405461449,
+            "polaris_test/pair above": 31.122481463854655,
+            "polaris_test/not pair above": 28.987010250285717
+          }
+        },
+        "6": {
+          "tau": {
+            "polaris_test/all": 58.67860144984937,
+            "polaris_test/pair": 30.490254177642605,
+            "polaris_test/not pair": 68.50188858660185,
+            "polaris_test/pair above": 30.885765082267362,
+            "polaris_test/not pair above": 29.224144913180396
+          }
+        },
+        "7": {
+          "tau": {
+            "polaris_test/all": 58.922225448742005,
+            "polaris_test/pair": 30.941701286308664,
+            "polaris_test/not pair": 68.61661151772743,
+            "polaris_test/pair above": 31.36406356753908,
+            "polaris_test/not pair above": 29.591464222949217
+          }
+        }
+      }
+    },
+    "released_s12": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.56233438297258,
+            "polaris_test/pair": 28.975230653939892,
+            "polaris_test/not pair": 67.7611264422557,
+            "polaris_test/pair above": 29.244236187433998,
+            "polaris_test/not pair above": 27.325042156333357
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 58.370606265895695,
+            "polaris_test/pair": 30.19323993280888,
+            "polaris_test/not pair": 68.21724918606883,
+            "polaris_test/pair above": 30.566709167476176,
+            "polaris_test/not pair above": 28.65684614585585
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.560442953066314,
+            "polaris_test/pair": 30.442577737568477,
+            "polaris_test/not pair": 68.34744591968057,
+            "polaris_test/pair above": 30.82634469764206,
+            "polaris_test/not pair above": 29.00668897241739
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.58349387299836,
+            "polaris_test/pair": 30.42485214268032,
+            "polaris_test/not pair": 68.36805895032587,
+            "polaris_test/pair above": 30.794031909789076,
+            "polaris_test/not pair above": 29.000789396583254
+          }
+        },
+        "4": {
+          "tau": {
+            "polaris_test/all": 58.853788954259436,
+            "polaris_test/pair": 30.953651664811776,
+            "polaris_test/not pair": 68.45884312039968,
+            "polaris_test/pair above": 31.340755028067623,
+            "polaris_test/not pair above": 29.281766797697355
+          }
+        },
+        "5": {
+          "tau": {
+            "polaris_test/all": 58.71614437718671,
+            "polaris_test/pair": 30.610317886700006,
+            "polaris_test/not pair": 68.46597306107569,
+            "polaris_test/pair above": 30.95050215023752,
+            "polaris_test/not pair above": 29.19460662595606
+          }
+        },
+        "6": {
+          "tau": {
+            "polaris_test/all": 58.974046419830884,
+            "polaris_test/pair": 31.19526688105348,
+            "polaris_test/not pair": 68.5034096799938,
+            "polaris_test/pair above": 31.574001836955695,
+            "polaris_test/not pair above": 29.292808298359528
+          }
+        }
+      }
+    },
+    "released_s13": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.82888839767784,
+            "polaris_test/pair": 29.631410710521134,
+            "polaris_test/not pair": 67.80219448704834,
+            "polaris_test/pair above": 29.947910460554304,
+            "polaris_test/not pair above": 27.49284165015682
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 57.81031166291666,
+            "polaris_test/pair": 29.466244757562233,
+            "polaris_test/not pair": 67.83818828242866,
+            "polaris_test/pair above": 29.749991722843426,
+            "polaris_test/not pair above": 27.476900672988556
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.65958139998364,
+            "polaris_test/pair": 30.905903961679766,
+            "polaris_test/not pair": 68.24126178660565,
+            "polaris_test/pair above": 31.341645302117545,
+            "polaris_test/not pair above": 28.66697846531071
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.52723022508489,
+            "polaris_test/pair": 30.53732270020252,
+            "polaris_test/not pair": 68.26252165113996,
+            "polaris_test/pair above": 30.891978695916713,
+            "polaris_test/not pair above": 28.570271890892595
+          }
+        },
+        "4": {
+          "tau": {
+            "polaris_test/all": 58.85637959980015,
+            "polaris_test/pair": 31.097511417810765,
+            "polaris_test/not pair": 68.40947108711882,
+            "polaris_test/pair above": 31.513766061144484,
+            "polaris_test/not pair above": 28.98598994693084
+          }
+        },
+        "5": {
+          "tau": {
+            "polaris_test/all": 58.56514245955064,
+            "polaris_test/pair": 30.45682307740516,
+            "polaris_test/not pair": 68.34991511206047,
+            "polaris_test/pair above": 30.78022517372892,
+            "polaris_test/not pair above": 28.7518555820203
+          }
+        }
+      }
+    },
+    "released_s14": {
+      "epochs": {
+        "0": {
+          "tau": {
+            "polaris_test/all": 57.843041140796515,
+            "polaris_test/pair": 29.455520394524388,
+            "polaris_test/not pair": 67.8849331068316,
+            "polaris_test/pair above": 29.75261761527478,
+            "polaris_test/not pair above": 27.67878941107964
+          }
+        },
+        "1": {
+          "tau": {
+            "polaris_test/all": 58.431772392663675,
+            "polaris_test/pair": 30.305076394550706,
+            "polaris_test/not pair": 68.2368299407132,
+            "polaris_test/pair above": 30.715885816969852,
+            "polaris_test/not pair above": 28.676050073357036
+          }
+        },
+        "2": {
+          "tau": {
+            "polaris_test/all": 58.6191561917145,
+            "polaris_test/pair": 30.522095675384747,
+            "polaris_test/not pair": 68.39499264089109,
+            "polaris_test/pair above": 30.97393050229139,
+            "polaris_test/not pair above": 29.079413366989197
+          }
+        },
+        "3": {
+          "tau": {
+            "polaris_test/all": 58.67085296129888,
+            "polaris_test/pair": 30.629487649271454,
+            "polaris_test/not pair": 68.38798084339116,
+            "polaris_test/pair above": 31.04235014310729,
+            "polaris_test/not pair above": 28.980837920089385
+          }
+        },
+        "4": {
+          "tau": {
+            "polaris_test/all": 58.85989790967534,
+            "polaris_test/pair": 30.87365960950834,
+            "polaris_test/not pair": 68.51454762791805,
+            "polaris_test/pair above": 31.297239763758462,
+            "polaris_test/not pair above": 29.291101058092462
+          }
+        },
+        "5": {
+          "tau": {
+            "polaris_test/all": 58.883655202765695,
+            "polaris_test/pair": 30.986836980216925,
+            "polaris_test/not pair": 68.49567425554041,
+            "polaris_test/pair above": 31.40868876229927,
+            "polaris_test/not pair above": 29.26853316012421
+          }
+        }
+      }
+    }
+  }
+}

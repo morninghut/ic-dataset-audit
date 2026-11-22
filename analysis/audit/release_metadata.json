@@ -1,0 +1,137 @@
+{
+ "composite": {
+  "downloads": 58,
+  "files": [
+   ".gitattributes",
+   "README.md",
+   "data/test-00000-of-00001.parquet"
+  ],
+  "gated": false,
+  "kind": "huggingface_dataset",
+  "last_modified": "2026-06-09T01:35:49.000Z",
+  "license": null,
+  "repo": "yuwd/Composite",
+  "sha": "d6c63cbe948daa123550d8b6a206c323c5cdde3f",
+  "tags": []
+ },
+ "deneb_code": {
+  "kind": "github",
+  "license": null,
+  "pushed_at": "2026-06-13T08:42:26Z",
+  "stars": 5,
+  "url": "https://github.com/Ka2ukiMatsuda/DENEB"
+ },
+ "nebula": {
+  "downloads": 262,
+  "files": [
+   ".gitattributes",
+   "README.md",
+   "data/test-00000-of-00002.parquet",
+   "data/test-00001-of-00002.parquet",
+   "data/train-00000-of-00010.parquet",
+   "data/train-00001-of-00010.parquet",
+   "data/train-00002-of-00010.parquet",
+   "data/train-00003-of-00010.parquet",
+   "data/train-00004-of-00010.parquet",
+   "data/train-00005-of-00010.parquet",
+   "data/train-00006-of-00010.parquet",
+   "data/train-00007-of-00010.parquet",
+   "data/train-00008-of-00010.parquet",
+   "data/train-00009-of-00010.parquet",
+   "data/valid-00000-of-00002.parquet",
+   "data/valid-00001-of-00002.parquet"
+  ],
+  "gated": false,
+  "kind": "huggingface_dataset",
+  "last_modified": "2025-02-01T16:54:54.000Z",
+  "license": null,
+  "repo": "Ka2ukiMatsuda/Nebula",
+  "sha": "a4c99b14818d834bca2b9a8b1fa3741deda94b47",
+  "tags": []
+ },
+ "pearl_code": {
+  "kind": "github",
+  "license": null,
+  "pushed_at": "2026-01-17T09:56:20Z",
+  "stars": 0,
+  "url": "https://github.com/hiranohachiman/Pearl"
+ },
+ "polaris": {
+  "downloads": 4131,
+  "files": [
+   ".gitattributes",
+   "README.md",
+   "data/test-00000-of-00011-bd8038c07cdc14d8.parquet",
+   "data/test-00001-of-00011-5a40e297e6753047.parquet",
+   "data/test-00002-of-00011-42c9f9ce802af499.parquet",
+   "data/test-00003-of-00011-02b125e4ad0f8a17.parquet",
+   "data/test-00004-of-00011-b98ee01686f6aa12.parquet",
+   "data/test-00005-of-00011-c0779293ee51c518.parquet",
+   "data/test-00006-of-00011-1243a8441a3dafc7.parquet",
+   "data/test-00007-of-00011-98f7ab4473900016.parquet",
+   "data/test-00008-of-00011-f17e530f7ad9da88.parquet",
+   "data/test-00009-of-00011-5c991361cfe1a0dd.parquet",
+   "data/test-00010-of-00011-2610585bb9307177.parquet",
+   "data/train-00000-of-00030-4eae81bc46456aec.parquet",
+   "data/train-00001-of-00030-91edaec7249faf79.parquet",
+   "data/train-00002-of-00030-a80878061b21501b.parquet",
+   "data/train-00003-of-00030-4f2c088355b3841a.parquet",
+   "data/train-00004-of-00030-42a558c241c26feb.parquet",
+   "data/train-00005-of-00030-1e73f90fd92bfc2b.parquet",
+   "data/train-00006-of-00030-98b8c4e24bb34216.parquet",
+   "data/train-00007-of-00030-8d3fcacdc8769254.parquet",
+   "data/train-00008-of-00030-f67abfeac71333b4.parquet",
+   "data/train-00009-of-00030-0c7ee607e4cf52bd.parquet",
+   "data/train-00010-of-00030-784d8fe4428a4931.parquet",
+   "data/train-00011-of-00030-f77952ed70559c59.parquet",
+   "data/train-00012-of-00030-d8a916a843ea84b0.parquet",
+   "data/train-00013-of-00030-306bff7b271dc619.parquet",
+   "data/train-00014-of-00030-df9dd640335becb1.parquet",
+   "data/train-00015-of-00030-049d7688759a0bb4.parquet",
+   "data/train-00016-of-00030-59b6277706f048ed.parquet",
+   "data/train-00017-of-00030-a6bfbadc4d1aac6c.parquet",
+   "data/train-00018-of-00030-da074f89a35235f4.parquet",
+   "data/train-00019-of-00030-5fddf8cb701f7149.parquet",
+   "data/train-00020-of-00030-c829ff1577aabbe0.parquet",
+   "data/train-00021-of-00030-1a97d8b96c9f2394.parquet",
+   "data/train-00022-of-00030-7454f85d70d67be6.parquet",
+   "data/train-00023-of-00030-31bd7709a0ee35a7.parquet",
+   "data/train-00024-of-00030-5b36119c942f7bdc.parquet",
+   "data/train-00025-of-00030-d5010cf9f3d1c7df.parquet",
+   "data/train-00026-of-00030-0ae54db24a7a1f59.parquet"
+  ],
+  "gated": false,
+  "kind": "huggingface_dataset",
+  "last_modified": "2024-03-24T11:16:55.000Z",
+  "license": "bsd",
+  "repo": "yuwd/Polaris",
+  "sha": "e527aa82a79f08cd97792baf624853b80aecc81f",
+  "tags": [
+   "license:bsd"
+  ]
+ },
+ "polos_code": {
+  "error": "RemoteDisconnected('Remote end closed connection without response')",
+  "kind": "github",
+  "url": "https://api.github.com/repos/keio-smilab24/Polos"
+ },
+ "spica": {
+  "downloads": 134,
+  "files": [
+   ".gitattributes",
+   "README.md",
+   "images.zip",
+   "spica_all_data.csv",
+   "spica_test.csv",
+   "spica_train.csv",
+   "spica_val.csv"
+  ],
+  "gated": false,
+  "kind": "huggingface_dataset",
+  "last_modified": "2026-01-17T12:06:42.000Z",
+  "license": null,
+  "repo": "hiranohachiman/Spica",
+  "sha": "c382725e97ddbc3d85c36e9ee677cfa0b9200132",
+  "tags": []
+ }
+}

@@ -1,0 +1,50 @@
+{
+  "nebula_exp_train->polaris_test": {
+    "test_samples": 26122,
+    "duplicated_samples": 13111,
+    "duplicated_share": 0.5019140953985146,
+    "image_only_share": 0.27658678508536866,
+    "duplicated_pairs": 2057,
+    "pairs_with_equal_mean_score": 2055
+  },
+  "nebula_exp_train->nebula_test": {
+    "test_samples": 3298,
+    "duplicated_samples": 0,
+    "duplicated_share": 0.0,
+    "image_only_share": 0.0,
+    "duplicated_pairs": 0,
+    "pairs_with_equal_mean_score": 0
+  },
+  "polaris_exp_train->polaris_test": {
+    "test_samples": 26122,
+    "duplicated_samples": 0,
+    "duplicated_share": 0.0,
+    "image_only_share": 0.0,
+    "duplicated_pairs": 0,
+    "pairs_with_equal_mean_score": 0
+  },
+  "polaris_exp_train->nebula_test": {
+    "test_samples": 3298,
+    "duplicated_samples": 806,
+    "duplicated_share": 0.24439053972104305,
+    "image_only_share": 0.013341419041843541,
+    "duplicated_pairs": 806,
+    "pairs_with_equal_mean_score": 806
+  },
+  "union->polaris_test": {
+    "test_samples": 26122,
+    "duplicated_samples": 13111,
+    "duplicated_share": 0.5019140953985146,
+    "image_only_share": 0.27658678508536866,
+    "duplicated_pairs": 2057,
+    "pairs_with_equal_mean_score": 2055
+  },
+  "union->nebula_test": {
+    "test_samples": 3298,
+    "duplicated_samples": 806,
+    "duplicated_share": 0.24439053972104305,
+    "image_only_share": 0.013341419041843541,
+    "duplicated_pairs": 806,
+    "pairs_with_equal_mean_score": 806
+  }
+}
