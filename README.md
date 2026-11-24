@@ -7,6 +7,9 @@
 **Xiaochen Zhang** · **Jin Li** · **Chunlong Xia** · **Longjiang Guo**
 
 <p>
+  <a href="https://arxiv.org/pdf/2611.30488">
+    <img src="https://img.shields.io/badge/arXiv-2611.30488-B31B1B?logo=arxiv&logoColor=white" alt="arXiv: 2611.30488">
+  </a>
   <a href="https://huggingface.co/datasets/hutmorning/ic-dataset-audit">
     <img src="https://img.shields.io/badge/Hugging_Face-Scores_%26_Checkpoints-FFD21E?logo=huggingface&logoColor=FFD21E" alt="Hugging Face Scores & Checkpoints">
   </a>
