@@ -43,7 +43,7 @@
 
 ---
 
-Recent human-judgment benchmarks for image captioning (**Polaris**, **Nebula**, and **Spica**) share a large fraction of identical `(image, candidate caption, human ratings)` samples across their training and test splits—**68.4%** of the Polaris test set appears inside the Spica training set.
+Recent human-judgment benchmarks for image captioning (**Polaris**, **Nebula**, and **Spica**) share a large fraction of duplicated `(image, candidate caption)` pairs across their training and test splits—**68.4%** of the Polaris test set appears inside the Spica training set, with identical mean human ratings for **96.7%–100%** of cross-dataset duplicated pairs.
 
 This repository provides:
 
@@ -60,7 +60,7 @@ This repository provides:
 
 ### 1. Substantial cross-dataset sample leakage
 
-Across the three recent benchmarks, identical samples—same decoded pixels, same candidate caption, and same human ratings—leak heavily between training and evaluation sets (**68.4%** of Polaris test in Spica train, **50.2%** in Nebula train; **43.3%** of Spica test and **24.4%** of Nebula test in Polaris train; **2.2%** of Spica test inside Spica train itself). Earlier benchmarks (Composite, Flickr8k-Expert, Flickr8k-CF) have virtually zero sample overlap.
+Across the three recent benchmarks, exact `(image, candidate caption)` pairs—matched by decoded pixels and exact candidate text—leak heavily between training and evaluation sets (**68.4%** of Polaris test in Spica train, **50.2%** in Nebula train; **43.3%** of Spica test and **24.4%** of Nebula test in Polaris train; **2.2%** of Spica test inside Spica train itself), with identical pair-mean human ratings on **96.7%–100%** of the cross-dataset duplicates (Appendix B). Earlier benchmarks (Composite, Flickr8k-Expert, Flickr8k-CF) have virtually zero sample overlap.
 
 <p align="center">
   <img src="assets/fig_duplication.png" width="85%" alt="Share of each evaluation set duplicated in each training set">
@@ -68,7 +68,7 @@ Across the three recent benchmarks, identical samples—same decoded pixels, sam
 
 ### 2. Memorization compounds with every training epoch
 
-Training **Pearl** on the released Spica set inflates Kendall's τ on duplicated Polaris test samples from **+2.5** at epoch 1 to **+10.4** by epoch 5, while performance on non-duplicated samples remains completely flat. By contrast, **DENEB** gains less than one point overall (**+0.55**).
+Across **Pearl** trainings whose Spica training set retains the duplicates (released, random-removal, and matched-removal runs), the mean gap over deduplicated runs on duplicated Polaris test samples widens from **+2.5** at epoch 1 to **+10.4** at epoch 5—with all three released runs stopping by epoch 3 (**+7.6** over deduplicated) and epoch 5 reflecting the single remaining matched-removal vs. deduplicated run (Appendix F)—while all other samples stay flat across epochs (within ~0.5 points). By contrast, **DENEB** gains less than one point overall (**+0.55**).
 
 <p align="center">
   <img src="assets/fig_epochs.png" width="85%" alt="Pearl Kendall tau per training epoch on duplicated vs other samples">
